@@ -1,0 +1,24 @@
+[user]
+  name = crcrworks
+  email = 42961885+crcrworks@users.noreply.github.com
+
+[core]
+  editor = nvim
+  whitespace = cr-at-eol
+  quotepath = false
+	autocrlf = false
+
+[color]
+  ui = true
+
+[init]
+  defaultBranch = main
+
+[filter "lfs"]
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+
+[ghq]
+root = ~/ghq

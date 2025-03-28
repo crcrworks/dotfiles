@@ -13,3 +13,6 @@
 [submodule "dot_config/fish"]
 	path = dot_config/fish
 	url = https://github.com/crcrworks/dotfiles-fish.git
+[submodule "dot_config/exact_nvim"]
+	path = dot_config/exact_nvim
+	url = https://github.com/crcrworks/dotfiles-nvim.git

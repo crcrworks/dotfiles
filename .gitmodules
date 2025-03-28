@@ -7,12 +7,12 @@
 [submodule "dot_config/sketchybar"]
 	path = dot_config/sketchybar
 	url = https://github.com/crcrworks/dotfiles-sketchybar.git
-[submodule "dot_config/ghostty"]
-	path = dot_config/ghostty
-	url = https://github.com/crcrworks/dotfiles-ghostty.git
 [submodule "dot_config/fish"]
 	path = dot_config/fish
 	url = https://github.com/crcrworks/dotfiles-fish.git
 [submodule "dot_config/exact_nvim"]
 	path = dot_config/exact_nvim
 	url = https://github.com/crcrworks/dotfiles-nvim.git
+[submodule "dot_config/exact_ghostty"]
+	path = dot_config/exact_ghostty
+	url = https://github.com/crcrworks/dotfiles-ghostty.git

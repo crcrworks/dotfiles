@@ -174,7 +174,7 @@ pretty: true
 user-input-color: '#c3c6aa'
 
 ## Set the color for tool output (default: None)
-#tool-output-color: 'xxx'
+tool-output-color: '#E69875'
 
 ## Set the color for tool error messages (default: #FF2222)
 tool-error-color: '#E67E80'
@@ -186,19 +186,19 @@ tool-warning-color: '#DBBC7F'
 assistant-output-color: '#7FBBB3'
 
 ## Set the color for the completion menu (default: terminal's default text color)
-#completion-menu-color: 'xxx'
+completion-menu-color: '#c3c6aa'
 
 ## Set the background color for the completion menu (default: terminal's default background color)
 completion-menu-bg-color: '#2E383C'
 
 ## Set the color for the current item in the completion menu (default: terminal's default background color)
-#completion-menu-current-color: 'xxx'
+#completion-menu-current-color: '#A7C080'
 
 ## Set the background color for the current item in the completion menu (default: terminal's default text color)
 completion-menu-current-bg-color: '#2E383C'
 
 ## Set the markdown code theme (default: default, other options include monokai, solarized-dark, solarized-light, or a Pygments builtin style, see https://pygments.org/styles for available themes)
-#code-theme: default
+code-theme: monokai
 
 ## Show diffs when committing changes (default: False)
 #show-diffs: false

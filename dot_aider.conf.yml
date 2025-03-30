@@ -243,7 +243,7 @@ code-theme: monokai
 #commit: false
 
 ## Specify a custom prompt for generating commit messages
-#commit-prompt: xxx
+commit-prompt: 日本語で書いてください。コミットメッセージはできるだけ簡潔に書いてください
 
 ## Perform a dry run without modifying files (default: False)
 #dry-run: false

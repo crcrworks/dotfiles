@@ -260,3 +260,8 @@ run = 'move-node-to-workspace W'
 if.app-id = "com.apple.finder"
 check-further-callbacks = true
 run = 'layout floating'
+
+[[on-window-detected]]
+if.app-id = "com.apple.Preview"
+check-further-callbacks = true
+run = 'layout floating'

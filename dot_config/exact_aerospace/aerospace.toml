@@ -232,12 +232,31 @@ if.app-id = "com.spotify.client"
 run = "move-node-to-workspace S"
 
 [[on-window-detected]]
-if.app-id = "NULL-APP-BUNDLE-ID"
+if.app-name-regex-substring = "bevy-*"
 check-further-callbacks = true
 run = 'layout floating'
 
+[[on-window-detected]]
+if.app-name-regex-substring = "wine64-preloader"
+check-further-callbacks = true
+run = ['layout floating', 'move-node-to-workspace G']
 
 [[on-window-detected]]
 if.app-id = "com.heroicgameslauncher.hgl"
+check-further-callbacks = true
+run = ['layout floating', 'move-node-to-workspace G']
+
+[[on-window-detected]]
+if.app-id = "com.cron.electron"
+check-further-callbacks = true
+run = 'move-node-to-workspace W'
+
+[[on-window-detected]]
+if.app-id = "com.readdle.smartemail-Mac"
+check-further-callbacks = true
+run = 'move-node-to-workspace W'
+
+[[on-window-detected]]
+if.app-id = "com.apple.finder"
 check-further-callbacks = true
 run = 'layout floating'

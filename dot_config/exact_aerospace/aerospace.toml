@@ -271,3 +271,13 @@ if.app-id = 'app.zen-browser.zen'
 if.window-title-regex-substring = 'Picture-in-picture'
 run = 'layout floating'
 check-further-callbacks = true
+
+[[on-window-detected]]
+if.app-id = 'com.apple.Passwords'
+run = 'layout floating'
+check-further-callbacks = true
+
+[[on-window-detected]]
+if.app-id = 'com.codewavers.CrossOver'
+run = 'layout floating'
+check-further-callbacks = true

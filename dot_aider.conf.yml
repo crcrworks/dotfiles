@@ -18,7 +18,7 @@
 # Main model:
 
 ## Specify the model to use for the main chat
-#model: xxx
+model: openai/claude-3.7-sonnet-thought
 
 ########################
 # API Keys and settings:
@@ -30,7 +30,7 @@
 #anthropic-api-key: xxx
 
 ## Specify the api base url
-#openai-api-base: xxx
+openai-api-base: https://api.githubcopilot.com
 
 ## (deprecated, use --set-env OPENAI_API_TYPE=<value>)
 #openai-api-type: xxx

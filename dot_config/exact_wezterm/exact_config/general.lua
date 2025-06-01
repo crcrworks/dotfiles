@@ -9,7 +9,7 @@ return {
 	window_close_confirmation = "AlwaysPrompt",
 	max_fps = 240,
 	animation_fps = 240,
-	front_end = "WebGpu",
+	front_end = "OpenGL",
 	webgpu_preferred_adapter = gpus[1],
 
 	-- leader = { key = "a", mods = "CTRL" },

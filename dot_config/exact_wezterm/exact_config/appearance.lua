@@ -63,11 +63,15 @@ return {
 		top = 5,
 		bottom = 5,
 	},
+
 	colors = {
 		tab_bar = {
 			background = "#2D353B",
 		},
+
+		cursor_bg = "#9DA9A0",
 	},
+
 	tab_bar_style = {},
 	window_frame = {
 		border_bottom_height = "0.5cell",

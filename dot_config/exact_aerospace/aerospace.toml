@@ -240,12 +240,17 @@ run = 'layout floating'
 [[on-window-detected]]
 if.app-name-regex-substring = "wine64-preloader"
 check-further-callbacks = true
-run = ['layout floating', 'move-node-to-workspace G']
+run = ['layout floating', 'move-node-to-workspace F']
+
+[[on-window-detected]]
+if.app-name-regex-substring = "RocketLeague.exe"
+check-further-callbacks = true
+run = ['layout floating', 'move-node-to-workspace F']
 
 [[on-window-detected]]
 if.app-id = "com.heroicgameslauncher.hgl"
 check-further-callbacks = true
-run = ['layout floating', 'move-node-to-workspace G']
+run = ['layout floating', 'move-node-to-workspace F']
 
 [[on-window-detected]]
 if.app-id = "com.cron.electron"
@@ -290,4 +295,12 @@ check-further-callbacks = true
 
 [[on-window-detected]]
 if.app-id = 'com.mitchellh.ghostty'
+run = 'layout floating'
+
+[[on-window-detected]]
+if.app-id = 'com.electron.dockerdesktop'
+run = 'layout floating'
+
+[[on-window-detected]]
+if.app-id = 'com.apple.ActivityMonitor'
 run = 'layout floating'

@@ -304,3 +304,8 @@ run = 'layout floating'
 [[on-window-detected]]
 if.app-id = 'com.apple.ActivityMonitor'
 run = 'layout floating'
+
+[[on-window-detected]]
+if.window-title-regex-substring = 'iCloud Passwords'
+run = 'layout floating'
+check-further-callbacks = true

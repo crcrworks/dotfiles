@@ -82,6 +82,17 @@ outer.right = 10
 # 'main' binding mode must be always presented
 # Fallback value (if you omit the key): mode.main.binding = {}
 [mode.main.binding]
+alt-enter = ['''exec-and-forget osascript -e '
+    tell application "Ghostty"
+        if it is running
+            tell application "System Events" to tell process "Ghostty" 
+                click menu item "New Window" of menu "File" of menu bar 1
+            end tell
+        else
+            activate
+        end if
+    end tell'
+    ''', 'exec-and-forget sh -c "sleep .3 && aerospace layout tiling"']
 
 # All possible keys:
 # - Letters.        a, b, c, ..., z
@@ -112,7 +123,6 @@ outer.right = 10
 # See: https://nikitabobko.github.io/AeroSpace/commands#layout
 alt-slash = 'layout tiles horizontal vertical'
 alt-comma = 'layout accordion horizontal vertical'
-alt-enter = "fullscreen"
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#focus
 alt-h = 'focus left'

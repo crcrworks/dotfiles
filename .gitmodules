@@ -16,3 +16,6 @@
 [submodule "dot_config/exact_yazi"]
 	path = dot_config/exact_yazi
 	url = git@github.com:crcrworks/dotfiles-yazi.git
+[submodule "dot_config/exact_kitty"]
+	path = dot_config/exact_kitty
+	url = git@github.com:crcrworks/dotfiles-kitty.git

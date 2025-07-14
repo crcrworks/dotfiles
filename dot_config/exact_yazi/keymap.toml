@@ -1,0 +1,19 @@
+[manager]
+prepend_keymap = [
+  { on = [
+    "g",
+    "n",
+  ], run = 'cd ~/.config/nvim', desc = "Go to nvim directory" },
+  { on = [
+    "g",
+    "y",
+  ], run = 'cd ~/.config/yazi', desc = "Go to yazi directory" },
+  { on = [
+    "g",
+    "w",
+  ], run = 'cd ~/.config/wezterm', desc = "Go to wezterm directory" },
+  { on = [
+    "g",
+    "i",
+  ], run = 'plugin lazygit', desc = "run lazygit" },
+]

@@ -1,0 +1,23 @@
+cmake_minimum_required(VERSION 3.13)
+project(myproject C)
+
+set(project_name sample)
+
+add_executable(${project_name} ${project_name}.c)
+target_compile_options(${project_name} PRIVATE -O2 -Wall)
+
+target_include_directories(${project_name} PRIVATE
+    /usr/X11R6/include
+    /usr/local/include 
+)
+
+target_link_directories(${project_name} PRIVATE
+    /usr/local/lib64
+    /opt/X11/lib
+)
+
+target_link_libraries(${project_name} 
+    eggx
+    X11
+    m
+)

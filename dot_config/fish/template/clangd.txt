@@ -1,0 +1,4 @@
+CompileFlags:
+  Add:
+    - --include-directory=/Users/crcr/development/lib/eggx-0.95/
+    - --include-directory=/opt/X11/include/

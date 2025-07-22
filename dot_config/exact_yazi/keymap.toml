@@ -3,9 +3,13 @@ prepend_keymap = [
   { on = [
     "g",
     "c",
-  ], run = 'cd /Users/crcr/.local/share/chezmoi', desc = "Go to config directory" },
+  ], run = 'cd ~/.local/share/chezmoi', desc = "Go to config directory" },
   { on = [
     "g",
     "i",
   ], run = 'plugin lazygit', desc = "run lazygit" },
+  { on = [
+    "g",
+    "D",
+  ], run = 'cd ~/Document', desc = "open Document" },
 ]

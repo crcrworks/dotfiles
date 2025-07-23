@@ -1,0 +1,14 @@
+[tools]
+"rust" = { version = "latest", components = "rust-src,llvm-tools" }
+"node" = "latest"
+"go" = "latest"
+"bun" = "latest"
+
+[hooks]
+postinstall = 'npx corepack enable'
+
+[settings]
+experimental = true
+
+[env]
+_.path = ['./node_modules/.bin']

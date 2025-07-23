@@ -6,7 +6,6 @@
 return {
 	"AstroNvim/astrocommunity",
 	{ import = "astrocommunity.pack.lua" },
-	{ import = "astrocommunity.pack.json" },
 	{ import = "astrocommunity.pack.rust" },
 	{ import = "astrocommunity.pack.cs" },
 	{ import = "astrocommunity.pack.go" },

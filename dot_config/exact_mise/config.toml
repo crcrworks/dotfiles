@@ -1,14 +1,19 @@
+[settings]
+experimental = true
+
 [tools]
 "rust" = { version = "latest", components = "rust-src,llvm-tools" }
 "node" = "latest"
 "go" = "latest"
 "bun" = "latest"
+"uv" = "latest"
+"python" = "latest"
+
+"cargo:eza" = "latest"
+"cargo:fd-find" = "latest"
+"cargo:zoxide" = "latest"
+"cargo:starship" = "latest"
 
 [hooks]
+enter = "echo 'I changed directories'"
 postinstall = 'npx corepack enable'
-
-[settings]
-experimental = true
-
-[env]
-_.path = ['./node_modules/.bin']

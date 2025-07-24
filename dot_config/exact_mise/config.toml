@@ -13,7 +13,7 @@ experimental = true
 "cargo:fd-find" = "latest"
 "cargo:zoxide" = "latest"
 "cargo:starship" = "latest"
+"cargo:hyperfine" = "latest"
 
 [hooks]
-enter = "echo 'I changed directories'"
 postinstall = 'npx corepack enable'

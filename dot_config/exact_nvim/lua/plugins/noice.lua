@@ -1,6 +1,10 @@
+local map = vim.keymap.set
+map("n", "<Leader>fn", function()
+  require("noice").cmd "pick"
+end)
+
 return {
   {
-
     "folke/noice.nvim",
     event = "VeryLazy",
     dependencies = {

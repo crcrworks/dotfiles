@@ -59,3 +59,7 @@ map("n", "<leader>ps", "<cmd>Lazy<cr>")
 map("n", "<leader>la", function()
   require("tiny-code-action").code_action()
 end, { noremap = true, silent = true })
+
+map("n", "gl", function()
+  vim.diagnostic.open_float()
+end, { desc = "LSP diagnostic loclist" })

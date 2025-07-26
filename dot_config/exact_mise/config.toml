@@ -15,5 +15,7 @@ experimental = true
 "cargo:starship" = "latest"
 "cargo:hyperfine" = "latest"
 
+"npm:@vtsls/language-server" = "latest"
+
 [hooks]
 postinstall = 'npx corepack enable'

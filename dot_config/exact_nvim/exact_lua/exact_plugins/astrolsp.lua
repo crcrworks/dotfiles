@@ -38,6 +38,11 @@ return {
 		-- customize language server configuration options passed to `lspconfig`
 		---@diagnostic disable: missing-fields
 		config = {
+			vtsls = {
+				settings = {
+					typescript = { format = false },
+				},
+			},
 			yamlls = {
 				settings = {
 					yaml = {
@@ -60,6 +65,7 @@ return {
 							".git",
 							"target",
 						},
+
 						cargo = {
 							extraEnv = { CARGO_PROFILE_RUST_ANALYZER_INHERITS = "dev" },
 							extraArgs = { "--profile", "rust-analyzer" },
@@ -119,7 +125,7 @@ return {
 					desc = "Toggle LSP semantic highlight (buffer)",
 					cond = function(client)
 						return client.supports_method("textDocument/semanticTokens/full")
-								and vim.lsp.semantic_tokens ~= nil
+							and vim.lsp.semantic_tokens ~= nil
 					end,
 				},
 			},

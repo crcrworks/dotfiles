@@ -1,6 +1,6 @@
 require("nvchad.configs.lspconfig").defaults()
 
-local servers = { "html", "cssls", "vtsls" }
+local servers = { "html", "cssls", "vtsls", "biome" }
 
 vim.lsp.config("vtsls", {
   filetypes = {
@@ -12,34 +12,33 @@ vim.lsp.config("vtsls", {
     "typescript.tsx",
   },
   settings = {
-    complete_function_calls = true,
-    vtsls = {
-      enableMoveToFileCodeAction = true,
-      autoUseWorkspaceTsdk = true,
-      experimental = {
-        maxInlayHintLength = 30,
-        completion = {
-          enableServerSideFuzzyMatch = true,
-        },
+    typescript = {
+      format = false,
+      updateImportsOnFileMove = { enabled = "always" },
+      inlayHints = {
+        parameterNames = { enabled = "all" },
+        parameterTypes = { enabled = true },
+        variableTypes = { enabled = true },
+        propertyDeclarationTypes = { enabled = true },
+        functionLikeReturnTypes = { enabled = true },
+        enumMemberValues = { enabled = true },
       },
     },
-    typescript = {
+    javascript = {
       updateImportsOnFileMove = { enabled = "always" },
-      suggest = {
-        completeFunctionCalls = true,
-      },
       inlayHints = {
-        enumMemberValues = { enabled = true },
-        functionLikeReturnTypes = { enabled = true },
         parameterNames = { enabled = "literals" },
         parameterTypes = { enabled = true },
+        variableTypes = { enabled = true },
         propertyDeclarationTypes = { enabled = true },
-        variableTypes = { enabled = false },
+        functionLikeReturnTypes = { enabled = true },
+        enumMemberValues = { enabled = true },
       },
+    },
+    vtsls = {
+      enableMoveToFileCodeAction = true,
     },
   },
 })
 
 vim.lsp.enable(servers)
-
--- read :h vim.lsp.config for changing options of lsp servers

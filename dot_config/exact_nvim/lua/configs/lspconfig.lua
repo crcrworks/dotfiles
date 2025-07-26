@@ -1,6 +1,6 @@
 require("nvchad.configs.lspconfig").defaults()
 
-local servers = { "html", "cssls", "vtsls", "biome" }
+local servers = { "html", "cssls", "vtsls", "biome", "rust-analyzer" }
 
 vim.lsp.config("vtsls", {
   filetypes = {
@@ -37,6 +37,26 @@ vim.lsp.config("vtsls", {
     },
     vtsls = {
       enableMoveToFileCodeAction = true,
+    },
+  },
+})
+
+vim.lsp.config("rust-analyzer", {
+  settings = {
+    ["rust-analyzer"] = {
+      files = {
+        excludeDirs = {
+          ".direnv",
+          ".git",
+          "target",
+        },
+      },
+      check = {
+        command = "clippy",
+        extraArgs = {
+          "--no-deps",
+        },
+      },
     },
   },
 })

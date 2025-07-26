@@ -42,6 +42,9 @@ return {
         quit_on_open = false,
       },
     },
+    view = {
+      width = 40,
+    },
     renderer = {
       group_empty = true,
       highlight_git = false,

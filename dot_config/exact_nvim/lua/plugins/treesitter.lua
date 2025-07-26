@@ -10,6 +10,7 @@ return {
       "tsx",
       "json",
       "rust",
+      "scss",
     },
   },
 }

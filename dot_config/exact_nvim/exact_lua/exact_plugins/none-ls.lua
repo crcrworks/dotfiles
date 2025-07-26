@@ -14,7 +14,7 @@ return {
 		opts.sources = require("astrocore").list_insert_unique(opts.sources, {
 
 			null_ls.builtins.formatting.stylua,
-			null_ls.builtins.formatting.biome,
+			-- null_ls.builtins.formatting.biome,
 			null_ls.builtins.diagnostics.sqlfluff.with({
 				extra_args = { "--dialect", "mysql" },
 			}),

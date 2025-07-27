@@ -173,6 +173,7 @@ map("n", "<leader>v", function()
 end, { desc = "terminal new vertical term" })
 
 map("n", "<leader>ps", "<cmd>Lazy<cr>")
+map("n", "<leader>pm", "<cmd>Mason<cr>")
 
 -- LSP
 map("n", "gl", function()

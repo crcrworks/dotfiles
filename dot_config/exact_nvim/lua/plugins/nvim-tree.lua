@@ -1,17 +1,11 @@
 local api = require "nvim-tree.api"
 
-local function edit_or_open()
-  local node = api.tree.get_node_under_cursor()
-
-  if node.nodes ~= nil then
-    api.node.open.edit()
-  else
-    api.node.open.edit()
-    api.tree.close()
-  end
+local function righty()
+  api.node.open.edit()
 end
 
 local function lefty()
+  api.node.navigate.parent()
   local node_at_cursor = api.tree.get_node_under_cursor()
   if node_at_cursor.nodes and node_at_cursor.open then
     api.node.open.edit()
@@ -26,7 +20,7 @@ local function my_on_attach(bufnr)
   end
 
   api.config.mappings.default_on_attach(bufnr)
-  vim.keymap.set("n", "l", edit_or_open, opts "Right")
+  vim.keymap.set("n", "l", righty, opts "Right")
   vim.keymap.set("n", "h", lefty, opts "Left")
 end
 
@@ -37,6 +31,8 @@ return {
   "nvim-tree/nvim-tree.lua",
   opts = {
     on_attach = my_on_attach,
+    hijack_cursor = true,
+    sync_root_with_cwd = true,
     actions = {
       open_file = {
         quit_on_open = false,
@@ -50,8 +46,10 @@ return {
       highlight_git = false,
 
       icons = {
+        git_placement = "after",
+        bookmarks_placement = "after",
         show = {
-          git = false,
+          git = true,
         },
       },
     },

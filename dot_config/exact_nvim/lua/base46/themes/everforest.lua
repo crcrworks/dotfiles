@@ -60,14 +60,14 @@ M.type = "dark"
 M.polish_hl = {
   treesitter = {
     ["@variable"] = { fg = M.base_30.white },
-    ["@variable.builtin"] = { fg = M.base_30.purple },
+    ["@variable.builtin"] = { fg = M.base_30.dark_purple },
     ["@variable.parameter"] = { fg = M.base_30.white },
     ["@variable.parameter.builtin"] = { fg = M.base_30.yello },
     ["@variable.member"] = { fg = M.base_30.nord_blue },
 
     ["@constant"] = { fg = M.base_30.white },
-    ["@constant.builtin"] = { fg = M.base_30.purple },
-    ["@constant.macro"] = { fg = M.base_30.purple },
+    ["@constant.builtin"] = { fg = M.base_30.dark_purple },
+    ["@constant.macro"] = { fg = M.base_30.dark_purple },
 
     ["@module"] = { fg = M.base_30.yellow },
     ["@module.builtin"] = { fg = M.base_30.yellow },
@@ -85,15 +85,15 @@ M.polish_hl = {
     ["@character"] = { fg = M.base_30.green },
     ["@character.special"] = { fg = M.base_30.yellow },
 
-    ["@boolean"] = { fg = M.base_30.purple },
-    ["@number"] = { fg = M.base_30.purple },
-    ["@number.float"] = { fg = M.base_30.purple },
+    ["@boolean"] = { fg = M.base_30.dark_purple },
+    ["@number"] = { fg = M.base_30.dark_purple },
+    ["@number.float"] = { fg = M.base_30.dark_purple },
 
     ["@type"] = { fg = M.base_30.yellow },
     ["@type.builtin"] = { fg = M.base_30.yellow },
     ["@type.definition"] = { fg = M.base_30.yellow },
 
-    ["@attribute"] = { fg = M.base_30.purple },
+    ["@attribute"] = { fg = M.base_30.dark_purple },
     ["@attribute.builtin"] = { fg = M.base_30.yello },
     ["@property"] = { fg = M.base_30.nord_blue },
 
@@ -123,8 +123,8 @@ M.polish_hl = {
     ["@keyword.conditional"] = { fg = M.base_30.red },
     ["@keyword.conditional.ternary"] = { fg = M.base_30.red },
 
-    ["@keyword.directive"] = { fg = M.base_30.purple },
-    ["@keyword.directive.define"] = { fg = M.base_30.purple },
+    ["@keyword.directive"] = { fg = M.base_30.dark_purple },
+    ["@keyword.directive.define"] = { fg = M.base_30.dark_purple },
 
     ["@punctuation.delimiter"] = { fg = M.base_30.light_grey },
     ["@punctuation.bracket"] = { fg = M.base_30.white },

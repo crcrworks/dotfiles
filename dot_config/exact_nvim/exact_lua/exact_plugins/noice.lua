@@ -1,7 +1,4 @@
 local map = vim.keymap.set
-map("n", "<Leader>fn", function()
-  require("noice").cmd "pick"
-end)
 
 map("n", "<Leader>fNa", function()
   require("noice").cmd "all"

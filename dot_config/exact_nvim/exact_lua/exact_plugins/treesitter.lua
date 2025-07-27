@@ -11,6 +11,7 @@ return {
       "json",
       "rust",
       "scss",
+      "css",
     },
   },
 }

@@ -1,6 +1,6 @@
 return {
   "nvim-treesitter/nvim-treesitter-context",
-  event = "BufEnter",
+  event = "BufRead",
   cmd = { "TSContext" },
   opts = {
 

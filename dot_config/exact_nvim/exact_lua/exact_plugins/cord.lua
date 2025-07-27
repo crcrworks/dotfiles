@@ -2,7 +2,7 @@ return {
   "vyfor/cord.nvim",
   version = "^2",
   build = ":Cord update",
-  event = "VeryLazy",
+  event = "BufRead",
   opts = {
     editor = {
       client = "nvchad",

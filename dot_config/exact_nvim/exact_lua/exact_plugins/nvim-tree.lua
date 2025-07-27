@@ -28,6 +28,7 @@ vim.cmd [[autocmd BufEnter * ++nested if winnr('$') == 1 && bufname() == 'NvimTr
 
 return {
   "nvim-tree/nvim-tree.lua",
+  lazy = false,
   opts = {
     on_attach = my_on_attach,
     hijack_cursor = true,

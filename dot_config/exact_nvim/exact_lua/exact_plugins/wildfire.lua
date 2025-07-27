@@ -1,6 +1,6 @@
 return {
   "sustech-data/wildfire.nvim",
-  event = "BufEnter",
+  event = "BufRead",
   dependencies = { "nvim-treesitter/nvim-treesitter" },
   opts = {},
 }

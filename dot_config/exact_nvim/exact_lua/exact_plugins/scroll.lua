@@ -1,6 +1,6 @@
 return {
   "karb94/neoscroll.nvim",
-  lazy = false,
+  event = "BufRead",
   config = function()
     local neoscroll = require "neoscroll"
 

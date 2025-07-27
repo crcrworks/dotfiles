@@ -11,10 +11,6 @@ return {
     dependencies = {
       -- if you lazy-load any plugin below, make sure to add proper `module="..."` entries
       "MunifTanjim/nui.nvim",
-      -- OPTIONAL:
-      --   `nvim-notify` is only needed, if you want to use the notification view.
-      --   If not available, we use `mini` as the fallback
-      "rcarriga/nvim-notify",
     },
     opts = {
       lsp = {
@@ -51,45 +47,4 @@ return {
       },
     },
   },
-  -- {
-  --   "AstroNvim/astrocore",
-  --   ---@type AstroCoreOpts
-  --   opts = {
-  --     mappings = {
-  --       n = {
-  --         ["<Leader>fN"] = { desc = "noice" },
-  --         ["<Leader>fNl"] = {
-  --           function()
-  --             require("noice").cmd "last"
-  --           end,
-  --           desc = "Noice Last Message",
-  --         },
-  --         ["<Leader>fNh"] = {
-  --           function()
-  --             require("noice").cmd "history"
-  --           end,
-  --           desc = "Noice History",
-  --         },
-  --         ["<Leader>fNa"] = {
-  --           function()
-  --             require("noice").cmd "all"
-  --           end,
-  --           desc = "Noice All",
-  --         },
-  --         ["<Leader>fNd"] = {
-  --           function()
-  --             require("noice").cmd "dismiss"
-  --           end,
-  --           desc = "Dismiss All",
-  --         },
-  --         ["<Leader>fn"] = {
-  --           function()
-  --             require("noice").cmd "pick"
-  --           end,
-  --           desc = "Noice Picker (Telescope/FzfLua)",
-  --         },
-  --       },
-  --     },
-  --   },
-  -- },
 }

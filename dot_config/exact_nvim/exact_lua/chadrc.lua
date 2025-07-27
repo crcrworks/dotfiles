@@ -6,13 +6,6 @@
 
 ---@type ChadrcConfig
 local M = {}
---
--- vim.api.nvim_set_hl(0, "SnacksPickerBorder", { fg = theme.black })
--- vim.api.nvim_set_hl(0, "SnacksPickerCol", { fg = theme.vibrant_green })
--- vim.api.nvim_set_hl(0, "SnacksPickerDesc", { fg = theme.vibrant_green })
--- vim.api.nvim_set_hl(0, "SnacksPickerTree", { fg = theme.vibrant_green })
--- vim.api.nvim_set_hl(0, "SnacksPickerDir", { fg = theme.vibrant_green })
--- vim.api.nvim_set_hl(0, "SnacksDashboardDir", { fg = theme.vibrant_green })
 
 M.base46 = {
   theme = "everforest",

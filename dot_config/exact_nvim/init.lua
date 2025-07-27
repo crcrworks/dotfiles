@@ -35,11 +35,10 @@ dofile(vim.g.base46_cache .. "statusline")
 
 require "options"
 require "autocmds"
+require "base46.themes.highlight"
 
 vim.schedule(function()
   require "mappings"
 end)
 
 vim.g.vscode_snippets_path = vim.fn.stdpath "config" .. "/snippets"
-
-require "base46.themes.highlight"

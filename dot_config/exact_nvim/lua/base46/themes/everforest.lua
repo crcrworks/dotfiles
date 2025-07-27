@@ -62,7 +62,7 @@ M.polish_hl = {
     ["@variable"] = { fg = M.base_30.white },
     ["@variable.builtin"] = { fg = M.base_30.dark_purple },
     ["@variable.parameter"] = { fg = M.base_30.white },
-    ["@variable.parameter.builtin"] = { fg = M.base_30.yello },
+    ["@variable.parameter.builtin"] = { fg = M.base_30.yello }, -- not changed
     ["@variable.member"] = { fg = M.base_30.nord_blue },
 
     ["@constant"] = { fg = M.base_30.white },
@@ -80,7 +80,7 @@ M.polish_hl = {
     ["@string.special"] = { fg = M.base_30.yellow },
     ["@string.special.symbol"] = { fg = M.base_30.white },
     ["@string.special.path"] = { fg = M.base_30.yellow },
-    ["@string.special.url"] = { fg = M.base_30.white },
+    ["@string.special.url"] = { fg = M.base_30.white, underline = true, link = "Underlined" },
 
     ["@character"] = { fg = M.base_30.green },
     ["@character.special"] = { fg = M.base_30.yellow },
@@ -112,7 +112,10 @@ M.polish_hl = {
     ["@keyword.coroutine"] = { fg = M.base_30.red },
     ["@keyword.function"] = { fg = M.base_30.red },
     ["@keyword.operator"] = { fg = M.base_30.orange },
+
+    Include = { fg = M.base_30.red },
     ["@keyword.import"] = { fg = M.base_30.red },
+
     ["@keyword.type"] = { fg = M.base_30.red },
     ["@keyword.modifier"] = { fg = M.base_30.red },
     ["@keyword.repeat"] = { fg = M.base_30.red },
@@ -162,7 +165,7 @@ M.polish_hl = {
     ["@markup.raw.block"] = { fg = M.base_30.vibrant_green },
 
     ["@markup.list"] = { fg = M.base_30.nord_blue },
-    ["@markup.ligt.checked"] = { fg = M.base_30.vibrant_green },
+    ["@markup.ligt.checked"] = { fg = M.base_30.vibrant_green }, -- not changed?
     ["@markup.list.unchecked"] = { fg = M.base_30.light_grey },
 
     ["@diff.plus"] = { fg = M.base_30.vibrant_green },
@@ -171,7 +174,7 @@ M.polish_hl = {
 
     ["@tag"] = { fg = M.base_30.orange },
     ["@tag.builtin"] = { fg = M.base_30.yello },
-    ["@tag.attribute"] = { fg = M.base_30.vibrant_green },
+    ["@tag.attribute"] = { fg = M.base_30.vibrant_green }, --not changed?
     ["@tag.delimiter"] = { fg = M.base_30.vibrant_green },
   },
 }

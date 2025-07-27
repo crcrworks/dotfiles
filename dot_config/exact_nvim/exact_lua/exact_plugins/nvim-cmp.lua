@@ -6,6 +6,7 @@ return {
     sources = {
       { name = "nvim_lsp" },
       { name = "buffer" },
+      { name = "luasnip" },
     },
     performance = {
       max_view_entries = 7,

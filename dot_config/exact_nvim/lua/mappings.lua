@@ -55,6 +55,10 @@ end, { desc = "terminal new vertical term" })
 
 map("n", "<leader>ps", "<cmd>Lazy<cr>")
 
+map("n", "<leader>th", function()
+  require("nvchad.themes").open()
+end, { desc = "telescope nvchad themes" })
+
 -- LSP
 map("n", "<leader>la", function()
   require("tiny-code-action").code_action()

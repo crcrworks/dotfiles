@@ -42,6 +42,10 @@ return {
       width = 40,
     },
     renderer = {
+      root_folder_label = function(path)
+        return vim.fn.fnamemodify(path, ":t")
+      end,
+
       group_empty = true,
       highlight_git = false,
 

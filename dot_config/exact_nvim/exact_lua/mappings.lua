@@ -34,6 +34,7 @@ end, { desc = "buffer close" })
 map("n", "<leader>/", "gcc", { desc = "toggle comment", remap = true })
 map("v", "<leader>/", "gc", { desc = "toggle comment", remap = true })
 
+-- telescope
 map("n", "<leader>ff", "<cmd>Telescope find_files<cr>", { desc = "telescope find files" })
 map("n", "<leader>fw", "<cmd>Telescope live_grep<CR>", { desc = "telescope live grep" })
 map("n", "<leader>fb", "<cmd>Telescope buffers<CR>", { desc = "telescope find buffers" })
@@ -55,7 +56,7 @@ end, { desc = "terminal new vertical term" })
 
 map("n", "<leader>ps", "<cmd>Lazy<cr>")
 
-map("n", "<leader>th", function()
+map("n", "<leaderft", function()
   require("nvchad.themes").open()
 end, { desc = "telescope nvchad themes" })
 
@@ -67,3 +68,27 @@ end, { noremap = true, silent = true })
 map("n", "gl", function()
   vim.diagnostic.open_float()
 end, { desc = "LSP diagnostic loclist" })
+
+map("n", "gD", function()
+  vim.lsp.buf.declaration()
+end, { desc = "Declaration of current symbol" })
+
+map("n", "gd", function()
+  vim.lsp.buf.definition()
+end, { desc = "Show the definition of current symbol" })
+
+map("n", "<leader>ll", function()
+  vim.lsp.codelens.refresh()
+end, { desc = "LSP CodeLens refresh" })
+
+map("n", "<leader>lL", function()
+  vim.lsp.codelens.run()
+end, { desc = "LSP CodeLens run" })
+
+map("n", "<leader>uL", function()
+  vim.lsp.codelens.toggle()
+end, { desc = "LSP CodeLens run" })
+
+map("n", "lD", function()
+  require("telescope.builtin").diagnostics()
+end, { desc = "Declaration of current symbol" })

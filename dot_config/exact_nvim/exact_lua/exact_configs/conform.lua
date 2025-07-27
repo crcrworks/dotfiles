@@ -1,7 +1,13 @@
 local options = {
   formatters_by_ft = {
     lua = { "stylua" },
-    -- css = { "prettier" },
+    scss = { "prettierd" },
+    javascript = { "biome-check" },
+    typescript = { "biome-check" },
+    typescriptreact = { "biome-check" },
+    javascriptreact = { "biome-check" },
+    fish = { "fish_indent" },
+
     -- html = { "prettier" },
   },
 

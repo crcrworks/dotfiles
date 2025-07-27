@@ -204,5 +204,6 @@ map("n", "<leader>lD", function()
   require("snacks").picker.diagnostics()
 end, { desc = "Search diagnostics" })
 
-map("s", "<C-s>", "<nop>")
-map("i", "<C-s>", "<nop>")
+map({ "n", "x" }, "<leader>lf", function()
+  require("conform").format { lsp_fallback = true }
+end, { desc = "general format file" })

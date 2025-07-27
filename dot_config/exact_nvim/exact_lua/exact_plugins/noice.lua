@@ -1,6 +1,6 @@
 local map = vim.keymap.set
 
-map("n", "<Leader>fNa", function()
+map("n", "<Leader>fN", function()
   require("noice").cmd "all"
 end)
 

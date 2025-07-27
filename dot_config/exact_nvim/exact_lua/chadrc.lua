@@ -9,4 +9,26 @@ M.base46 = {
   theme = "everforest",
 }
 
+M.ui = {
+  cmp = {
+    style = "atom_colored",
+  },
+
+  statusline = {
+    theme = "vscode_colored",
+  },
+
+  tabufline = {
+    enabled = true,
+    lazyload = true,
+    order = { "treeOffset", "buffers", "tabs" },
+    bufwidth = 21,
+    modules = {
+      function(modules)
+        table.insert(modules, modules[1])
+      end,
+    },
+  },
+}
+
 return M

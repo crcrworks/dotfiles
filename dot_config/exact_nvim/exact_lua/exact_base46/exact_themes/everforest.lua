@@ -57,9 +57,129 @@ M.base_16 = {
 
 M.type = "dark"
 
--- M.polish_hl = {
---   treesitter = {},
--- }
+M.polish_hl = {
+  treesitter = {
+    Include = { fg = M.base_30.red },
+
+    SnacksPickerBorder = { fg = M.base_30.black },
+    SnacksPickerCol = { fg = M.base_30.vibrant_green },
+    SnacksPickerDesc = { fg = M.base_30.vibrant_green },
+    SnacksPickerTree = { fg = M.base_30.vibrant_green },
+    SnacksPickerDir = { fg = M.base_30.white },
+    SnacksPickerFile = { fg = M.base_30.orange },
+    SnacksPickerMatch = { fg = M.base_30.orange },
+    SnacksDashboardDir = { fg = M.base_30.white },
+    SnacksDashboardFile = { fg = M.base_30.yellow },
+    SnacksDashboardIcon = { fg = M.base_30.yellow },
+    SnacksDashboardTitle = { fg = M.base_30.orange },
+    SnacksDashboardHeader = { fg = M.base_30.orange },
+    SnacksDashboardFooter = { fg = M.base_30.orange },
+    SnacksDashboardDesc = { fg = M.base_30.orange },
+    SnacksDashboardSpecial = { fg = M.base_30.yellow },
+    NoiceCmdlinePopupBorder = { fg = M.base_30.green },
+    NoiceCmdlineIconCmdline = { fg = M.base_30.green },
+    NoiceCmdlineIconInput = { fg = M.base_30.green },
+    NoiceCmdlineIconSearch = { fg = M.base_30.green },
+    NoiceCmdlineIconLua = { fg = M.base_30.green },
+    NoiceCmdlineIconHelp = { fg = M.base_30.green },
+    NoiceCmdlineIconFilter = { fg = M.base_30.green },
+    NoiceCmdlineIconCalculator = { fg = M.base_30.green },
+
+    ["@variable"] = { fg = M.base_30.white },
+    ["@variable.builtin"] = { fg = M.base_30.dark_purple },
+    ["@variable.parameter"] = { fg = M.base_30.white },
+    ["@variable.parameter.builtin"] = { fg = M.base_30.white },
+    ["@variable.member"] = { fg = M.base_30.nord_blue },
+
+    ["@constant"] = { fg = M.base_30.white },
+    ["@constant.builtin"] = { fg = M.base_30.dark_purple },
+    ["@constant.macro"] = { fg = M.base_30.dark_purple },
+
+    ["@module"] = { fg = M.base_30.yellow },
+    ["@module.builtin"] = { fg = M.base_30.yellow },
+    ["@label"] = { fg = M.base_30.orange },
+
+    ["@string"] = { fg = M.base_30.green },
+    ["@string.documentation"] = { fg = M.base_30.green },
+    ["@string.regexp"] = { fg = M.base_30.vibrant_green },
+    ["@string.escape"] = { fg = M.base_30.vibrant_green },
+    ["@string.special"] = { fg = M.base_30.yellow },
+    ["@string.special.symbol"] = { fg = M.base_30.white },
+    ["@string.special.path"] = { fg = M.base_30.yellow },
+    ["@string.special.url"] = { fg = M.base_30.white, underline = true },
+
+    ["@character"] = { fg = M.base_30.green },
+    ["@character.special"] = { fg = M.base_30.yellow },
+
+    ["@boolean"] = { fg = M.base_30.dark_purple },
+    ["@number"] = { fg = M.base_30.dark_purple },
+    ["@number.float"] = { fg = M.base_30.dark_purple },
+
+    ["@type"] = { fg = M.base_30.yellow },
+    ["@type.builtin"] = { fg = M.base_30.yellow },
+    ["@type.definition"] = { fg = M.base_30.yellow },
+
+    ["@attribute"] = { fg = M.base_30.dark_purple },
+    ["@attribute.builtin"] = { fg = M.base_30.yellow },
+    ["@property"] = { fg = M.base_30.nord_blue },
+
+    ["@function"] = { fg = M.base_30.vibrant_green },
+    ["@function.builtin"] = { fg = M.base_30.vibrant_green },
+    ["@function.call"] = { fg = M.base_30.vibrant_green },
+    ["@function.macro"] = { fg = M.base_30.vibrant_green },
+    ["@function.method"] = { fg = M.base_30.vibrant_green },
+    ["@function.method.call"] = { fg = M.base_30.vibrant_green },
+
+    ["@constructor"] = { fg = M.base_30.vibrant_green },
+    ["@operator"] = { fg = M.base_30.orange },
+
+    ["@keyword"] = { fg = M.base_30.red },
+    ["@keyword.coroutine"] = { fg = M.base_30.red },
+    ["@keyword.function"] = { fg = M.base_30.red },
+    ["@keyword.operator"] = { fg = M.base_30.orange },
+    ["@keyword.import"] = { fg = M.base_30.red },
+    ["@keyword.type"] = { fg = M.base_30.red },
+    ["@keyword.modifier"] = { fg = M.base_30.red },
+    ["@keyword.repeat"] = { fg = M.base_30.red },
+    ["@keyword.return"] = { fg = M.base_30.red },
+    ["@keyword.debug"] = { fg = M.base_30.orange },
+    ["@keyword.exception"] = { fg = M.base_30.red },
+    ["@keyword.conditional"] = { fg = M.base_30.red },
+    ["@keyword.conditional.ternary"] = { fg = M.base_30.red },
+    ["@keyword.directive"] = { fg = M.base_30.dark_purple },
+    ["@keyword.directive.define"] = { fg = M.base_30.dark_purple },
+
+    ["@punctuation.delimiter"] = { fg = M.base_30.light_grey },
+    ["@punctuation.bracket"] = { fg = M.base_30.white },
+    ["@punctuation.special"] = { fg = M.base_30.nord_blue },
+
+    ["@comment"] = { fg = M.base_30.light_grey },
+    ["@comment.documentation"] = { fg = M.base_30.light_grey },
+    ["@comment.error"] = { fg = M.base_30.black, bg = M.base_30.red },
+    ["@comment.warning"] = { fg = M.base_30.black, bg = M.base_30.yellow },
+    ["@comment.todo"] = { fg = M.base_30.black, bg = M.base_30.cyan },
+    ["@comment.note"] = { fg = M.base_30.black, bg = M.base_30.vibrant_green },
+
+    ["@markup.heading"] = { fg = M.base_30.orange },
+    ["@markup.quote"] = { fg = M.base_30.light_grey },
+    ["@markup.math"] = { fg = M.base_30.blue },
+    ["@markup.link"] = { fg = M.base_30.green },
+    ["@markup.link.label"] = { fg = M.base_30.yellow },
+    ["@markup.link.url"] = { fg = M.base_30.nord_blue },
+    ["@markup.raw"] = { fg = M.base_30.vibrant_green },
+    ["@markup.raw.block"] = { fg = M.base_30.vibrant_green },
+    ["@markup.list"] = { fg = M.base_30.nord_blue },
+    ["@markup.list.unchecked"] = { fg = M.base_30.light_grey },
+
+    ["@diff.plus"] = { fg = M.base_30.vibrant_green },
+    ["@diff.minus"] = { fg = M.base_30.red },
+    ["@diff.delta"] = { fg = M.base_30.nord_blue },
+
+    ["@tag"] = { fg = M.base_30.orange },
+    ["@tag.builtin"] = { fg = M.base_30.yellow },
+    ["@tag.delimiter"] = { fg = M.base_30.vibrant_green },
+  },
+}
 
 M = require("base46").override_theme(M, "everforest")
 

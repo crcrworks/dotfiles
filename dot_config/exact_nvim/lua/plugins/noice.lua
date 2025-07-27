@@ -3,6 +3,10 @@ map("n", "<Leader>fn", function()
   require("noice").cmd "pick"
 end)
 
+map("n", "<Leader>fNa", function()
+  require("noice").cmd "all"
+end)
+
 return {
   {
     "folke/noice.nvim",

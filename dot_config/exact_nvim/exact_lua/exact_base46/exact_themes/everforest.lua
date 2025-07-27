@@ -85,6 +85,12 @@ M.polish_hl = {
     NoiceCmdlineIconFilter = { fg = M.base_30.green },
     NoiceCmdlineIconCalculator = { fg = M.base_30.green },
 
+    DiagnosticUnderlineOk = { underline = true, sp = M.base_30.green },
+    DiagnosticUnderlineHint = { underline = true, sp = M.base_30.vibrant_green },
+    DiagnosticUnderlineInfo = { underline = true, sp = M.base_30.nord_blue },
+    DiagnosticUnderlineWarn = { underline = true, sp = M.base_30.yellow },
+    DiagnosticUnderlineError = { underline = true, sp = M.base_30.red },
+
     ["@variable"] = { fg = M.base_30.white },
     ["@variable.builtin"] = { fg = M.base_30.dark_purple },
     ["@variable.parameter"] = { fg = M.base_30.white },

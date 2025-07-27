@@ -202,3 +202,6 @@ end, { desc = "LSP CodeLens run" })
 map("n", "<leader>lD", function()
   require("snacks").picker.diagnostics()
 end, { desc = "Search diagnostics" })
+
+map("s", "<C-s>", "<nop>")
+map("i", "<C-s>", "<nop>")

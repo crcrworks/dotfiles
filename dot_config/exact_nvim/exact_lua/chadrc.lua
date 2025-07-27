@@ -11,6 +11,10 @@ M.base46 = {
   theme = "everforest",
 }
 
+M.lsp = {
+  signature = false,
+}
+
 M.ui = {
   cmp = {
     style = "atom_colored",

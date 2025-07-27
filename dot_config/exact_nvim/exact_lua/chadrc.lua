@@ -22,7 +22,7 @@ M.ui = {
 
   tabufline = {
     enabled = true,
-    lazyload = true,
+    lazyload = false,
     order = { "treeOffset", "buffers", "tabs" },
     bufwidth = 21,
     modules = {

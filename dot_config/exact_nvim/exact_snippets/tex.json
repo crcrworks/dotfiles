@@ -1,0 +1,39 @@
+{
+  "basic_template": {
+    "prefix": "!",
+    "body": [
+      "\\documentclass[dvipdfmx,autodetect-engine]{jsarticle}",
+      "\\usepackage[dvipdfm]{graphicx}",
+      "\\usepackage{ascmac}",
+      "\\usepackage{fancybox}",
+      "",
+      "\\renewcommand{\\figurename}{図}",
+      "\\renewcommand{\\tablename}{表}",
+      "\\newenvironment{code}",
+      "{\\vspace{0.5zw}\\VerbatimEnvironment  \\begin{screen}",
+      "\\baselineskip=1.0\\normalbaselineskip",
+      " \\begin{Verbatim}}",
+      "{\\end{Verbatim}",
+      "\\baselineskip=\\normalbaselineskip",
+      " \\end{screen}\\vspace{0.5zw}}",
+      "",
+      "\\title{${0}}",
+      "\\author{${1}}",
+      "\\date{\\today}",
+      "",
+      "\\begin{document}",
+      "",
+      "\\maketitle",
+      "",
+      "\\begin{abstract}",
+      "\\end{abstract}",
+      "",
+      "\\section{${2}}",
+      "\\bibliographystyle{plain}",
+      "\\bibliography{references}",
+      "",
+      "\\end{document}"
+    ],
+    "description": "basic template for tex"
+  }
+}

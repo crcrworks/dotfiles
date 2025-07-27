@@ -39,3 +39,5 @@ require "autocmds"
 vim.schedule(function()
   require "mappings"
 end)
+
+vim.g.vscode_snippets_path = vim.fn.stdpath "config" .. "/snippets"

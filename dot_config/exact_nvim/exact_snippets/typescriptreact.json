@@ -1,0 +1,10 @@
+{
+  "sclass": {
+    "prefix": "sclass",
+    "body": [
+      "className={style.${4}}",
+      "${0}"
+    ],
+    "description": "classname for scss"
+  }
+}

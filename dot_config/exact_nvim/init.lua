@@ -41,3 +41,5 @@ vim.schedule(function()
 end)
 
 vim.g.vscode_snippets_path = vim.fn.stdpath "config" .. "/snippets"
+
+require "base46.themes.highlight"

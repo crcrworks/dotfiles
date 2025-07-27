@@ -137,7 +137,7 @@ map("n", "<leader>fs", function()
 end, { desc = "Find buffers/recent/registers" })
 
 map("n", "<leader>ft", function()
-  require("snacks").picker.colorschemes()
+  require("nvchad.themes").open()
 end, { desc = "Find themes" })
 
 map("n", "<leader>fi", function()
@@ -172,7 +172,6 @@ end, { desc = "terminal new vertical term" })
 map("n", "<leader>ps", "<cmd>Lazy<cr>")
 
 -- LSP
-
 map("n", "gl", function()
   vim.diagnostic.open_float()
 end, { desc = "LSP diagnostic loclist" })

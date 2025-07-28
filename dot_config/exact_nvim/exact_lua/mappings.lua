@@ -115,10 +115,6 @@ map("n", "<leader>fm", function()
   require("snacks").picker.man()
 end, { desc = "Find man" })
 
-map("n", "<leader>fn", function()
-  require("snacks").picker.notifications()
-end, { desc = "Find notifications" })
-
 map("n", "<leader>fo", function()
   require("snacks").picker.recent()
 end, { desc = "Find old Files" })

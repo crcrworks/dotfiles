@@ -1,8 +1,8 @@
 local map = vim.keymap.set
 
-map("n", "<Leader>fN", function()
-  require("noice").cmd "all"
-end)
+map("n", "<Leader>fn", function()
+  require("noice").cmd "telescope"
+end, { desc = "Find notifications" })
 
 return {
   {
@@ -11,6 +11,8 @@ return {
     dependencies = {
       -- if you lazy-load any plugin below, make sure to add proper `module="..."` entries
       "MunifTanjim/nui.nvim",
+
+      "nvim-telescope/telescope.nvim",
     },
     opts = {
       lsp = {

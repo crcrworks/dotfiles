@@ -13,11 +13,9 @@ return {
       local this_os = vim.uv.os_uname().sysname
 
       local liblldb_path = vim.fn.expand "$MASON/share/lldb"
-      -- The path in windows is different
       if this_os:find "Windows" then
         liblldb_path = liblldb_path .. "\\bin\\lldb.dll"
       else
-        -- The liblldb extension is .so for linux and .dylib for macOS
         liblldb_path = liblldb_path .. "/lib/liblldb" .. (this_os == "Linux" and ".so" or ".dylib")
       end
       adapter = cfg.get_codelldb_adapter(codelldb_path, liblldb_path)
@@ -25,30 +23,108 @@ return {
       adapter = cfg.get_codelldb_adapter()
     end
 
-    local astrolsp_avail, astrolsp = pcall(require, "astrolsp")
-    -- local astrolsp_opts = (astrolsp_avail and astrolsp.lsp_opts "rust_analyzer") or {}
-    -- local server = {
-    --   ---@type table | (fun(project_root:string|nil, default_settings: table|nil):table) -- The rust-analyzer settings or a function that creates them.
-    --   settings = function(project_root, default_settings)
-    --     local astrolsp_settings = astrolsp_opts.settings or {}
-    --
-    --     local merge_table = require("astrocore").extend_tbl(default_settings or {}, astrolsp_settings)
-    --     local ra = require "rustaceanvim.config.server"
-    --     -- load_rust_analyzer_settings merges any found settings with the passed in default settings table and then returns that table
-    --     return ra.load_rust_analyzer_settings(project_root, {
-    --       settings_file_pattern = "rust-analyzer.json",
-    --       default_settings = merge_table,
-    --     })
-    --   end,
-    -- }
-    -- local final_server = require("astrocore").extend_tbl(astrolsp_opts, server)
-    -- return {
-    --   server = final_server,
-    --   dap = { adapter = adapter, load_rust_types = true },
-    --   tools = { enable_clippy = false },
-    -- }
+    local server = {
+      on_attach = function(client, bufnr)
+        vim.keymap.set("n", "<leader>la", function()
+          vim.cmd.RustLsp "codeAction"
+        end, { desc = "Code Action", buffer = bufnr })
+        vim.keymap.set("n", "<leader>d", function()
+          vim.cmd.RustLsp "debuggables"
+        end, { desc = "Rust Debuggables", buffer = bufnr })
+
+        if client.server_capabilities.codeLensProvider then
+          local group_name = "codelens_" .. bufnr
+          vim.api.nvim_create_augroup(group_name, { clear = true })
+          vim.api.nvim_create_autocmd({ "BufEnter", "CursorHold", "InsertLeave" }, {
+            group = group_name,
+            callback = function()
+              vim.lsp.codelens.refresh()
+            end,
+            buffer = bufnr,
+          })
+        end
+      end,
+      settings = {
+        ["rust-analyzer"] = {
+          cargo = {
+            allFeatures = true,
+            loadOutDirsFromCheck = true,
+            buildScripts = {
+              enable = true,
+            },
+          },
+          check = {
+            command = "clippy",
+            extraArgs = {
+              "--no-deps",
+            },
+          },
+          checkOnSave = true,
+          diagnostics = {
+            enable = true,
+          },
+          procMacro = {
+            enable = true,
+            ignored = {
+              ["async-trait"] = { "async_trait" },
+              ["napi-derive"] = { "napi" },
+              ["async-recursion"] = { "async_recursion" },
+            },
+          },
+          inlayHints = {
+            genericParameterHints = {
+              type = {
+                enable = true,
+              },
+            },
+          },
+          lens = {
+            enable = true,
+            implementations = {
+              enable = true,
+            },
+            references = {
+              adt = {
+                enable = true,
+              },
+              enumVariant = {
+                enable = true,
+              },
+              method = {
+                enable = true,
+              },
+              trait = {
+                enable = true,
+              },
+            },
+            run = {
+              enable = true,
+            },
+          },
+          files = {
+            excludeDirs = {
+              ".direnv",
+              ".git",
+              ".github",
+              ".gitlab",
+              "bin",
+              "node_modules",
+              "target",
+              "venv",
+              ".venv",
+            },
+          },
+        },
+      },
+    }
+
+    return {
+      server = server,
+      dap = { adapter = adapter, load_rust_types = true },
+      tools = { enable_clippy = false },
+    }
   end,
-  -- config = function(_, opts)
-  --   vim.g.rustaceanvim = require("astrocore").extend_tbl(opts, vim.g.rustaceanvim)
-  -- end,
+  config = function(_, opts)
+    vim.g.rustaceanvim = opts
+  end,
 }

@@ -41,11 +41,13 @@ return {
     view = {
       width = 40,
     },
+    git = { ignore = false },
     renderer = {
       root_folder_label = function(path)
         return vim.fn.fnamemodify(path, ":t")
       end,
 
+      hidden_display = "all",
       group_empty = true,
       highlight_git = false,
 

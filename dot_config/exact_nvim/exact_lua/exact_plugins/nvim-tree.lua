@@ -23,8 +23,9 @@ local function my_on_attach(bufnr)
   vim.keymap.set("n", "h", lefty, opts "Left")
 end
 
--- Close if lasat window
-vim.cmd [[autocmd BufEnter * ++nested if winnr('$') == 1 && bufname() == 'NvimTree_' . tabpagenr() | quit | endif]]
+vim.schedule(function()
+  api.tree.toggle { focus = false }
+end)
 
 return {
   "nvim-tree/nvim-tree.lua",

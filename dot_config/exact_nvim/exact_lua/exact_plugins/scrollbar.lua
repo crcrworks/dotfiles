@@ -1,4 +1,4 @@
-local theme = require "base46.themes.everforest"
+local theme = require("base46.themes.everforest").base_30
 
 return {
   "petertriho/nvim-scrollbar",
@@ -7,15 +7,15 @@ return {
     require("scrollbar").setup {
       handle = {
         blend = 30,
-        color = theme.base_30.grey,
+        color = theme.grey,
       },
       marks = {
-        Search = { color = theme.base_30.orange },
-        Error = { color = theme.base_30.red },
-        Warn = { color = theme.base_30.yellow },
-        Info = { color = theme.base_30.purple },
-        Hint = { color = theme.base_30.green },
-        Misc = { color = theme.base_30.nord_blue },
+        Search = { color = theme.orange },
+        Error = { color = theme.red },
+        Warn = { color = theme.yellow },
+        Info = { color = theme.purple },
+        Hint = { color = theme.green },
+        Misc = { color = theme.nord_blue },
       },
       excluded_filetypes = {
         "",

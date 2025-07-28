@@ -1,4 +1,4 @@
-local theme = require "base46.themes.everforest"
+local theme = require("base46.themes.everforest").base_30
 
 return {
   {
@@ -24,8 +24,8 @@ return {
             right_arrow = ">",
           },
           style = {
-            { fg = theme.base_30.light_grey },
-            { fg = theme.base_30.red }, -- this fg is used to highlight wrong chunk
+            { fg = theme.light_grey },
+            { fg = theme.red }, -- this fg is used to highlight wrong chunk
           },
           textobject = "",
           max_file_size = 1024 * 1024,
@@ -48,7 +48,7 @@ return {
         line_num = {
           enable = true,
           use_treesitter = false,
-          style = theme.base_30.light_grey,
+          style = theme.light_grey,
         },
       }
     end,

@@ -1,12 +1,12 @@
 require("nvchad.configs.lspconfig").defaults()
 
-local lsp_dir = vim.fn.stdpath "config" .. "/lua/configs/lsp"
+local lsp_dir = vim.fn.stdpath "config" .. "/lua/lsp"
 local language_configs = {}
 
 for name in vim.fs.dir(lsp_dir) do
   if name:match "%.lua$" then
     local module_name = name:gsub("%.lua$", "")
-    table.insert(language_configs, require("configs.lsp." .. module_name))
+    table.insert(language_configs, require("lsp." .. module_name))
   end
 end
 

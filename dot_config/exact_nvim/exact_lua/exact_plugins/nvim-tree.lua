@@ -43,6 +43,9 @@ return {
     view = {
       width = 40,
     },
+    filters = {
+      dotfiles = true,
+    },
     git = { ignore = false },
     renderer = {
       root_folder_label = function(path)

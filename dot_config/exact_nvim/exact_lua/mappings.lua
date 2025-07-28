@@ -1,4 +1,6 @@
 local map = vim.keymap.set
+local tabufline = require "nvchad.tabufline"
+local snacks = require "snacks"
 
 map("n", ";", ":", { desc = "CMD enter command mode" })
 
@@ -22,18 +24,18 @@ map("n", "<C-j>", "<C-w>j", { desc = "switch window down" })
 map("n", "<C-k>", "<C-w>k", { desc = "switch window up" })
 
 map("n", "<tab>", function()
-  require("nvchad.tabufline").next()
+  tabufline.next()
 end, { desc = "buffer goto next" })
 
 map("n", "<S-tab>", function()
-  require("nvchad.tabufline").prev()
+  tabufline.prev()
 end, { desc = "buffer goto prev" })
 
 map("v", "<tab>", ">gv", { desc = "buffer goto next" })
 map("v", "<S-tab>", "<gv", { desc = "buffer goto prev" })
 
 map("n", "<leader>c", function()
-  require("nvchad.tabufline").close_buffer()
+  tabufline.close_buffer()
 end, { desc = "buffer close" })
 
 map("n", "<leader>/", "gcc", { desc = "toggle comment", remap = true })
@@ -42,97 +44,97 @@ map("v", "<leader>/", "gc", { desc = "toggle comment", remap = true })
 -- picker
 
 map("n", "<leader>gb", function()
-  require("snacks").picker.git_branches()
+  snacks.picker.git_branches()
 end, { desc = "Git branches" })
 
 map("n", "<leader>gc", function()
-  require("snacks").picker.git_log()
+  snacks.picker.git_log()
 end, { desc = "Git commits (repository)" })
 
 map("n", "<leader>gC", function()
-  require("snacks").picker.git_log { current_file = true, follow = true }
+  snacks.picker.git_log { current_file = true, follow = true }
 end, { desc = "Git commits (current file)" })
 
 map("n", "<leader>gt", function()
-  require("snacks").picker.git_status()
+  snacks.picker.git_status()
 end, { desc = "Git status" })
 
 map("n", "<leader>gT", function()
-  require("snacks").picker.git_stash()
+  snacks.picker.git_stash()
 end, { desc = "Git stash" })
 
 map("n", "<leader>ff", function()
-  require("snacks").picker.files {
+  snacks.picker.files {
     hidden = vim.tbl_get((vim.uv or vim.loop).fs_stat ".git" or {}, "type") == "directory",
   }
 end, { desc = "Find files" })
 
 map("n", "<leader>fF", function()
-  require("snacks").picker.files { hidden = true, ignored = true }
+  snacks.picker.files { hidden = true, ignored = true }
 end, { desc = "Find all files" })
 
 map("n", "<leader>fw", function()
-  require("snacks").picker.grep()
+  snacks.picker.grep()
 end, { desc = "Find words" })
 
 map("n", "<leader>fW", function()
-  require("snacks").picker.grep { hidden = true, ignored = true }
+  snacks.picker.grep { hidden = true, ignored = true }
 end, { desc = "Find words in  all files" })
 
 map("n", "<leader>f'", function()
-  require("snacks").picker.marks()
+  snacks.picker.marks()
 end, { desc = "Find marks" })
 
 map("n", "<leader>fl", function()
-  require("snacks").picker.lines()
+  snacks.picker.lines()
 end, { desc = "Find lines" })
 
 map("n", "<leader>fb", function()
-  require("snacks").picker.buffers()
+  snacks.picker.buffers()
 end, { desc = "Find buffers" })
 
 map("n", "<leader>fc", function()
-  require("snacks").picker.grep_word()
+  snacks.picker.grep_word()
 end, { desc = "Find word under cursor" })
 
 map("n", "<leader>fC", function()
-  require("snacks").picker.commands()
+  snacks.picker.commands()
 end, { desc = "Find commands" })
 
 map("n", "<leader>fg", function()
-  require("snacks").picker.git_files()
+  snacks.picker.git_files()
 end, { desc = "Find git files" })
 
 map("n", "<leader>fh", function()
-  require("snacks").picker.help()
+  snacks.picker.help()
 end, { desc = "Find git files" })
 
 map("n", "<leader>fk", function()
-  require("snacks").picker.keymaps()
+  snacks.picker.keymaps()
 end, { desc = "Find keymaps" })
 
 map("n", "<leader>fm", function()
-  require("snacks").picker.man()
+  snacks.picker.man()
 end, { desc = "Find man" })
 
 map("n", "<leader>fo", function()
-  require("snacks").picker.recent()
+  snacks.picker.recent()
 end, { desc = "Find old Files" })
 
 map("n", "<leader>fO", function()
-  require("snacks").picker.recent { filder = { cwd = true } }
+  snacks.picker.recent { filder = { cwd = true } }
 end, { desc = "Find old Files(cwd)" })
 
 map("n", "<leader>fp", function()
-  require("snacks").picker.projects()
+  snacks.picker.projects()
 end, { desc = "Find projects" })
 
 map("n", "<leader>fr", function()
-  require("snacks").picker.registers()
+  snacks.picker.registers()
 end, { desc = "Find registers" })
 
 map("n", "<leader>fs", function()
-  require("snacks").picker.smart()
+  snacks.picker.smart()
 end, { desc = "Find buffers/recent/registers" })
 
 map("n", "<leader>ft", function()
@@ -140,11 +142,11 @@ map("n", "<leader>ft", function()
 end, { desc = "Find themes" })
 
 map("n", "<leader>fi", function()
-  require("snacks").picker.highlights()
+  snacks.picker.highlights()
 end, { desc = "Find highlights" })
 
 map("n", "<leader>fu", function()
-  require("snacks").picker.undo()
+  snacks.picker.undo()
 end, { desc = "Find undo history" })
 
 map("n", "<leader>ls", function()
@@ -152,7 +154,7 @@ map("n", "<leader>ls", function()
   if aerial_avail and aerial.snacks_picker then
     aerial.snacks_picker()
   else
-    require("snacks").picker.lsp_symbols()
+    snacks.picker.lsp_symbols()
   end
 end, { desc = "Search symbols" })
 
@@ -197,7 +199,7 @@ map("n", "<leader>uL", function()
 end, { desc = "LSP CodeLens run" })
 
 map("n", "<leader>lD", function()
-  require("snacks").picker.diagnostics()
+  snacks.picker.diagnostics()
 end, { desc = "Search diagnostics" })
 
 map({ "n", "x" }, "<leader>lf", function()

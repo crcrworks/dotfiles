@@ -1,5 +1,6 @@
 return {
-  vtsls = {
+  "vtsls",
+  {
     filetypes = {
       "javascript",
       "javascriptreact",

@@ -1,0 +1,3 @@
+return {
+  tombi = { settings = {} },
+}

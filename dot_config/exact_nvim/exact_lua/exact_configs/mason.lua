@@ -7,7 +7,6 @@ return {
     "html-lsp",
     "lua-language-server",
     "prettierd",
-    "stylelint",
     "stylelint-lsp",
     "stylua",
     "typos-lsp",

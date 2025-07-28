@@ -24,6 +24,7 @@ return {
 
     String = { fg = "vibrant_green", link = "" },
     Include = { fg = "red" },
+
     ["@variable"] = { fg = "white" },
     ["@variable.builtin"] = { fg = "dark_purple" },
     ["@variable.parameter"] = { fg = "white" },

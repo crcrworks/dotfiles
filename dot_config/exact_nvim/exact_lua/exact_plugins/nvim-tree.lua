@@ -23,9 +23,10 @@ local function my_on_attach(bufnr)
   vim.keymap.set("n", "h", lefty, opts "Left")
 end
 
-vim.schedule(function()
-  api.tree.toggle { focus = false }
-end)
+-- auto open on startup
+-- vim.schedule(function()
+--   api.tree.toggle { focus = false }
+-- end)
 
 return {
   "nvim-tree/nvim-tree.lua",

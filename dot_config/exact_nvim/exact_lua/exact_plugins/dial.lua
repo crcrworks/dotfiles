@@ -1,18 +1,18 @@
 local map = vim.keymap.set
 
-map("v", "<C-a>", function()
+map("v", "<C-x>", function()
   return require("dial.map").manipulate("decrement", "visual")
 end, { desc = "Increment" })
 
-map("v", "<C-x>", function()
+map("v", "<C-a>", function()
   return require("dial.map").manipulate("increment", "visual")
 end, { desc = "decrement" })
 
-map("n", "<C-a>", function()
+map("n", "<C-x>", function()
   return require("dial.map").manipulate("decrement", "normal")
 end, { desc = "Increment" })
 
-map("n", "<C-x>", function()
+map("n", "<C-a>", function()
   return require("dial.map").manipulate("increment", "normal")
 end, { desc = "decrement" })
 

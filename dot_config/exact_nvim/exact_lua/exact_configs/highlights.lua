@@ -1,10 +1,26 @@
 return {
   override = {
-    DiagnosticUnderlineOk = { underline = true, sp = "green" },
-    DiagnosticUnderlineHint = { underline = true, sp = "vibrant_green" },
-    DiagnosticUnderlineInfo = { underline = true, sp = "nord_blue" },
-    DiagnosticUnderlineWarn = { underline = true, sp = "yellow" },
-    DiagnosticUnderlineError = { underline = true, sp = "red" },
+    DiagnosticUnderlineOk = { undercurl = true, sp = "green" },
+    DiagnosticUnderlineHint = { undercurl = true, sp = "vibrant_green" },
+    DiagnosticUnderlineInfo = { undercurl = true, sp = "nord_blue" },
+    DiagnosticUnderlineWarn = { undercurl = true, sp = "yellow" },
+    DiagnosticUnderlineError = { undercurl = true, sp = "red" },
+
+    LspCodelens = { fg = "light_grey" },
+
+    NvimTreeFolderName = { fg = "nord_blue" },
+    NvimTreeEmptyFolderName = { fg = "nord_blue" },
+    NvimTreeOpenedFolderName = { fg = "nord_blue" },
+    NvimTreeFolderIcon = { fg = "nord_blue" },
+    NvimTreeFolderArrowOpen = { fg = "nord_blue" },
+    NvimTreeCutHL = { undercurl = true, sp = "purple" },
+    NvimTreeCopiedHL = { undercurl = true, sp = "nord_blue" },
+    NvimTreeBookmarkHL = { undercurl = true, sp = "green" },
+
+    SpellBad = { undercurl = true, sp = "orange" },
+    SpellCap = { undercurl = true, sp = "yellow" },
+    SpellRare = { undercurl = true, sp = "nord_blue" },
+    SpellLocal = { undercurl = true, sp = "green" },
 
     String = { fg = "vibrant_green", link = "" },
     Include = { fg = "red" },

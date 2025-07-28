@@ -1,6 +1,6 @@
 return {
   stylelint_lsp = {
-    cmd = { "stylelint-lsp", "--stdio" },
+    root_markers = { { ".stylelintrc.json" }, ".git" },
     filetypes = {
       "scss",
     },

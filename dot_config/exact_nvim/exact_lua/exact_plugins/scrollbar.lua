@@ -1,4 +1,12 @@
-local theme = require("base46.themes.everforest").base_30
+local theme = {
+  grey = "#4e565c",
+  orange = "#e69875",
+  red = "#e67e80",
+  yellow = "#dbbc7f",
+  purple = "#ecafcc",
+  green = "#83c092",
+  nord_blue = "#78b4ac",
+}
 
 return {
   "petertriho/nvim-scrollbar",

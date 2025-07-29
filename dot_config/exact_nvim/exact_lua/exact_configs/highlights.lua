@@ -22,6 +22,16 @@ return {
     NvimTreeCopiedHL = { undercurl = true, sp = "nord_blue" },
     NvimTreeBookmarkHL = { undercurl = true, sp = "green" },
 
+    MiniIconsGrey = { fg = "grey" },
+    MiniIconsGreen = { fg = "green" },
+    MiniIconsAzure = { fg = "blue" },
+    MiniIconsPurple = { fg = "purple" },
+    MiniIconsBlue = { fg = "nord_blue" },
+    MiniIconsCyan = { fg = "nord_blue" },
+    MiniIconsRed = { fg = "red" },
+    MiniIconsOrange = { fg = "orange" },
+    MiniIconsYellow = { fg = "yellow" },
+
     SpellBad = { undercurl = true, sp = "orange" },
     SpellCap = { undercurl = true, sp = "yellow" },
     SpellRare = { undercurl = true, sp = "nord_blue" },

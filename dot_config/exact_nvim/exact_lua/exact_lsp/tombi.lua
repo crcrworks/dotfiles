@@ -1,5 +1,5 @@
 return {
-  "bombi",
+  "tombi",
   opts = {
     cmd = { "tombi", "lsp" },
     filetypes = { "toml" },

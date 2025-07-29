@@ -1,47 +1,5 @@
 local map = vim.keymap.set
-local tabufline = require "nvchad.tabufline"
 local snacks = require "snacks"
-
-map("n", ";", ":", { desc = "CMD enter command mode" })
-
-map("n", "<leader><enter>", "<cmd>noh<cr>")
-map("n", "<Leader>w", "<cmd>w<cr>")
-map("n", "<C-s>", "<cmd>w<cr>")
-
-map("n", "<Leader>e", "<cmd>NvimTreeToggle<cr>")
-map("n", "<Leader>o", "<cmd>NvimTreeFocus<cr>")
-
-map("i", "<C-b>", "<ESC>^i", { desc = "move beginning of line" })
-map("i", "<C-e>", "<End>", { desc = "move end of line" })
-map("i", "<C-h>", "<Left>", { desc = "move left" })
-map("i", "<C-l>", "<Right>", { desc = "move right" })
-map("i", "<C-j>", "<Down>", { desc = "move down" })
-map("i", "<C-k>", "<Up>", { desc = "move up" })
-
-map("n", "<C-h>", "<C-w>h", { desc = "switch window left" })
-map("n", "<C-l>", "<C-w>l", { desc = "switch window right" })
-map("n", "<C-j>", "<C-w>j", { desc = "switch window down" })
-map("n", "<C-k>", "<C-w>k", { desc = "switch window up" })
-
-map("n", "<tab>", function()
-  tabufline.next()
-end, { desc = "buffer goto next" })
-
-map("n", "<S-tab>", function()
-  tabufline.prev()
-end, { desc = "buffer goto prev" })
-
-map("v", "<tab>", ">gv", { desc = "buffer goto next" })
-map("v", "<S-tab>", "<gv", { desc = "buffer goto prev" })
-
-map("n", "<leader>c", function()
-  tabufline.close_buffer()
-end, { desc = "buffer close" })
-
-map("n", "<leader>/", "gcc", { desc = "toggle comment", remap = true })
-map("v", "<leader>/", "gc", { desc = "toggle comment", remap = true })
-
--- picker
 
 map("n", "<leader>gb", function()
   snacks.picker.git_branches()
@@ -157,51 +115,3 @@ map("n", "<leader>ls", function()
     snacks.picker.lsp_symbols()
   end
 end, { desc = "Search symbols" })
-
--- terminal
-map("t", "<C-x>", "<C-\\><C-N>", { desc = "terminal escape terminal mode" })
-
--- new terminals
-map("n", "<leader>h", function()
-  require("nvchad.term").new { pos = "sp" }
-end, { desc = "terminal new horizontal term" })
-
-map("n", "<leader>v", function()
-  require("nvchad.term").new { pos = "vsp" }
-end, { desc = "terminal new vertical term" })
-
-map("n", "<leader>ps", "<cmd>Lazy<cr>")
-map("n", "<leader>pm", "<cmd>Mason<cr>")
-
--- LSP
-map("n", "gl", function()
-  vim.diagnostic.open_float()
-end, { desc = "LSP diagnostic loclist" })
-
-map("n", "gD", function()
-  vim.lsp.buf.declaration()
-end, { desc = "Declaration of current symbol" })
-
-map("n", "gd", function()
-  vim.lsp.buf.definition()
-end, { desc = "Show the definition of current symbol" })
-
-map("n", "<leader>ll", function()
-  vim.lsp.codelens.refresh()
-end, { desc = "LSP CodeLens refresh" })
-
-map("n", "<leader>lL", function()
-  vim.lsp.codelens.run()
-end, { desc = "LSP CodeLens run" })
-
-map("n", "<leader>uL", function()
-  vim.lsp.codelens.toggle()
-end, { desc = "LSP CodeLens run" })
-
-map("n", "<leader>lD", function()
-  snacks.picker.diagnostics()
-end, { desc = "Search diagnostics" })
-
-map({ "n", "x" }, "<leader>lf", function()
-  require("conform").format { lsp_fallback = true }
-end, { desc = "general format file" })

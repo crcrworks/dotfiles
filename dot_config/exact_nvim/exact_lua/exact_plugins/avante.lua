@@ -1,6 +1,3 @@
-local map = vim.keymap.set
-map("v", "<leader>A", "<cmd>AvanteEdit<cr>")
-
 return {
   "yetone/avante.nvim",
   build = vim.fn.has "win32" == 1 and "powershell -ExecutionPolicy Bypass -File Build.ps1 -BuildFromSource false"

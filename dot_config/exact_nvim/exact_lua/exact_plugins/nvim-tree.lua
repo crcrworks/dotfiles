@@ -1,3 +1,7 @@
+local map = vim.keymap.set
+map("n", "<Leader>e", "<cmd>NvimTreeToggle<cr>")
+map("n", "<Leader>o", "<cmd>NvimTreeFocus<cr>")
+
 local function my_on_attach(bufnr)
   local api = require "nvim-tree.api"
 

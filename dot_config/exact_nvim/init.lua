@@ -1,11 +1,6 @@
 vim.g.base46_cache = vim.fn.stdpath "data" .. "/base46/"
 vim.g.mapleader = " "
 
-vim.cmd [[
-  xnoremap p "_dP
-]]
-
--- bootstrap lazy and all plugins
 local lazypath = vim.fn.stdpath "data" .. "/lazy/lazy.nvim"
 
 if not vim.uv.fs_stat(lazypath) then
@@ -17,7 +12,6 @@ vim.opt.rtp:prepend(lazypath)
 
 local lazy_config = require "configs.lazy"
 
--- load plugins
 require("lazy").setup({
   {
     "NvChad/NvChad",
@@ -34,7 +28,5 @@ require "options"
 require "autocmds"
 
 vim.schedule(function()
-  require "mappings"
+  require "configs.mappings"
 end)
-
-vim.g.vscode_snippets_path = vim.fn.stdpath "config" .. "/snippets"

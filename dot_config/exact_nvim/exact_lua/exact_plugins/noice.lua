@@ -1,9 +1,3 @@
-local map = vim.keymap.set
-
-map("n", "<Leader>fn", function()
-  require("noice").cmd "telescope"
-end, { desc = "Find notifications" })
-
 return {
   {
     "folke/noice.nvim",

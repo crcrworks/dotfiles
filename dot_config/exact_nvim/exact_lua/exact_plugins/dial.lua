@@ -1,8 +1,30 @@
 return {
   "monaqa/dial.nvim",
   lazy = true,
+  opts = {
+    on_attach = function()
+      local map = vim.keymap.set
+      local dial = require "dial.map"
+      map("v", "<C-x>", function()
+        return dial.manipulate("decrement", "visual")
+      end, { desc = "Increment" })
+
+      map("v", "<C-a>", function()
+        return dial.manipulate("increment", "visual")
+      end, { desc = "decrement" })
+
+      map("n", "<C-x>", function()
+        return dial.manipulate("decrement", "normal")
+      end, { desc = "Increment" })
+
+      map("n", "<C-a>", function()
+        return dial.manipulate("increment", "normal")
+      end, { desc = "decrement" })
+    end,
+  },
   config = function()
     local augend = require "dial.augend"
+
     require("dial.config").augends:register_group {
       default = {
         augend.integer.alias.decimal,

@@ -11,7 +11,7 @@ vim.api.nvim_create_autocmd("FileType", {
 
 return {
   "cssmodules-language-server",
-  {
+  opts = {
     init_options = {
       camelCase = false,
     },

@@ -11,5 +11,6 @@ return {
     "stylua",
     "typos-lsp",
     "vtsls",
+    "gopls",
   },
 }

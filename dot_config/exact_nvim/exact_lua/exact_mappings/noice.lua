@@ -1,7 +1,7 @@
 local map = vim.keymap.set
 
 map("n", "<leader>fn", function()
-  require("snacks").notifier.show_history {}
+  require("noice").cmd "telescope"
 end, { desc = "Find notifications" })
 
 map("n", "<leader>fN", function()

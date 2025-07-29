@@ -60,7 +60,7 @@ return {
       root_folder_label = false,
       hidden_display = "all",
       group_empty = true,
-      highlight_git = false,
+      highlight_git = true,
       indent_markers = { enable = true },
 
       icons = {

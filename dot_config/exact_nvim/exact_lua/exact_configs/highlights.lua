@@ -17,6 +17,7 @@ return {
     NvimTreeHiddenIcon = { fg = "light_grey" },
     NvimTreeHiddenFolderHL = { fg = "light_grey" },
     NvimTreeHiddenFileHL = { fg = "light_grey" },
+    NvimTreeIndentMarker = { fg = "grey" },
     NvimTreeCutHL = { undercurl = true, sp = "purple" },
     NvimTreeCopiedHL = { undercurl = true, sp = "nord_blue" },
     NvimTreeBookmarkHL = { undercurl = true, sp = "green" },

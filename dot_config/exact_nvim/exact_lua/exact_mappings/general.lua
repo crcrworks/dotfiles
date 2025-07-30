@@ -1,5 +1,5 @@
 local map = vim.keymap.set
-local tabufline = require "nvchad.tabufline"
+local tabufline = require "ui.tabufline"
 
 map("n", ";", ":", { desc = "CMD enter command mode" })
 

@@ -9,6 +9,7 @@ local options = {
       "defaults",
       "devicons",
       "git",
+      "diffview",
       "lsp",
       "mason",
       "leap",

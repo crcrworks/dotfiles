@@ -9,5 +9,5 @@ return {
     "typescript.tsx",
   },
   root_markers = { ".git" },
-  cmd = { os.getenv "TSGOPATH", "--lsp", "--stdio" },
+  cmd = { "tsgo", "--lsp", "--stdio" },
 }

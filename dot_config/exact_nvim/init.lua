@@ -14,7 +14,7 @@ local lazy_config = require "configs.lazy"
 
 -- build theme integrations
 if not vim.uv.fs_stat(vim.fn.stdpath "data" .. "/base46/") then
-  require("base46").compile()
+  require("base46").load_all_highlights()
 end
 
 require("lazy").setup({
@@ -32,5 +32,4 @@ require "autocmds"
 vim.schedule(function()
   require "configs.mappings"
   require "ui"
-  require("base46").load_all_highlights()
 end)

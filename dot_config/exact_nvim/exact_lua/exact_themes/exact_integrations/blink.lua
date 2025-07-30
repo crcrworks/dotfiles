@@ -14,7 +14,7 @@ local highlights = {
   BlinkCmpScrollBarGutter = { bg = colors.black2 },
   BlinkCmpLabel = { fg = colors.white },
   BlinkCmpLabelDeprecated = { fg = colors.red, strikethrough = true },
-  BlinkCmpLabelMatch = { fg = colors.blue, bold = true },
+  BlinkCmpLabelMatch = { fg = colors.orange, bold = true },
   BlinkCmpLabelDetail = { fg = colors.light_grey },
   BlinkCmpLabelDescription = { fg = colors.light_grey },
   BlinkCmpSource = { fg = colors.grey_fg },

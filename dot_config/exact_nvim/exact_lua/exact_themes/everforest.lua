@@ -1,5 +1,3 @@
-local highlights = require "themes.highlights"
-
 local M = {
   type = "dark",
 
@@ -56,10 +54,8 @@ local M = {
   },
 
   polish_hl = {
-    treesitter = highlights.override,
+    -- treesitter = require "themes.integrations.treesitter",
   },
 }
-
-M = require("base46").override_theme(M, "everforest")
 
 return M

@@ -1,25 +1,28 @@
-local highlights = require "themes.highlights"
-
 local options = {
   base46 = {
     theme = "everforest",
-    hl_add = highlights.add,
-    hl_override = highlights.override,
     integrations = {
+      "blink",
       "cmp",
+      "snacks",
+      "noice",
       "defaults",
       "devicons",
       "git",
       "lsp",
       "mason",
+      "leap",
+      "avante",
       "nvimtree",
       "statusline",
       "syntax",
       "treesitter",
       "tbline",
       "whichkey",
+      "mini-icons",
+      "tiny-inline-diagnostic",
+      "codeactionmenu",
     },
-    changed_themes = {},
     transparency = false,
     theme_toggle = { "onedark", "one_light" },
   },

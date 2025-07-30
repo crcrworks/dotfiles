@@ -27,7 +27,7 @@ return {
     fg = colors.purple,
   },
   MiniIconsCyan = {
-    fg = colors.cyan,
+    fg = colors.blue,
   },
 
   MiniIconsGrey = {

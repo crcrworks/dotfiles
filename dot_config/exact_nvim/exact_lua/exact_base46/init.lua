@@ -62,15 +62,6 @@ M.extend_default_hl = function(highlights, integration_name)
     end
   end
 
-  local hl_override = opts.hl_override
-  local overridden_hl = M.turn_str_to_color(hl_override)
-
-  for key, value in pairs(overridden_hl) do
-    if highlights[key] then
-      highlights[key] = M.merge_tb(highlights[key], value)
-    end
-  end
-
   return highlights
 end
 
@@ -144,11 +135,6 @@ M.load_all_highlights = function()
   end)
 
   vim.api.nvim_exec_autocmds("User", { pattern = "NvThemeReload" })
-end
-
-M.override_theme = function(default_theme, theme_name)
-  local changed_themes = opts.changed_themes
-  return M.merge_tb(default_theme, changed_themes.all or {}, changed_themes[theme_name] or {})
 end
 
 --------------------------- user functions ----------------------------------------------------------

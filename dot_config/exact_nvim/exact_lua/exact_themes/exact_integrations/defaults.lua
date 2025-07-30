@@ -79,12 +79,20 @@ local defaults = {
   LazyReasonImport = { fg = colors.white },
   LazyProgressDone = { fg = colors.green },
 
-  NvDashAscii = { fg = colors.blue },
-  NvDashButtons = { fg = colors.light_grey },
-  NvDashFooter = { fg = colors.red },
+  DiagnosticUnderlineOk = { undercurl = true, sp = colors.green },
+  DiagnosticUnderlineHint = { undercurl = true, sp = colors.vibrant_green },
+  DiagnosticUnderlineInfo = { undercurl = true, sp = colors.nord_blue },
+  DiagnosticUnderlineWarn = { undercurl = true, sp = colors.yellow },
+  DiagnosticUnderlineError = { undercurl = true, sp = colors.red },
+
+  LspCodelens = { fg = colors.light_grey },
+
+  SpellBad = { undercurl = true, sp = colors.orange },
+  SpellCap = { undercurl = true, sp = colors.yellow },
+  SpellRare = { undercurl = true, sp = colors.nord_blue },
+  SpellLocal = { undercurl = true, sp = colors.green },
+
+  RenameFloatBorder = { fg = colors.grey },
 }
 
--- merge statusline & hl_add tables!
-local merge_tb = require("base46").merge_tb
-local hexify_ColorStrs = require("base46").turn_str_to_color
-return merge_tb(defaults, hexify_ColorStrs(require("configs.ui").base46.hl_add))
+return defaults

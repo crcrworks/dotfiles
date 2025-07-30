@@ -12,8 +12,8 @@ local pos_data = {
   ["bo vsp"] = { resize = "width", area = "columns" },
 }
 
-local nvconfig = require "configs.ui"
-local config = nvconfig.term
+local ui_config = require "configs.ui"
+local config = ui_config.term
 
 if config.base46_colors then
   dofile(vim.g.base46_cache .. "term")

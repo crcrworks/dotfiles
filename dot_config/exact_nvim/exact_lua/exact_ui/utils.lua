@@ -34,9 +34,7 @@ end
 
 M.reload = function(module)
   require("plenary.reload").reload_module "ui"
-  require("plenary.reload").reload_module "chadrc"
   require("plenary.reload").reload_module "base46"
-  require("plenary.reload").reload_module "nvchad"
 
   if module then
     require("plenary.reload").reload_module(module)

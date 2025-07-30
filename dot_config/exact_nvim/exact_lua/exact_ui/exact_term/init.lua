@@ -12,7 +12,7 @@ local pos_data = {
   ["bo vsp"] = { resize = "width", area = "columns" },
 }
 
-local nvconfig = require "ui.config"
+local nvconfig = require "configs.ui"
 local config = nvconfig.term
 
 if config.base46_colors then

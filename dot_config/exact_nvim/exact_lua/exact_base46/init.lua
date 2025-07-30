@@ -1,26 +1,8 @@
 local M = {}
-local g = vim.g
-local opts = require("ui.config").base46
+local opts = require("configs.ui").base46
 local cache_path = vim.g.base46_cache
 
-local integrations = {
-  "cmp",
-  "defaults",
-  "devicons",
-  "git",
-  "lsp",
-  "mason",
-  "nvimtree",
-  "statusline",
-  "syntax",
-  "treesitter",
-  "tbline",
-  "whichkey",
-}
-
-for _, value in ipairs(opts.integrations) do
-  table.insert(integrations, value)
-end
+local integrations = require("configs.ui").base46.integrations
 
 M.get_theme_tb = function(type)
   local name = opts.theme
@@ -175,9 +157,9 @@ M.toggle_transparency = function()
   M.load_all_highlights()
 
   package.loaded.chadrc = nil
-  local old = require("ui.config").base46.transparency
+  local old = require("configs.ui").base46.transparency
   local new = "transparency = " .. tostring(opts.transparency)
-  require("ui.config.utils").replace_word("transparency = " .. tostring(old), new)
+  require("ui.utils").replace_word("transparency = " .. tostring(old), new)
 end
 
 return M

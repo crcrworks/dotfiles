@@ -7,7 +7,7 @@ local btn = require("ui.tabufline.utils").btn
 local strep = string.rep
 local style_buf = require("ui.tabufline.utils").style_buf
 local cur_buf = api.nvim_get_current_buf
-local opts = require("ui.config").ui.tabufline
+local opts = require("configs.ui").ui.tabufline
 
 local M = {}
 g.toggle_theme_icon = "   "

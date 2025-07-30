@@ -1,7 +1,7 @@
 local M = {}
 local masonames = require "ui.mason.names"
-local pkgs = require("ui.config").mason.pkgs
-local skipped = require("ui.config").mason.skip
+local pkgs = require("configs.ui").mason.pkgs
+local skipped = require("configs.ui").mason.skip
 
 M.get_pkgs = function()
   local tools = {}

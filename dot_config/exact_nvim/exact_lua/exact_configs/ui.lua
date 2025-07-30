@@ -5,7 +5,20 @@ local options = {
     theme = "everforest",
     hl_add = highlights.add,
     hl_override = highlights.override,
-    integrations = {},
+    integrations = {
+      "cmp",
+      "defaults",
+      "devicons",
+      "git",
+      "lsp",
+      "mason",
+      "nvimtree",
+      "statusline",
+      "syntax",
+      "treesitter",
+      "tbline",
+      "whichkey",
+    },
     changed_themes = {},
     transparency = false,
     theme_toggle = { "onedark", "one_light" },
@@ -66,5 +79,5 @@ local options = {
   },
 }
 
-local status, chadrc = pcall(require, "ui.config")
+local status, chadrc = pcall(require, "configs.ui")
 return vim.tbl_deep_extend("force", options, status and chadrc or {})

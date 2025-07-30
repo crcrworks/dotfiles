@@ -1,6 +1,6 @@
 local colors = require("base46").get_theme_tb "base_30"
 
-local config = require "ui.config"
+local config = require "configs.ui"
 
 local highlights = {
   MiniTablineCurrent = {

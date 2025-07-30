@@ -1,4 +1,4 @@
-local config = require "ui.config"
+local config = require "configs.ui"
 
 if config.ui.statusline.enabled then
   vim.o.statusline = "%!v:lua.require('ui.statusline.init')()"

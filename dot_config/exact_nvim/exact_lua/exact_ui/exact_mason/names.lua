@@ -1,5 +1,6 @@
 return {
   als = "ada-language-server",
+  tombi = "tombi",
   angularls = "angular-language-server",
   ansiblels = "ansible-language-server",
   antlersls = "antlers-language-server",

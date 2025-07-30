@@ -14,7 +14,7 @@ local orders = {
 }
 
 M.generate = function(theme, modules)
-  local config = require("ui.config").ui.statusline
+  local config = require("configs.ui").ui.statusline
   local order = config.order or orders[theme]
   local result = {}
 

@@ -3,9 +3,8 @@ local fn = vim.fn
 local opt_local = vim.api.nvim_set_option_value
 local base46_path = vim.fn.fnamemodify(debug.getinfo(require("base46").merge_tb, "S").source:sub(2), ":p:h")
 
-
 M.replace_word = function(old, new, filepath)
-  filepath = filepath or vim.fn.stdpath "config" .. "/lua/" .. "ui/config.lua"
+  filepath = filepath or vim.fn.stdpath "config" .. "/lua/" .. "configs/ui.lua"
 
   local file = io.open(filepath, "r")
   if file then

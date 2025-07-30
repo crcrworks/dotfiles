@@ -1,7 +1,7 @@
 local theme = require("base46").get_theme_tb "base_16"
 local base30 = require("base46").get_theme_tb "base_30"
 
-local opts = require("ui.config").base46
+local opts = require("configs.ui").base46
 local transparent = opts.transparent
 
 return {

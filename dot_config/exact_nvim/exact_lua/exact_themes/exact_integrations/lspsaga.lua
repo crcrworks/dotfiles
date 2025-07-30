@@ -1,6 +1,6 @@
 local colors = require("base46").get_theme_tb "base_30"
 
-local opts = require("ui.config").base46
+local opts = require("configs.ui").base46
 
 if opts.transparency then
   return {}

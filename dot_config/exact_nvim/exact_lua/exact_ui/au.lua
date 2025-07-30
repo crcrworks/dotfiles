@@ -1,5 +1,5 @@
 local autocmd = vim.api.nvim_create_autocmd
-local config = require "ui.config"
+local config = require "configs.ui"
 
 if config.lsp.signature then
   autocmd("LspAttach", {

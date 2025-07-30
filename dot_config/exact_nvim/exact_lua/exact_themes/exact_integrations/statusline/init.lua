@@ -1,4 +1,4 @@
-local stl = require("ui.config").ui.statusline
+local stl = require("configs.ui").ui.statusline
 
 if not stl.enabled then
   return {}

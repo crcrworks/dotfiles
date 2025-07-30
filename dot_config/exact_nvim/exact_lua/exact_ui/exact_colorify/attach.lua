@@ -1,6 +1,6 @@
 local fn = vim.fn
 local api = vim.api
-local conf = require("ui.config").colorify
+local conf = require("configs.ui").colorify
 local ns = require("ui.colorify.state").ns
 
 local get_extmarks = api.nvim_buf_get_extmarks

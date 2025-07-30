@@ -5,7 +5,7 @@ return {
   event = "BufRead",
   opts = {
     editor = {
-      client = "Nvim",
+      -- client = "Nvim",
       tooltip = "",
     },
     buttons = {

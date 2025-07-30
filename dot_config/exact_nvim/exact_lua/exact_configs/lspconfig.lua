@@ -75,18 +75,34 @@ M.defaults = function()
   vim.lsp.enable "lua_ls"
 end
 
+-- Loading LSP files
+
 local lsp_dir = vim.fn.stdpath "config" .. "/lua/lsp"
+local excluded_keys = { 1, "enabled", "opts" }
 
 for name in vim.fs.dir(lsp_dir) do
   if name:match "%.lua$" then
     local module_name = name:gsub("%.lua$", "")
     local config = require("lsp." .. module_name)
 
-    local server_name = config[1]
-    local opts = config.opts
+    if config.enabled ~= false then
+      local server_name = config[1]
+      local opts = {}
 
-    vim.lsp.config(server_name, opts)
-    vim.lsp.enable(server_name)
+      local excluded_set = {}
+      for _, key in ipairs(excluded_keys) do
+        excluded_set[key] = true
+      end
+
+      for key, value in pairs(config) do
+        if not excluded_set[key] then
+          opts[key] = value
+        end
+      end
+
+      vim.lsp.config(server_name, opts)
+      vim.lsp.enable(server_name)
+    end
   end
 end
 

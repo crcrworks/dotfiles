@@ -1,6 +1,4 @@
 return {
   "gopls",
-  opts = {
-    filetypes = { "go" },
-  },
+  filetypes = { "go" },
 }

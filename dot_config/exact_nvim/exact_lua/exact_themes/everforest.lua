@@ -1,4 +1,4 @@
-local highlights = require "configs.highlights"
+local highlights = require "themes.highlights"
 
 local M = {
   type = "dark",

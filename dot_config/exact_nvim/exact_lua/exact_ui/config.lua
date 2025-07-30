@@ -1,10 +1,14 @@
-local highlights = require "configs.highlights"
+local highlights = require "themes.highlights"
 
 local options = {
   base46 = {
     theme = "everforest",
     hl_add = highlights.add,
     hl_override = highlights.override,
+    integrations = {},
+    changed_themes = {},
+    transparency = false,
+    theme_toggle = { "onedark", "one_light" },
   },
 
   lsp = {

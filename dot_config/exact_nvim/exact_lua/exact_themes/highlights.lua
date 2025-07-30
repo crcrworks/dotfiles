@@ -159,5 +159,7 @@ return {
     NoiceCmdlineIconHelp = { fg = "green" },
     NoiceCmdlineIconFilter = { fg = "green" },
     NoiceCmdlineIconCalculator = { fg = "green" },
+
+    RenameFloatBorder = { fg = "grey" },
   },
 }

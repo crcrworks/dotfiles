@@ -40,6 +40,11 @@ map("v", "<leader>/", "gc", { desc = "toggle comment", remap = true })
 map("n", "<leader>ps", "<cmd>Lazy<cr>")
 map("n", "<leader>pm", "<cmd>Mason<cr>")
 
+map("n", "<leader>tr", function()
+  require("base46").load_all_highlights()
+  print "Theme reloaded: everforest"
+end, { desc = "Reload theme" })
+
 vim.cmd [[
   xnoremap p "_dP
 ]]

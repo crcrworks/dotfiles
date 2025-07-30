@@ -65,12 +65,12 @@ return function()
       col = 1,
       relative = "cursor",
       width = #to_rename + 15,
-      title = { { " Renamer ", "@comment.danger" } },
+      title = "",
       title_pos = "center",
     }
 
     local win = api.nvim_open_win(buf, true, winopts)
-    vim.wo[win].winhl = "Normal:Normal,FloatBorder:Removed"
+    vim.wo[win].winhl = "Normal:Normal,FloatBorder:RenameFloatBorder"
     api.nvim_set_current_win(win)
 
     api.nvim_buf_set_lines(buf, 0, -1, true, { " " .. to_rename })
@@ -79,7 +79,11 @@ return function()
     vim.fn.prompt_setprompt(buf, "")
     vim.api.nvim_input "A"
 
-    vim.keymap.set({ "i", "n" }, "<Esc>", function()
+    vim.keymap.set("i", "<Esc>", function()
+      vim.cmd "stopinsert"
+    end, { buffer = buf })
+
+    vim.keymap.set("n", "<Esc>", function()
       api.nvim_buf_delete(buf, { force = true })
     end, { buffer = buf })
 

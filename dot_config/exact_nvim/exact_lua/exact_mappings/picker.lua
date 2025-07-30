@@ -95,10 +95,6 @@ map("n", "<leader>fs", function()
   snacks.picker.smart()
 end, { desc = "Find buffers/recent/registers" })
 
-map("n", "<leader>ft", function()
-  require("nvchad.themes").open()
-end, { desc = "Find themes" })
-
 map("n", "<leader>fi", function()
   snacks.picker.highlights()
 end, { desc = "Find highlights" })

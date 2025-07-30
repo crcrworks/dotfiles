@@ -13,11 +13,6 @@ vim.opt.rtp:prepend(lazypath)
 local lazy_config = require "configs.lazy"
 
 require("lazy").setup({
-  -- {
-  --   "NvChad/NvChad",
-  --   lazy = false,
-  --   branch = "v2.5",
-  -- },
   { import = "plugins" },
 }, lazy_config)
 
@@ -26,8 +21,9 @@ dofile(vim.g.base46_cache .. "statusline")
 
 require "options"
 require "autocmds"
-require "ui"
 
 vim.schedule(function()
   require "configs.mappings"
+  require "ui"
+  require("base46").load_all_highlights()
 end)

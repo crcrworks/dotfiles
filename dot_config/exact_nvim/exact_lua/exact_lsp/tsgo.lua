@@ -1,5 +1,6 @@
 return {
   "tsgo",
+  enabled = false,
   filetypes = {
     "javascript",
     "javascriptreact",

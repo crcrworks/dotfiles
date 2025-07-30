@@ -12,8 +12,23 @@ vim.opt.rtp:prepend(lazypath)
 
 local lazy_config = require "configs.lazy"
 
--- build theme integrations
-if not vim.uv.fs_stat(vim.fn.stdpath "data" .. "/base46/") then
+local function should_load_highlights()
+  local base46_dir = vim.fn.stdpath "data" .. "/base46/"
+  if not vim.uv.fs_stat(base46_dir) then
+    return true
+  end
+
+  local integrations = require("configs.ui").base46.integrations
+  for _, name in ipairs(integrations) do
+    if not vim.uv.fs_stat(base46_dir .. name) then
+      return true
+    end
+  end
+
+  return false
+end
+
+if should_load_highlights() then
   require("base46").load_all_highlights()
 end
 

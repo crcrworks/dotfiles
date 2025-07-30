@@ -123,5 +123,5 @@ return {
 
   ["@tag"] = { fg = base30.orange },
   ["@tag.builtin"] = { fg = base30.yellow },
-  ["@tag.delimiter"] = { fg = base30.blue },
+  ["@tag.delimiter"] = { fg = base30.vibrant_green },
 }

@@ -125,9 +125,9 @@ M.load_all_highlights = function()
   require("plenary.reload").reload_module "base46"
   M.compile()
 
-  for _, name in ipairs(integrations) do
-    dofile(vim.g.base46_cache .. name)
-  end
+  -- for _, name in ipairs(integrations) do
+  --   dofile(vim.g.base46_cache .. name)
+  -- end
 
   -- update blankline
   pcall(function()

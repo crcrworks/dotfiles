@@ -12,13 +12,19 @@ vim.opt.rtp:prepend(lazypath)
 
 local lazy_config = require "configs.lazy"
 
+-- build theme integrations
+if not vim.uv.fs_stat(vim.fn.stdpath "data" .. "/base46/") then
+  require("base46").compile()
+end
+
 require("lazy").setup({
   { import = "plugins" },
 }, lazy_config)
 
-dofile(vim.g.base46_cache .. "defaults")
-dofile(vim.g.base46_cache .. "snacks")
-dofile(vim.g.base46_cache .. "statusline")
+local integrations = require("configs.ui").base46.integrations
+for _, name in ipairs(integrations) do
+  dofile(vim.g.base46_cache .. name)
+end
 
 require "options"
 require "autocmds"

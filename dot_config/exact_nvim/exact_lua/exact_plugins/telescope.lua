@@ -1,5 +1,3 @@
-dofile(vim.g.base46_cache .. "telescope")
-
 return {
   "nvim-telescope/telescope.nvim",
   cmds = "<leader>fn",

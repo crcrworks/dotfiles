@@ -1,6 +1,10 @@
 local map = vim.keymap.set
 local tabufline = require "ui.tabufline"
 
+map("n", "<space>pb", function()
+  require("base46").compile()
+end, { desc = "Build theme to cache" })
+
 map("n", ";", ":", { desc = "CMD enter command mode" })
 
 map("n", "<leader><enter>", "<cmd>noh<cr>")

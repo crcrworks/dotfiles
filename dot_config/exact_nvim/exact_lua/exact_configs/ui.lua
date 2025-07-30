@@ -17,6 +17,7 @@ local options = {
       "statusline",
       "syntax",
       "treesitter",
+      "telescope",
       "tbline",
       "whichkey",
       "mini-icons",

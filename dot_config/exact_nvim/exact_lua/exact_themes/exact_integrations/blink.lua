@@ -25,7 +25,7 @@ local highlights = {
   BlinkCmpDocCursorLine = { bg = colors.one_bg },
   BlinkCmpSignatureHelp = { bg = colors.black },
   BlinkCmpSignatureHelpBorder = { fg = colors.grey_fg },
-  BlinkCmpSignatureHelpActiveParameter = { fg = colors.blue, bold = true },
+  BlinkCmpSignatureHelpActiveParameter = { fg = colors.nord_blue, bold = true },
 }
 
 -- Kind highlights
@@ -41,11 +41,11 @@ local kinds = {
   Type = base16.base0A,
   Keyword = base16.base07,
   Method = base16.base0D,
-  Constructor = colors.blue,
+  Constructor = colors.nord_blue,
   Folder = base16.base07,
   Module = base16.base0A,
   Property = base16.base08,
-  Enum = colors.blue,
+  Enum = colors.nord_blue,
   Unit = base16.base0E,
   Class = colors.teal,
   File = base16.base07,

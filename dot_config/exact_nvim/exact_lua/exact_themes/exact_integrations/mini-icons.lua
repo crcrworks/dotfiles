@@ -9,7 +9,7 @@ return {
     fg = colors.teal,
   },
   MiniIconsBlue = {
-    fg = colors.blue,
+    fg = colors.nord_blue,
   },
   MiniIconsRed = {
     fg = colors.red,
@@ -27,7 +27,7 @@ return {
     fg = colors.purple,
   },
   MiniIconsCyan = {
-    fg = colors.blue,
+    fg = colors.cyan,
   },
 
   MiniIconsGrey = {

@@ -8,13 +8,10 @@ experimental = true
 "bun" = "latest"
 "uv" = "latest"
 "python" = "latest"
-"cargo:eza" = "latest"
-"cargo:fd-find" = "latest"
-"cargo:zoxide" = "latest"
-"cargo:starship" = "latest"
-"cargo:hyperfine" = "latest"
-"cargo:typos-cli" = "latest"
 "npm:@typescript/native-preview" = "latest"
 
 [hooks]
 postinstall = "npx corepack enable"
+
+[tasks."brew-install"]
+run = "Brew bundle"

@@ -4,7 +4,7 @@ theme:
       primary: "#D3C6AA"
       secondary: "#69a59d"
       inverted: "#F7F1FF"
-      faint: "#3a4248"
+      faint: "#656d73"
       warning: "#e67e80"
       success: "#83c092"
     background:
@@ -12,5 +12,4 @@ theme:
     border:
       primary: "#656d73"
       secondary: "#626a70"
-      faint: "#3a4248"
-
+      faint: "#656d73"

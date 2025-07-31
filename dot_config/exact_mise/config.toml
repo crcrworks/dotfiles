@@ -18,4 +18,3 @@ experimental = true
 
 [hooks]
 postinstall = "npx corepack enable"
-

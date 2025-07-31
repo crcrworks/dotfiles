@@ -23,15 +23,8 @@ brew "fd"
 brew "lazydocker"
 brew "lazysql"
 brew "hyperfine"
-
-# Development
-brew "go"
-brew "rust"
-brew "deno"
-brew "eslint"
-brew "pnpm"
-brew "git"
 brew "colima"
+brew "git"
 
 # Application
 cask "discord"

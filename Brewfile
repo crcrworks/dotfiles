@@ -19,9 +19,9 @@ brew "zoxide"
 brew "cmake"
 brew "dust"
 brew "typos-cli"
-brew "rainfrog"
-brew "rainfrog"
 brew "fd"
+brew "lazydocker"
+brew "lazysql"
 brew "hyperfine"
 
 # Development

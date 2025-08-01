@@ -15,11 +15,13 @@ return {
     indent = { enable = true },
     ensure_installed = {
       "lua",
+      "svelte",
       "luadoc",
       "printf",
       "vim",
       "vimdoc",
       "html",
+      "sql",
       "css",
       "typescript",
       "javascript",

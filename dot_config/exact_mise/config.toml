@@ -2,13 +2,13 @@
 experimental = true
 
 [tools]
-"rust" = { version = "latest", components = "rust-src,llvm-tools" }
-"node" = "latest"
-"go" = "latest"
-"bun" = "latest"
-"uv" = "latest"
-"python" = "latest"
-"npm:@typescript/native-preview" = "latest"
+"rust" = { version = "stable", components = "rust-src,llvm-tools" }
+"node" = "22"
+"go" = "1.25rc2"
+"bun" = "1.2.19"
+"uv" = "0.8.4"
+"python" = "3.13.5"
+"npm:@typescript/native-preview" = "7.0.0-dev.20250801.1"
 
 [hooks]
 postinstall = "npx corepack enable"

@@ -3,7 +3,7 @@
 local options = {
   formatters_by_ft = {
     lua = { "stylua" },
-    scss = { "prettierd" },
+    scss = { "stylelint" },
     javascript = { "biome-check" },
     typescript = { "biome-check" },
     typescriptreact = { "biome-check" },

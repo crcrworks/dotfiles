@@ -1,3 +1,5 @@
+local ensure_installed = require "configs.treesitter"
+
 return {
   "nvim-treesitter/nvim-treesitter",
   event = { "BufReadPost", "BufNewFile" },
@@ -13,24 +15,6 @@ return {
     },
 
     indent = { enable = true },
-    ensure_installed = {
-      "lua",
-      "svelte",
-      "luadoc",
-      "printf",
-      "vim",
-      "vimdoc",
-      "html",
-      "sql",
-      "css",
-      "typescript",
-      "javascript",
-      "tsx",
-      "json",
-      "rust",
-      "scss",
-      "css",
-      "go",
-    },
+    ensure_installed = ensure_installed,
   },
 }

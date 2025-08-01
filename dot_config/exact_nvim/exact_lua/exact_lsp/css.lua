@@ -1,6 +1,6 @@
 return {
   "cssls",
-  filetypes = { "css" },
+  filetypes = { "css", "scss" },
   init_options = {
     provideFormatter = false,
   },

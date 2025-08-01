@@ -3,11 +3,11 @@
 local options = {
   formatters_by_ft = {
     lua = { "stylua" },
-    scss = { "stylelint" },
-    javascript = { "biome-check" },
-    typescript = { "biome-check" },
-    typescriptreact = { "biome-check" },
-    javascriptreact = { "biome-check" },
+    scss = { "dprint" },
+    javascript = { "dprint" },
+    typescript = { "dprint" },
+    typescriptreact = { "dprint" },
+    javascriptreact = { "dprint" },
     fish = { "fish_indent" },
   },
 

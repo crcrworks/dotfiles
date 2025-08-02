@@ -10,7 +10,7 @@ vim.api.nvim_create_autocmd("FileType", {
 })
 
 return {
-  "cssmodules-language-server",
+  "cssmodules_ls",
   init_options = {
     camelCase = false,
   },

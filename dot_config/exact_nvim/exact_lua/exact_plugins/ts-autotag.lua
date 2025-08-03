@@ -1,6 +1,6 @@
 return {
   "windwp/nvim-ts-autotag",
-  ft = { "typescriptreact", "typescript", "javascript", "javascriptreact" },
+  ft = { "typescriptreact", "typescript", "javascript", "javascriptreact", "vue" },
   opts = {
     opts = {
       enable_close = true,

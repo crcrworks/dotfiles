@@ -16,4 +16,5 @@ return {
   "scss",
   "css",
   "go",
+  "vue",
 }

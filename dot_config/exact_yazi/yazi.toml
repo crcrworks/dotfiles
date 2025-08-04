@@ -1,19 +1,19 @@
 [mgr]
 show_hidden = true
+linemode = "size_and_mtime"
 
 [opener]
 edit = [
-	{ run = 'nvim "$@"', block = true },
-	{ run = 'code "$@"', block = true },
+  { run = 'nvim "$@"', block = true },
+  { run = 'code "$@"', block = true },
 ]
 
 [plugin]
 prepend_previewers = [
-	# { name = "*.csv", run = "rich-preview" },
-	# { name = "*.md", run = "rich-preview" },
-	# { name = "*.rst", run = "rich-preview" },
-	# { name = "*.ipynb", run = "rich-preview" },
-	# { name = "*.json", run = "rich-preview" },
+  # { name = "*.csv", run = "rich-preview" },
+  # { name = "*.md", run = "rich-preview" },
+  # { name = "*.rst", run = "rich-preview" },
+  # { name = "*.ipynb", run = "rich-preview" },
+  # { name = "*.json", run = "rich-preview" },
 ]
-
 append_previewers = [{ name = "*", run = "hexyl" }]

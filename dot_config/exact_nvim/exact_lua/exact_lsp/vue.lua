@@ -1,3 +1,0 @@
-return {
-  "vue_ls",
-}

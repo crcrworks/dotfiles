@@ -19,4 +19,7 @@ return {
   { import = "crosspond-extra.pack.yaml" },
   { import = "crosspond-extra.pack.toml" },
   { import = "crosspond-extra.pack.go" },
+  { import = "crosspond-extra.pack.markdown" },
+  { import = "crosspond-extra.pack.json" },
+  { import = "crosspond-extra.pack.docker" },
 }

@@ -5,7 +5,4 @@ return {
   "vim",
   "vimdoc",
   "html",
-  "sql",
-  "json",
-  "vue",
 }

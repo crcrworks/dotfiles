@@ -18,4 +18,5 @@ return {
   { import = "crosspond-extra.pack.typos" },
   { import = "crosspond-extra.pack.yaml" },
   { import = "crosspond-extra.pack.toml" },
+  { import = "crosspond-extra.pack.go" },
 }

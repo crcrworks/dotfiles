@@ -7,6 +7,5 @@ return {
   "html",
   "sql",
   "json",
-  "go",
   "vue",
 }

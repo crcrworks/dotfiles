@@ -13,15 +13,12 @@ vim.opt.rtp:prepend(lazypath)
 local lazy_config = require "configs.lazy"
 
 require("lazy").setup({
-  dev = {
-    path = "~/Development/nvim", -- not working
-    patterns = { "crosspond", "crosspond-ui", "crosspond-base46" },
-  },
   {
     "crcrworks/crosspond.nvim",
     lazy = false,
     import = "crosspond.plugins",
   },
+  { import = "extra" },
   { import = "plugins" },
 }, lazy_config)
 
@@ -31,8 +28,8 @@ for _, name in ipairs(integrations) do
 end
 
 require "options"
-require "autocmds"
+require "crosspond.autocmds"
 
 vim.schedule(function()
-  require "configs.mappings"
+  require "crosspond.configs.mappings"
 end)

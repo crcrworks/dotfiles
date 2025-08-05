@@ -1,8 +1,8 @@
 local map = vim.keymap.set
-local tabufline = require "ui.tabufline"
+local tabufline = require "crosspond-ui.tabufline"
 
 map("n", "<space>pb", function()
-  require("base46").compile()
+  require("crosspond-base46").compile()
 end, { desc = "Build theme to cache" })
 
 map("n", ";", ":", { desc = "CMD enter command mode" })
@@ -45,7 +45,7 @@ map("n", "<leader>ps", "<cmd>Lazy<cr>")
 map("n", "<leader>pm", "<cmd>Mason<cr>")
 
 map("n", "<leader>tr", function()
-  require("base46").load_all_highlights()
+  require("crosspond-base46").load_all_highlights()
   print "Theme reloaded: everforest"
 end, { desc = "Reload theme" })
 

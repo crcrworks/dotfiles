@@ -29,6 +29,13 @@ local options = {
     theme_toggle = { "onedark", "one_light" },
   },
 
+  cmp = {
+    icons_left = false, -- only for non-atom styles
+    style = "atom_colored", -- default/flat_light/flat_dark/atom/atom_colored
+    abbr_maxwidth = 60,
+    format_colors = { lsp = true, icon = "󱓻" },
+  },
+
   lsp = {
     signature = false,
   },

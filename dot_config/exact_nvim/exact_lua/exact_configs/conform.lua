@@ -1,6 +1,6 @@
 -- Formatters:  https://github.com/stevearc/conform.nvim/tree/master/lua/conform/formatters
 
-local options = {
+return {
   formatters_by_ft = {
     lua = { "stylua" },
     scss = { "dprint" },
@@ -16,5 +16,3 @@ local options = {
     lsp_fallback = true,
   },
 }
-
-return options

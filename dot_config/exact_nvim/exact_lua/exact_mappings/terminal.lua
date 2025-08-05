@@ -1,5 +1,5 @@
 local map = vim.keymap.set
-local terminal = require "ui.term"
+local terminal = require "crosspond-ui.term"
 
 map("t", "<C-x>", "<C-\\><C-N>", { desc = "terminal escape terminal mode" })
 

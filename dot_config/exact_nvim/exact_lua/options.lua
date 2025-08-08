@@ -1,7 +1,6 @@
 local opt = vim.opt
 local o = vim.o
 local g = vim.g
-
 o.laststatus = 3
 o.showmode = false
 o.splitkeep = "screen"
@@ -55,3 +54,14 @@ local is_windows = vim.fn.has "win32" ~= 0
 local sep = is_windows and "\\" or "/"
 local delim = is_windows and ";" or ":"
 vim.env.PATH = table.concat({ vim.fn.stdpath "data", "mason", "bin" }, sep) .. delim .. vim.env.PATH
+
+if g.neovide then
+  g.neovide_cursor_animation_length = 0.04
+  g.neovide_cursor_trail_size = 0
+  g.neovide_scroll_animation_length = 0.1
+  g.neovide_hide_mouse_when_typing = true
+  g.neovide_scale_factor = 1.0
+  g.neovide_position_animation_length = 0.05
+  g.neovide_refresh_rate_idle = 5
+  g.neovide_floating_shadow = false
+end

@@ -1,7 +1,6 @@
 alias o="open ."
 alias x="exit"
 alias cl="clear"
-alias nv="nvim"
 alias emacs="emacs -nw"
 alias intel="arch -x86_64 bash"
 alias bb="bartib"
@@ -15,6 +14,7 @@ alias gl="git log --oneline --graph --all"
 alias yt="yt-dlp"
 alias port="lsof"
 alias vencode-install="open /Users/crcr/Development/installer/VencordInstaller\ 5.app"
+alias nv="neovide"
 
 # brew
 alias bl="brew list --formula"

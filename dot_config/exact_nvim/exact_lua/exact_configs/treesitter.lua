@@ -17,4 +17,5 @@ return {
   "css",
   "go",
   "vue",
+  "python",
 }

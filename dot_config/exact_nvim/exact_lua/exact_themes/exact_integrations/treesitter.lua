@@ -1,6 +1,5 @@
 local theme = require("base46").get_theme_tb "base_16"
 local base30 = require("base46").get_theme_tb "base_30"
-
 return {
   String = { fg = base30.vibrant_green, link = "" },
   Include = { fg = base30.red },
@@ -34,7 +33,7 @@ return {
   ["@variable"] = { fg = base30.white },
   ["@variable.builtin"] = { fg = base30.dark_purple },
   ["@variable.parameter"] = { fg = base30.white },
-  ["@variable.parameter.builtin"] = { fg = base30.white },
+  ["@variable.parameter.builtin"] = { fg = base30.nord_blue },
   ["@variable.member"] = { fg = base30.nord_blue },
 
   ["@constant"] = { fg = base30.white },
@@ -124,4 +123,6 @@ return {
   ["@tag"] = { fg = base30.orange },
   ["@tag.builtin"] = { fg = base30.yellow },
   ["@tag.delimiter"] = { fg = base30.vibrant_green },
+
+  ["@lsp.type.enumMember"] = { fg = base30.nord_blue },
 }

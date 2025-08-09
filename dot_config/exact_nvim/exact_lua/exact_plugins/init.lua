@@ -25,4 +25,6 @@ return {
       return { override = require "ui.icons.devicons" }
     end,
   },
+
+  { import = "ui.blink.lazyspec" },
 }

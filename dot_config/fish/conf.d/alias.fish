@@ -14,7 +14,7 @@ alias gl="git log --oneline --graph --all"
 alias yt="yt-dlp"
 alias port="lsof"
 alias vencode-install="open /Users/crcr/Development/installer/VencordInstaller\ 5.app"
-alias nv="neovide"
+alias nv="nvim"
 
 # brew
 alias bl="brew list --formula"

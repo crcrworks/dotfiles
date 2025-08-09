@@ -34,6 +34,9 @@ end, { desc = "buffer goto prev" })
 map("v", "<tab>", ">gv", { desc = "buffer goto next" })
 map("v", "<S-tab>", "<gv", { desc = "buffer goto prev" })
 
+map("n", "\\", "<cmd>split<cr>", { desc = "split window vertically" })
+map("n", "|", "<cmd>vsplit<cr>", { desc = "split window holizontaly" })
+
 map("n", "<leader>c", function()
   tabufline.close_buffer()
 end, { desc = "buffer close" })

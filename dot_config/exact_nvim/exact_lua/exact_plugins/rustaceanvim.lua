@@ -25,9 +25,9 @@ return {
 
     local server = {
       on_attach = function(client, bufnr)
-        vim.keymap.set("n", "<leader>la", function()
-          vim.cmd.RustLsp "codeAction"
-        end, { desc = "Code Action", buffer = bufnr })
+        -- vim.keymap.set("n", "<leader>la", function()
+        --   vim.cmd.RustLsp "codeAction"
+        -- end, { desc = "Code Action", buffer = bufnr })
         vim.keymap.set("n", "<leader>d", function()
           vim.cmd.RustLsp "debuggables"
         end, { desc = "Rust Debuggables", buffer = bufnr })

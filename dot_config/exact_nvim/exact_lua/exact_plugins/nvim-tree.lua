@@ -57,6 +57,23 @@ return {
       dotfiles = true,
     },
     git = { ignore = false },
+
+    diagnostics = {
+      enable = true,
+      show_on_dirs = false,
+      show_on_open_dirs = true,
+      debounce_delay = 500,
+      severity = {
+        min = vim.diagnostic.severity.HINT,
+        max = vim.diagnostic.severity.ERROR,
+      },
+      icons = {
+        hint = "",
+        info = "",
+        warning = "",
+        error = "",
+      },
+    },
     renderer = {
       -- root_folder_label = function(path)
       --   return vim.fn.fnamemodify(path, ":t")
@@ -72,6 +89,7 @@ return {
         bookmarks_placement = "after",
         show = {
           git = true,
+          diagnostics = true,
         },
         glyphs = {
           default = "󰈚",

@@ -1,21 +1,10 @@
+local prefix = "<Leader>A"
+
 return {
   "yetone/avante.nvim",
   build = vim.fn.has "win32" == 1 and "powershell -ExecutionPolicy Bypass -File Build.ps1 -BuildFromSource false"
     or "make",
-  cmd = {
-    "AvanteAsk",
-    "AvanteBuild",
-    "AvanteEdit",
-    "AvanteRefresh",
-    "AvanteSwitchProvider",
-    "AvanteShowRepoMap",
-    "AvanteModels",
-    "AvanteChat",
-    "AvanteToggle",
-    "AvanteClear",
-    "AvanteFocus",
-    "AvanteStop",
-  },
+  keys = { "<leader>A", desc = "Boot avante" },
   specs = {
     {
       "zbirenbaum/copilot.lua",
@@ -90,5 +79,30 @@ return {
     -- 	-- model = "gpt-4o-mini", -- $0.15/$0.60
     -- 	max_tokens = 4096,
     -- },
+    mappings = {
+      ask = prefix .. "<CR>",
+      edit = prefix .. "e",
+      refresh = prefix .. "r",
+      new_ask = prefix .. "n",
+      focus = prefix .. "f",
+      select_model = prefix .. "?",
+      stop = prefix .. "S",
+      select_history = prefix .. "h",
+      toggle = {
+        default = prefix .. "t",
+        debug = prefix .. "d",
+        hint = prefix .. "H",
+        suggestion = prefix .. "s",
+        repomap = prefix .. "R",
+      },
+      diff = {
+        next = "]c",
+        prev = "[c",
+      },
+      files = {
+        add_current = prefix .. ".",
+        add_all_buffers = prefix .. "B",
+      },
+    },
   },
 }

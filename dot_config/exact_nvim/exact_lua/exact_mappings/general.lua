@@ -9,7 +9,6 @@ map("n", ";", ":", { desc = "CMD enter command mode" })
 
 map("n", "<leader><enter>", "<cmd>noh<cr>")
 map("n", "<Leader>w", "<cmd>w<cr>")
-map("n", "<C-s>", "<cmd>w<cr>")
 
 map("i", "<C-b>", "<ESC>^i", { desc = "move beginning of line" })
 map("i", "<C-e>", "<End>", { desc = "move end of line" })

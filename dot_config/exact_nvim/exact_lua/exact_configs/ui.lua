@@ -12,7 +12,7 @@ local options = {
       "diffview",
       "lsp",
       "mason",
-      "leap",
+      "flash",
       "avante",
       "nvimtree",
       "statusline",

@@ -9,6 +9,7 @@ experimental = true
 "uv" = "0.8.4"
 "python" = "3.13.5"
 "npm:@typescript/native-preview" = "7.0.0-dev.20250801.1"
+"npm:@google/gemini-cli" = "0.1.20"
 
 [hooks]
 postinstall = "npx corepack enable"

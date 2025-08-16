@@ -2,7 +2,7 @@
   "sclass": {
     "prefix": "sclass",
     "body": [
-      "className={style.${4}}",
+      "className={styles.${4}}",
       "${0}"
     ],
     "description": "classname for scss"

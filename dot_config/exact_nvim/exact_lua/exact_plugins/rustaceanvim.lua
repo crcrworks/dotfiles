@@ -79,7 +79,7 @@ return {
             },
           },
           lens = {
-            enable = true,
+            enable = false,
             implementations = {
               enable = true,
             },

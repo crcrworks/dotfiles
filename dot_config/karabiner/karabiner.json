@@ -1,0 +1,488 @@
+{
+  "profiles": [
+    {
+      "complex_modifications": {
+        "rules": [
+          {
+            "description": "Disable Command + h",
+            "manipulators": [
+              {
+                "from": {
+                  "key_code": "h",
+                  "modifiers": {
+                    "mandatory": [
+                      "left_command"
+                    ],
+                    "optional": [
+                      "any"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "page_down",
+                    "modifiers": []
+                  }
+                ],
+                "type": "basic"
+              }
+            ]
+          },
+          {
+            "description": "New Rule (change left_shift+caps_lock to page_down, right_shift+caps_lock to left_command+mission_control)",
+            "manipulators": [
+              {
+                "from": {
+                  "key_code": "caps_lock",
+                  "modifiers": {
+                    "mandatory": [
+                      "left_shift"
+                    ],
+                    "optional": [
+                      "any"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "page_down",
+                    "modifiers": []
+                  }
+                ],
+                "type": "basic"
+              },
+              {
+                "from": {
+                  "key_code": "caps_lock",
+                  "modifiers": {
+                    "mandatory": [
+                      "right_shift"
+                    ],
+                    "optional": [
+                      "any"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "apple_vendor_keyboard_key_code": "mission_control",
+                    "modifiers": [
+                      "left_command"
+                    ]
+                  }
+                ],
+                "type": "basic"
+              }
+            ]
+          },
+          {
+            "description": "Shift + Control + C to Control + C",
+            "manipulators": [
+              {
+                "from": {
+                  "key_code": "c",
+                  "modifiers": {
+                    "mandatory": [
+                      "control",
+                      "left_shift"
+                    ],
+                    "optional": [
+                      "any"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "c",
+                    "modifiers": [
+                      "control"
+                    ]
+                  }
+                ],
+                "type": "basic"
+              }
+            ]
+          },
+          {
+            "description": "Button 4: BrowserBack, Button 5: BrowserForward for Safari",
+            "manipulators": [
+              {
+                "conditions": [
+                  {
+                    "bundle_identifiers": [
+                      "^com\\.apple\\.Safari$",
+                      "^com\\.apple\\.finder$"
+                    ],
+                    "type": "frontmost_application_if"
+                  }
+                ],
+                "from": {
+                  "pointing_button": "button4"
+                },
+                "to": [
+                  {
+                    "key_code": "open_bracket",
+                    "modifiers": [
+                      "command"
+                    ]
+                  }
+                ],
+                "type": "basic"
+              },
+              {
+                "conditions": [
+                  {
+                    "bundle_identifiers": [
+                      "^com\\.apple\\.Safari$",
+                      "^com\\.apple\\.finder$"
+                    ],
+                    "type": "frontmost_application_if"
+                  }
+                ],
+                "from": {
+                  "pointing_button": "button5"
+                },
+                "to": [
+                  {
+                    "key_code": "close_bracket",
+                    "modifiers": [
+                      "command"
+                    ]
+                  }
+                ],
+                "type": "basic"
+              }
+            ]
+          },
+          {
+            "description": "ctrl-c to escape",
+            "manipulators": [
+              {
+                "from": {
+                  "key_code": "c",
+                  "modifiers": {
+                    "mandatory": [
+                      "control"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "escape",
+                    "modifiers": []
+                  }
+                ],
+                "type": "basic"
+              }
+            ]
+          },
+          {
+            "description": "シフトキーを単体で押したときに、英数・かなキーを送信する。（左シフトキーは英数、右シフトキーはかな)",
+            "manipulators": [
+              {
+                "conditions": [
+                  {
+                    "bundle_identifiers": [
+                      "^com\\.FreeholdGames\\.CavesOfQud$",
+                      "^sh\\.osk\\.tetrio-client$"
+                    ],
+                    "type": "frontmost_application_unless"
+                  }
+                ],
+                "from": {
+                  "key_code": "left_shift",
+                  "modifiers": {
+                    "optional": [
+                      "any"
+                    ]
+                  }
+                },
+                "parameters": {
+                  "basic.to_if_held_down_threshold_milliseconds": 0
+                },
+                "to": [
+                  {
+                    "key_code": "left_shift",
+                    "lazy": true
+                  }
+                ],
+                "to_if_alone": [
+                  {
+                    "key_code": "japanese_eisuu"
+                  }
+                ],
+                "to_if_held_down": [
+                  {
+                    "key_code": "left_shift"
+                  }
+                ],
+                "type": "basic"
+              },
+              {
+                "conditions": [
+                  {
+                    "bundle_identifiers": [
+                      "^com\\.FreeholdGames\\.CavesOfQud$",
+                      "^sh\\.osk\\.tetrio-client$"
+                    ],
+                    "type": "frontmost_application_unless"
+                  }
+                ],
+                "from": {
+                  "key_code": "right_shift",
+                  "modifiers": {
+                    "optional": [
+                      "any"
+                    ]
+                  }
+                },
+                "parameters": {
+                  "basic.to_if_held_down_threshold_milliseconds": 0
+                },
+                "to": [
+                  {
+                    "key_code": "right_shift",
+                    "lazy": true
+                  }
+                ],
+                "to_if_alone": [
+                  {
+                    "key_code": "japanese_kana"
+                  }
+                ],
+                "to_if_held_down": [
+                  {
+                    "key_code": "right_shift"
+                  }
+                ],
+                "type": "basic"
+              }
+            ]
+          }
+        ]
+      },
+      "devices": [
+        {
+          "identifiers": {
+            "is_pointing_device": true,
+            "product_id": 53297,
+            "vendor_id": 13364
+          },
+          "ignore": false
+        }
+      ],
+      "name": "Default profile",
+      "selected": true,
+      "simple_modifications": [
+        {
+          "from": {
+            "key_code": "caps_lock"
+          },
+          "to": [
+            {
+              "key_code": "left_control"
+            }
+          ]
+        }
+      ],
+      "virtual_hid_keyboard": {
+        "keyboard_type_v2": "ansi"
+      }
+    },
+    {
+      "devices": [
+        {
+          "identifiers": {
+            "is_keyboard": true,
+            "product_id": 640,
+            "vendor_id": 13364
+          },
+          "simple_modifications": [
+            {
+              "from": {
+                "key_code": "left_command"
+              },
+              "to": [
+                {
+                  "key_code": "d"
+                }
+              ]
+            },
+            {
+              "from": {
+                "key_code": "right_command"
+              },
+              "to": [
+                {
+                  "key_code": "g"
+                }
+              ]
+            },
+            {
+              "from": {
+                "key_code": "tab"
+              },
+              "to": [
+                {
+                  "key_code": "f"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "name": "USC",
+      "virtual_hid_keyboard": {
+        "keyboard_type_v2": "ansi"
+      }
+    },
+    {
+      "devices": [
+        {
+          "identifiers": {
+            "is_keyboard": true,
+            "product_id": 640,
+            "vendor_id": 13364
+          },
+          "simple_modifications": [
+            {
+              "from": {
+                "key_code": "d"
+              },
+              "to": [
+                {
+                  "key_code": "a"
+                }
+              ]
+            },
+            {
+              "from": {
+                "key_code": "k"
+              },
+              "to": [
+                {
+                  "key_code": "a"
+                }
+              ]
+            },
+            {
+              "from": {
+                "key_code": "l"
+              },
+              "to": [
+                {
+                  "key_code": "d"
+                }
+              ]
+            },
+            {
+              "from": {
+                "key_code": "s"
+              },
+              "to": [
+                {
+                  "key_code": "d"
+                }
+              ]
+            },
+            {
+              "from": {
+                "key_code": "spacebar"
+              },
+              "to": [
+                {
+                  "apple_vendor_top_case_key_code": "keyboard_fn"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "name": "drum-taiko"
+    },
+    {
+      "devices": [
+        {
+          "identifiers": {
+            "is_keyboard": true,
+            "product_id": 640,
+            "vendor_id": 13364
+          },
+          "simple_modifications": [
+            {
+              "from": {
+                "key_code": "c"
+              },
+              "to": [
+                {
+                  "key_code": "d"
+                }
+              ]
+            },
+            {
+              "from": {
+                "key_code": "r"
+              },
+              "to": [
+                {
+                  "key_code": "e"
+                }
+              ]
+            },
+            {
+              "from": {
+                "key_code": "spacebar"
+              },
+              "to": [
+                {
+                  "apple_vendor_top_case_key_code": "keyboard_fn"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "name": "drum"
+    },
+    {
+      "complex_modifications": {
+        "rules": [
+          {
+            "description": "マウスの戻るボタン(button4)で戻る",
+            "manipulators": [
+              {
+                "from": {
+                  "pointing_button": "button4"
+                },
+                "to": {
+                  "key_code": "open_bracket",
+                  "modifiers": [
+                    "command"
+                  ]
+                },
+                "type": "basic"
+              }
+            ]
+          }
+        ]
+      },
+      "devices": [
+        {
+          "identifiers": {
+            "is_pointing_device": true,
+            "product_id": 53297,
+            "vendor_id": 13364
+          },
+          "ignore": false
+        }
+      ],
+      "name": "mati"
+    },
+    {
+      "name": "Rocket League",
+      "virtual_hid_keyboard": {
+        "keyboard_type_v2": "ansi"
+      }
+    }
+  ]
+}

@@ -194,6 +194,7 @@ return {
   twiggy_language_server = "twiggy-language-server",
   typos_lsp = "typos-lsp",
   typst_lsp = "typst-lsp",
+  tsp_server = "tsp_server",
   unocss = "unocss-language-server",
   v_analyzer = "v-analyzer",
   vacuum = "vacuum",

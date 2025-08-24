@@ -21,6 +21,11 @@ return {
         functionLikeReturnTypes = { enabled = true },
         enumMemberValues = { enabled = true },
       },
+      tsserver = {
+        experimental = {
+          enableProjectDiagnostics = true,
+        },
+      },
     },
     javascript = {
       updateImportsOnFileMove = { enabled = "always" },

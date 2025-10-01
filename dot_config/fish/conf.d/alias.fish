@@ -15,6 +15,7 @@ alias yt="yt-dlp"
 alias port="lsof"
 alias vencode-install="open /Users/crcr/Development/installer/VencordInstaller\ 5.app"
 alias nv="nvim"
+alias ju="/opt/homebrew/bin/jj"
 
 # brew
 alias bl="brew list --formula"

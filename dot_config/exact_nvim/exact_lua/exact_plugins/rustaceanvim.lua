@@ -74,7 +74,7 @@ return {
           inlayHints = {
             genericParameterHints = {
               type = {
-                enable = true,
+                enable = false,
               },
             },
           },

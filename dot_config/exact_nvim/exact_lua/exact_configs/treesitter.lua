@@ -18,4 +18,5 @@ return {
   "go",
   "vue",
   "python",
+  "typst",
 }

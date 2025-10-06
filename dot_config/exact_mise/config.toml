@@ -20,7 +20,6 @@ experimental = true
 "has" = "1.5.2"
 "tree-sitter" = "0.25.10"
 "jj" = "0.34.0"
-"btop" = "1.4.5"
 "cargo:eza" = "0.23.4"
 "npm:@typescript/native-preview" = "7.0.0-dev.20250801.1"
 

@@ -5,7 +5,7 @@ experimental = true
 "rust" = { version = "stable", components = "rust-src,llvm-tools" }
 "go" = "latest"
 "python" = "latest"
-"node" = "latest"
+"node" = "22"
 "bun" = "latest"
 "uv" = "latest"
 "gemini-cli" = "latest"

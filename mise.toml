@@ -1,3 +1,6 @@
 [[watch_files]]
 patterns = ["**/*"]
 run = "chezmoi apply --force"
+
+[tools]
+chezmoi = "latest"

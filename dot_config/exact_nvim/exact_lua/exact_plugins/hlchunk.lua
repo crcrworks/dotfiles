@@ -44,7 +44,7 @@ return {
       },
 
       line_num = {
-        enable = false,
+        enable = true,
         use_treesitter = false,
         style = theme.light_grey,
       },

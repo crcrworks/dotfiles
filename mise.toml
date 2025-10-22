@@ -3,4 +3,4 @@ patterns = ["**/*"]
 run = "chezmoi apply --force"
 
 [tools]
-zoxide = "latest"
+chezmoi = "latest"

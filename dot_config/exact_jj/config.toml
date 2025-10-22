@@ -1,0 +1,6 @@
+[user]
+name = "crcrworks"
+email = "42961885+crcrworks@users.noreply.github.com"
+
+[ui]
+default-command = "log"

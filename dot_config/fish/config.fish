@@ -26,6 +26,6 @@ end
 
 set -q GHCUP_INSTALL_BASE_PREFIX[1]; or set GHCUP_INSTALL_BASE_PREFIX $HOME
 
+/home/crcr/.local/bin/mise activate fish | source
 starship init fish | source
 zoxide init fish | source
-mise activate fish | source

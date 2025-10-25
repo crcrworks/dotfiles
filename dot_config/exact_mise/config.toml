@@ -2,17 +2,15 @@
 experimental = true
 
 [tools]
-"rust" = { version = "stable", components = "rust-src,llvm-tools" }
+"rust" = { version = "stable", components = "rust-src,llvm-tools,rust-analyzer" }
 "go" = "latest"
 "python" = "latest"
 "node" = "22"
 "bun" = "latest"
 "uv" = "latest"
-"gemini-cli" = "latest"
 "claude-code" = "latest"
 "pnpm" = "latest"
 "typst" = "latest"
-"ffmpeg" = "latest"
 "jq" = "latest"
 "zoxide" = "latest"
 "neovim" = "latest"
@@ -21,9 +19,11 @@ experimental = true
 "tree-sitter" = "latest"
 "jj" = "latest"
 "gh" = "latest"
+"yazi" = "latest"
 "chezmoi" = "latest"
-"cargo:eza" = "latest"
-"npm:@typescript/native-preview" = "latest"
+"eza" = "latest"
+"starship" = "latest"
+"fzf" = "latest"
 
 [hooks]
 postinstall = "npx corepack enable"

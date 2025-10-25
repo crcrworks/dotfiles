@@ -2,7 +2,7 @@
 experimental = true
 
 [tools]
-"rust" = { version = "stable", components = "rust-src,llvm-tools" }
+"rust" = { version = "stable", components = "rust-src,llvm-tools,rust-analyzer" }
 "go" = "latest"
 "python" = "latest"
 "node" = "22"
@@ -24,6 +24,9 @@ experimental = true
 "chezmoi" = "latest"
 "cargo:eza" = "latest"
 "npm:@typescript/native-preview" = "latest"
+"ghq" = "latest"
+"yazi" = "latest"
+"fzf" = "latest"
 
 [hooks]
 postinstall = "npx corepack enable"

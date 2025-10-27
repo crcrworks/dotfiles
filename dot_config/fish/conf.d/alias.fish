@@ -15,7 +15,23 @@ alias yt="yt-dlp"
 alias port="lsof"
 alias vencode-install="open /Users/crcr/Development/installer/VencordInstaller\ 5.app"
 alias nv="nvim"
+
+# jujutsu
 alias ju="mise exec jj -- jj"
+alias jua="ju -r.."
+alias jubl="ju bookmark list"
+alias jubd="ju bookmark delete"
+alias jubd="ju bookmark delete"
+alias jubm="ju bookmark move"
+alias jubt="ju bookmark track"
+alias jur="ju rebase"
+alias jun="ju new"
+alias jud="ju desc -m"
+alias jue="ju edit"
+alias judif="ju diff"
+alias jus="ju status"
+alias jugp="ju git push"
+alias jugf="ju git fetch"
 
 # brew
 alias bl="brew list --formula"

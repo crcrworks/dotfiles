@@ -19,6 +19,7 @@ alias nv="nvim"
 # jujutsu
 alias ju="mise exec jj -- jj"
 alias jua="ju -r.."
+alias jus="ju status"
 alias jubl="ju bookmark list"
 alias jubd="ju bookmark delete"
 alias jubd="ju bookmark delete"

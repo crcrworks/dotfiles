@@ -3,8 +3,10 @@ experimental = true
 idiomatic_version_file_enable_tools = ["rust"]
 
 [tools]
-"rust@stable" = { version = "stable", components = "rust-src,llvm-tools,rust-analyzer" }
-"rust@nightly" = { version = "nightly", components = "rust-src,llvm-tools,rust-analyzer" }
+"rust" = [
+  { version = "stable", components = "rust-src,llvm-tools,rust-analyzer" },
+  { version = "nightly", components = "rust-src,llvm-tools,rust-analyzer" },
+]
 "go" = "latest"
 "python" = "latest"
 "node" = "22"

@@ -30,6 +30,7 @@ idiomatic_version_file_enable_tools = ["rust"]
 "ghq" = "latest"
 "yazi" = "latest"
 "fzf" = "latest"
+"fastfetch" = "latest"
 
 [hooks]
 postinstall = "npx corepack enable"

@@ -26,7 +26,6 @@ idiomatic_version_file_enable_tools = ["rust"]
 "gh" = "latest"
 "chezmoi" = "latest"
 "cargo:eza" = "latest"
-"npm:@typescript/native-preview" = "latest"
 "ghq" = "latest"
 "yazi" = "latest"
 "fzf" = "latest"

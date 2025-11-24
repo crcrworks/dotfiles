@@ -3,10 +3,7 @@ experimental = true
 idiomatic_version_file_enable_tools = ["rust"]
 
 [tools]
-"rust" = [
-  { version = "stable", components = "rust-src,llvm-tools,rust-analyzer" },
-  { version = "nightly", components = "rust-src,llvm-tools,rust-analyzer" },
-]
+"rust" = { version = "stable", components = "rust-src,llvm-tools,rust-analyzer" }
 "go" = "latest"
 "python" = "latest"
 "node" = "22"
@@ -30,6 +27,7 @@ idiomatic_version_file_enable_tools = ["rust"]
 "yazi" = "latest"
 "fzf" = "latest"
 "fastfetch" = "latest"
+"cargo-binstall" = "latest"
 
 [hooks]
 postinstall = "npx corepack enable"

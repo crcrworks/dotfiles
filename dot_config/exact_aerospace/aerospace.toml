@@ -287,3 +287,6 @@ if.window-title-regex-substring = "godot"
 run = "layout floating"
 check-further-callbacks = true
 
+[[on-window-detected]]
+if.app-id = "com.apple.reminders"
+run = "layout floating"

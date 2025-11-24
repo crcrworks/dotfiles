@@ -72,29 +72,25 @@ return {
             },
           },
           inlayHints = {
-            genericParameterHints = {
-              type = {
-                enable = false,
-              },
-            },
+            enable = false,
           },
           lens = {
-            enable = false,
+            enable = true,
             implementations = {
-              enable = true,
+              enable = false,
             },
             references = {
               adt = {
-                enable = true,
+                enable = false,
               },
               enumVariant = {
-                enable = true,
+                enable = false,
               },
               method = {
-                enable = true,
+                enable = false,
               },
               trait = {
-                enable = true,
+                enable = false,
               },
             },
             run = {

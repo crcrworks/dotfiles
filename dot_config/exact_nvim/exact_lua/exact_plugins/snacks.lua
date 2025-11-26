@@ -3,17 +3,21 @@ return {
   lazy = false,
   priority = 1000,
   opts = {
+    -- enabled
     bigfile = { enabled = true },
     dashboard = { enabled = true },
+    gh = { enabled = true },
+    picker = { enabled = true },
+    quickfile = { enabled = true },
+    statuscolumn = { enabled = true },
+    scope = { enabled = true },
+
+    -- disabled
     explorer = { enabled = false },
     indent = { enabled = false },
     input = { enabled = false },
-    picker = { enabled = true },
     notifier = { enabled = false },
-    quickfile = { enabled = true },
-    scope = { enabled = true },
     scroll = { enabled = false },
-    statuscolumn = { enabled = true },
     words = { enabled = false },
   },
 }

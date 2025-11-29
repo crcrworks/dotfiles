@@ -41,5 +41,3 @@ ctrl + shift - f : yabai -m window --toggle float
 ctrl + shift - s : yabai -m window --toggle sticky
 ctrl + shift - p : yabai -m window --toggle sticky --toggle pip
 ctrl + shift - e : yabai -m window --toggle expose
-
-cmd - w : yabai -m window --close && yabai -m window --focus recent

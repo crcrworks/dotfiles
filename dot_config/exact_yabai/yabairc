@@ -33,6 +33,8 @@ yabai -m config window_shadow on \
                 window_opacity off \
                 mouse_follows_focus off \
                 window_animation_duration 0.15 \ 
-                window_animation_easing ease_in_out_quart
+                window_animation_easing ease_in_out_quart \
+                mouse_follows_focus on \
+                focus_follows_mouse autoraise
 
 yabai -m signal --add event=window_destroyed active=yes action="yabai -m window --focus recent || yabai -m window --focus recent"

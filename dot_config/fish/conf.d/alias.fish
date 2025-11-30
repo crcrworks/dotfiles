@@ -39,6 +39,8 @@ alias jug="ju git"
 alias jugp="ju git push"
 alias jugf="ju git fetch"
 
+alias apps="yabai -m query --windows | jq '.[] | {app}'"
+
 # brew
 alias bl="brew list --formula"
 alias bg="brew upgrade"

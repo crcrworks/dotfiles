@@ -27,7 +27,9 @@ yabai -m mouse_drop_action swap
 yabai -m rule --add app="^System Settings$" layer=above manage=off
 yabai -m rule --add app="^Calculator$" manage=off
 yabai -m rule --add app="^Karabiner-Elements$" manage=off
-yabai -m rule --add app="^Spotify$" space=^s
+yabai -m rule --add app="^Finder$" manage=off
+yabai -m rule --add app="^Spotify$" space=6
+yabai -m rule --add app="^Discord$" space=5
 
 yabai -m config window_shadow on \
                 window_opacity off \

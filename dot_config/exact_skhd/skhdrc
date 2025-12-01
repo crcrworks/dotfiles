@@ -1,3 +1,6 @@
+# シェルをzshに設定
+.shell "/bin/bash"
+
 # ウィンドウサイズ調整
 alt - 0x1B : yabai -m window --ratio rel:0.05
 alt - 0x18 : yabai -m window --ratio rel:-0.05

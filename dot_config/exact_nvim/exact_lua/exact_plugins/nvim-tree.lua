@@ -81,14 +81,14 @@ return {
       root_folder_label = false,
       hidden_display = "all",
       group_empty = true,
-      highlight_git = true,
+      highlight_git = false,
       indent_markers = { enable = true },
 
       icons = {
         git_placement = "after",
         bookmarks_placement = "after",
         show = {
-          git = true,
+          git = false,
           diagnostics = true,
         },
         glyphs = {

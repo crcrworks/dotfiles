@@ -1,5 +1,5 @@
 local map = vim.keymap.set
-local tabufline = require "ui.tabufline"
+-- local tabufline = require "ui.tabufline"
 
 -- map("n", "<space>pb", function()
 --   require("base46").compile()
@@ -22,13 +22,8 @@ map("n", "<C-l>", "<C-w>l", { desc = "switch window right" })
 map("n", "<C-j>", "<C-w>j", { desc = "switch window down" })
 map("n", "<C-k>", "<C-w>k", { desc = "switch window up" })
 
-map("n", "<tab>", function()
-  tabufline.next()
-end, { desc = "buffer goto next" })
-
-map("n", "<S-tab>", function()
-  tabufline.prev()
-end, { desc = "buffer goto prev" })
+map("n", "<tab>", "<cmd>bnext<cr>", { desc = "buffer goto next" })
+map("n", "<S-tab>", "<cmd>bprevious<cr>", { desc = "buffer goto prev" })
 
 map("v", "<tab>", ">gv", { desc = "buffer goto next" })
 map("v", "<S-tab>", "<gv", { desc = "buffer goto prev" })
@@ -36,9 +31,7 @@ map("v", "<S-tab>", "<gv", { desc = "buffer goto prev" })
 map("n", "\\", "<cmd>split<cr>", { desc = "split window vertically" })
 map("n", "|", "<cmd>vsplit<cr>", { desc = "split window holizontaly" })
 
-map("n", "<leader>c", function()
-  tabufline.close_buffer()
-end, { desc = "buffer close" })
+map("n", "<leader>c", "<cmd>bdelete<cr>", { desc = "buffer close" })
 
 map("n", "<leader>/", "gcc", { desc = "toggle comment", remap = true })
 map("v", "<leader>/", "gc", { desc = "toggle comment", remap = true })

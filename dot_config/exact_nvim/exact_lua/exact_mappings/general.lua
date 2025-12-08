@@ -1,9 +1,9 @@
 local map = vim.keymap.set
 local tabufline = require "ui.tabufline"
 
-map("n", "<space>pb", function()
-  require("base46").compile()
-end, { desc = "Build theme to cache" })
+-- map("n", "<space>pb", function()
+--   require("base46").compile()
+-- end, { desc = "Build theme to cache" })
 
 map("n", ";", ":", { desc = "CMD enter command mode" })
 
@@ -46,10 +46,10 @@ map("v", "<leader>/", "gc", { desc = "toggle comment", remap = true })
 map("n", "<leader>ps", "<cmd>Lazy<cr>")
 map("n", "<leader>pm", "<cmd>Mason<cr>")
 
-map("n", "<leader>tr", function()
-  require("base46").load_all_highlights()
-  print "Theme reloaded: everforest"
-end, { desc = "Reload theme" })
+-- map("n", "<leader>tr", function()
+--   require("base46").load_all_highlights()
+--   print "Theme reloaded: everforest"
+-- end, { desc = "Reload theme" })
 
 vim.cmd [[
   xnoremap p "_dP

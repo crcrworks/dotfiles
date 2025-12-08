@@ -1,4 +1,4 @@
-dofile(vim.g.base46_cache .. "blink")
+-- dofile(vim.g.base46_cache .. "blink")
 
 local opts = {
   snippets = { preset = "luasnip" },

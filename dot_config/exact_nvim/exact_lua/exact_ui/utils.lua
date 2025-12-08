@@ -1,7 +1,7 @@
 local M = {}
 local fn = vim.fn
 local opt_local = vim.api.nvim_set_option_value
-local base46_path = vim.fn.fnamemodify(debug.getinfo(require("base46").merge_tb, "S").source:sub(2), ":p:h")
+-- local base46_path = vim.fn.fnamemodify(debug.getinfo(require("base46").merge_tb, "S").source:sub(2), ":p:h")
 
 M.replace_word = function(old, new, filepath)
   filepath = filepath or vim.fn.stdpath "config" .. "/lua/" .. "configs/ui.lua"
@@ -34,14 +34,14 @@ end
 
 M.reload = function(module)
   require("plenary.reload").reload_module "ui"
-  require("plenary.reload").reload_module "base46"
+  -- require("plenary.reload").reload_module "base46"
 
   if module then
     require("plenary.reload").reload_module(module)
   end
 
   require "ui"
-  require("base46").load_all_highlights()
+  -- require("base46").load_all_highlights()
 end
 
 return M

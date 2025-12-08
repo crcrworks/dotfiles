@@ -15,9 +15,9 @@ local pos_data = {
 local ui_config = require "configs.ui"
 local config = ui_config.term
 
-if config.base46_colors then
-  dofile(vim.g.base46_cache .. "term")
-end
+-- if config.base46_colors then
+--   dofile(vim.g.base46_cache .. "term")
+-- end
 
 -- used for initially resizing terms
 vim.g.hterm = false

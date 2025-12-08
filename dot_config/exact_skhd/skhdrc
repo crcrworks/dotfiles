@@ -15,10 +15,10 @@ shift + alt - k : yabai -m window --swap north
 shift + alt - l : yabai -m window --swap east
 
 # ウィンドウの移動（warp）
-ctrl + shift + alt - h : yabai -m window --warp west
-ctrl + shift + alt - j : yabai -m window --warp south
-ctrl + shift + alt - k : yabai -m window --warp north
-ctrl + shift + alt - l : yabai -m window --warp east
+ctrl + shift + alt - h : yabai -m window west --insert south; yabai -m window --warp west
+ctrl + shift + alt - j : yabai -m window south --insert east; yabai -m window --warp south
+ctrl + shift + alt - k : yabai -m window north --insert west; yabai -m window --warp north
+ctrl + shift + alt - l : yabai -m window east --insert north; yabai -m window --warp east
 
 # スペースへフォーカス移動（最初のウィンドウを選択）
 alt - 1 : yabai -m space --focus 1

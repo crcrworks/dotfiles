@@ -19,6 +19,7 @@ local options = {
     javascriptreact = { "dprint", "biome-check" },
     fish = { "fish_indent" },
     typst = { "typstyle" },
+    asm = { "asmfmt" },
   },
 
   format_on_save = {

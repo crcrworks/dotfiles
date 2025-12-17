@@ -19,4 +19,9 @@ return {
   "vue",
   "python",
   "typst",
+  "cpp",
+  "c",
+  "objc",
+  "cuda",
+  "proto",
 }

@@ -140,4 +140,18 @@ M.goto_buf = function(bufnr)
   api.nvim_set_current_buf(bufnr)
 end
 
+M.sort_by_recent = function()
+  local bufs = vim.t.bufs
+  local times = vim.t.buf_access_times or {}
+
+  table.sort(bufs, function(a, b)
+    local time_a = times[a] or 0
+    local time_b = times[b] or 0
+    return time_a > time_b
+  end)
+
+  vim.t.bufs = bufs
+  vim.cmd "redrawtabline"
+end
+
 return M

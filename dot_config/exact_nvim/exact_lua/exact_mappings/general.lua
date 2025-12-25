@@ -40,6 +40,10 @@ map("n", "<leader>c", function()
   tabufline.close_buffer()
 end, { desc = "buffer close" })
 
+map("n", "<leader>b", function()
+  tabufline.sort_by_recent()
+end, { desc = "sort buffers by recent" })
+
 map("n", "<leader>/", "gcc", { desc = "toggle comment", remap = true })
 map("v", "<leader>/", "gc", { desc = "toggle comment", remap = true })
 

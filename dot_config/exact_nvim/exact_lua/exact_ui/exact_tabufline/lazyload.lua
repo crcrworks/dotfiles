@@ -10,6 +10,9 @@ vim.t.bufs = vim.t.bufs
     return vim.fn.buflisted(buf) == 1
   end, vim.api.nvim_list_bufs())
 
+-- store buffer access times for sorting by recent
+vim.t.buf_access_times = vim.t.buf_access_times or {}
+
 -- autocmds for tabufline -> store bufnrs on bufadd, bufenter events
 -- thx to https://github.com/ii14 & stores buffer per tab -> table
 autocmd({ "BufAdd", "BufEnter", "tabnew" }, {
@@ -36,6 +39,13 @@ autocmd({ "BufAdd", "BufEnter", "tabnew" }, {
       if #api.nvim_buf_get_name(bufs[1]) == 0 and not get_opt("modified", { buf = bufs[1] }) then
         table.remove(bufs, 1)
       end
+    end
+
+    -- track buffer access time on BufEnter
+    if args.event == "BufEnter" and api.nvim_buf_is_valid(args.buf) and get_opt("buflisted", { buf = args.buf }) then
+      local times = vim.t.buf_access_times or {}
+      times[args.buf] = vim.loop.now()
+      vim.t.buf_access_times = times
     end
 
     vim.t.bufs = bufs

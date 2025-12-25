@@ -29,6 +29,7 @@ idiomatic_version_file_enable_tools = ["rust"]
 "fastfetch" = "latest"
 "cargo-binstall" = "latest"
 "task" = "latest"
+"just" = "latest"
 
 [hooks]
 postinstall = "npx corepack enable"

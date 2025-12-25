@@ -22,13 +22,13 @@ map("n", "<C-l>", "<C-w>l", { desc = "switch window right" })
 map("n", "<C-j>", "<C-w>j", { desc = "switch window down" })
 map("n", "<C-k>", "<C-w>k", { desc = "switch window up" })
 
-map("n", "<tab>", function()
-  tabufline.next()
-end, { desc = "buffer goto next" })
-
-map("n", "<S-tab>", function()
-  tabufline.prev()
-end, { desc = "buffer goto prev" })
+-- map("n", "<tab>", function()
+--   tabufline.next()
+-- end, { desc = "buffer goto next" })
+--
+-- map("n", "<S-tab>", function()
+--   tabufline.prev()
+-- end, { desc = "buffer goto prev" })
 
 map("v", "<tab>", ">gv", { desc = "buffer goto next" })
 map("v", "<S-tab>", "<gv", { desc = "buffer goto prev" })

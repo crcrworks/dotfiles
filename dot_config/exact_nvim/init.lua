@@ -43,6 +43,7 @@ end
 
 require "options"
 require "autocmds"
+require "nvim_rs"
 
 vim.schedule(function()
   require "configs.mappings"

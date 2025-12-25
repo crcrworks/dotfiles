@@ -1,0 +1,21 @@
+# Build the plugin
+build:
+    cargo build --release
+
+# Install to chezmoi managed directory
+install: build
+    cp target/release/libnvim_rs.dylib ../exact_lua/nvim_rs.so
+    chezmoi apply ~/.config/nvim/lua/nvim_rs.so
+
+# Install directly to nvim config for quick testing (bypass chezmoi)
+dev: build
+    cp target/release/libnvim_rs.dylib ~/.config/nvim/lua/nvim_rs.so
+
+# Clean build artifacts
+clean:
+    cargo clean
+    rm -f ../exact_lua/nvim_rs.so
+    rm -f ~/.config/nvim/lua/nvim_rs.so
+
+# Build and install in one command
+all: install

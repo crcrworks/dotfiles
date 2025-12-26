@@ -30,6 +30,7 @@ idiomatic_version_file_enable_tools = ["rust"]
 "cargo-binstall" = "latest"
 "task" = "latest"
 "just" = "latest"
+"github:sst/opencode" = "latest"
 
 [hooks]
 postinstall = "npx corepack enable"

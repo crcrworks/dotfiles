@@ -88,7 +88,7 @@ return {
                 enable = false,
               },
               method = {
-                enable = false,
+                enable = true,
               },
               trait = {
                 enable = false,

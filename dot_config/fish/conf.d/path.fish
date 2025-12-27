@@ -1,4 +1,4 @@
-# set -Ux EDITOR /opt/homebrew/bin/nvim
+# set -Ux ENABLE_LSP_TOOL 1
 
 # set -Ux ANDROID_HOME $HOME/Library/Android/sdk
 # set -U fish_user_paths $ANDROID_HOME/emulator $fish_user_paths

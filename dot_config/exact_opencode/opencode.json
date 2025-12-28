@@ -1,0 +1,40 @@
+{
+  "provider": {
+    "github-copilot": {
+      "models": {
+        "gpt-5.1-high": {
+          "id": "gpt-5.1",
+          "options": {
+            "reasoningEffort": "high",
+            "textVerbosity": "medium",
+            "reasoningSummary": "auto"
+          }
+        },
+        "gpt-5.2-low": {
+          "id": "gpt-5.2",
+          "options": {
+            "reasoningEffort": "low",
+            "textVerbosity": "low",
+            "reasoningSummary": "auto"
+          }
+        },
+        "gpt-5.2-high": {
+          "id": "gpt-5.2",
+          "options": {
+            "reasoningEffort": "high",
+            "textVerbosity": "medium",
+            "reasoningSummary": "detailed"
+          }
+        },
+        "gpt-5.2-xhigh": {
+          "id": "gpt-5.2",
+          "options": {
+            "reasoningEffort": "xhigh",
+            "textVerbosity": "high",
+            "reasoningSummary": "detailed"
+          }
+        }
+      }
+    }
+  }
+}

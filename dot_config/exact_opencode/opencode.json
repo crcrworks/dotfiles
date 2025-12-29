@@ -59,5 +59,16 @@
         }
       }
     }
-  }
+  },
+  "mcp": {
+    "pdf-reader": {
+      "type": "local",
+      "enabled": false,
+      "command": [
+        "npx",
+        "-y",
+        "@sylphx/pdf-reader-mcp"
+      ],
+    },
+  },
 }

@@ -1,5 +1,22 @@
 {
   "$schema": "https://opencode.ai/config.json",
+  "mode": {
+    "ask": {
+      "tools": {
+        "write": false,
+        "edit": false,
+        "bash": false,
+        "patch": false,
+        "todowrite": false,
+        "read": true,
+        "grep": true,
+        "glob": true,
+        "list": true,
+        "todoread": true,
+        "webfetch": true
+      }
+    }
+  },
   "provider": {
     "github-copilot": {
       "models": {

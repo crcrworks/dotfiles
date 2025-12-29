@@ -48,5 +48,16 @@
         "@sylphx/pdf-reader-mcp"
       ],
     },
+    "context7": {
+      "type": "local",
+      "command": [
+        "npx",
+        "-y",
+        "@upstash/context7-mcp",
+        "--api-key",
+        "ctx7sk-b5641bc1-28b7-415d-8951-1d0d7b73cf51"
+      ],
+      "enabled": true
+    }
   },
 }

@@ -1,4 +1,27 @@
 {
+  "$schema": "https://opencode.ai/config.json",
+  "command": {
+    "commit": {
+      "template": "現在のステージングされた変更をコミットしてください。\n\njujutsuを使用しています。fishシェルで実行してください。\n\n手順:\n1. `fish -c 'ju status'` で現在の状態を確認\n2. `fish -c 'ju diff'` で変更内容を確認\n3. 変更内容を分析して適切なコミットメッセージを作成\n4. `fish -c 'ju commit \"{コミットメッセージ}\"'` でコミットを実行\n\n## Conventional Commits形式\nコミットメッセージは以下の形式で記述してください:\n`<type>: <description>`\n\n### Prefix一覧\n- feat: 新機能の追加\n- fix: バグ修正\n- docs: ドキュメントのみの変更\n- style: コードの意味に影響しない変更（フォーマット等）\n- refactor: バグ修正でも機能追加でもないコード変更\n- perf: パフォーマンス改善\n- test: テストの追加・修正\n- build: ビルドシステムや外部依存関係の変更\n- ci: CI設定の変更\n- chore: その他の変更（設定ファイル等）\n- revert: 以前のコミットの取り消し\n\n例:\n- feat: add user authentication\n- fix: resolve null pointer in login\n- docs: update API documentation\n- chore: update dependencies",
+      "description": "jujutsuでコミットを作成",
+      "agent": "build"
+    },
+    "create-issue-plan": {
+      "template": "現在のコードベースやコンテキストから、GitHubに登録すべきissueを提案してください。\n\n手順:\n1. 現在の状況を分析（git status、最近の変更、TODOコメントなど）\n2. 登録すべきissueの候補をリストアップ\n3. 各issueについて以下を提案:\n   - タイトル\n   - 本文（問題の説明、再現手順、期待する動作など）\n   - ラベル（bug, enhancement, documentation など）\n\n実際にissueを作成するには `/create-issue-build` を使用してください。\n\n$ARGUMENTS",
+      "description": "作成するissueの計画を立てる",
+      "agent": "plan"
+    },
+    "create-issue-build": {
+      "template": "GitHubにissueを作成してください。\n\nghコマンドを使用して実際にissueを登録します。\n\n引数が指定されている場合はその内容でissueを作成:\n$ARGUMENTS\n\n引数がない場合は、現在の状況を分析してissueを作成してください。\n\nコマンド例:\n```\ngh issue create --title \"タイトル\" --body \"本文\"\n```\n\nラベルを付ける場合:\n```\ngh issue create --title \"タイトル\" --body \"本文\" --label \"bug\"\n```",
+      "description": "GitHubにissueを作成",
+      "agent": "build"
+    },
+    "create-pr": {
+      "template": "指定されたbookmarkからGitHub PRを作成してください。\n\n## 引数\nbookmark名: $1\n\n**引数が指定されていない場合は、エラーメッセージを表示して終了してください。**\n使用方法: `/create-pr <bookmark名>`\n\n## 前提\n- jujutsuを使用しています。fishシェルで実行してください。\n- PRのベースブランチはmainです。\n\n## 手順\n1. `fish -c 'ju bookmark list'` でbookmarkの存在を確認\n2. `fish -c 'ju log -r \"main::$1\"'` でmainからの変更を確認\n3. 変更内容を分析してPRの説明を作成\n4. `fish -c 'ju git push --bookmark $1'` でリモートにpush\n5. `gh pr create --head $1 --base main` でPRを作成\n\nPR作成コマンド例:\n```\ngh pr create --head $1 --base main --title \"PRタイトル\" --body \"$(cat <<'EOF'\n## Summary\n- 変更点1\n- 変更点2\nEOF\n)\"\n```\n\nPRのタイトルと説明は変更の「なぜ」を重視し、簡潔に記述してください。\n作成したPRのURLを表示してください。",
+      "description": "bookmarkからPRを作成 (引数: bookmark名)",
+      "agent": "build"
+    }
+  },
   "provider": {
     "github-copilot": {
       "models": {

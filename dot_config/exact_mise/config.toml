@@ -33,6 +33,7 @@ idiomatic_version_file_enable_tools = ["rust"]
 "github:sst/opencode" = "latest"
 "act" = "latest"
 "opencode" = "latest"
+"prek" = "latest"
 
 [hooks]
 postinstall = "npx corepack enable"

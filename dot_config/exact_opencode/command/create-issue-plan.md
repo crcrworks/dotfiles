@@ -1,6 +1,7 @@
 ---
 description: 作成するissueの計画を立てる
 agent: plan
+model: opencode/grok-code
 ---
 
 現在のコードベースやコンテキストから、GitHubに登録すべきissueを提案してください。

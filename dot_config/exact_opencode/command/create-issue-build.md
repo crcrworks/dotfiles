@@ -1,6 +1,7 @@
 ---
 description: GitHubにissueを作成
 agent: build
+model: opencode/grok-code
 ---
 
 GitHubにissueを作成してください。

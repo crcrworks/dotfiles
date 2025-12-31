@@ -1,6 +1,7 @@
 ---
 description: jujutsuでコミットを作成
 agent: build
+model: opencode/grok-code
 ---
 
 現在のステージングされた変更をコミットしてください。

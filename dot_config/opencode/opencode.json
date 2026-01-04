@@ -3,7 +3,8 @@
   "model": "github-copilot/claude-opus-4.5",
   "plugin": [
     "oh-my-opencode",
-    "opencode-copilot-usage-toast"
+    "opencode-copilot-usage-toast",
+    "opencode-openai-codex-auth"
   ],
   "mode": {
     "ask": {
@@ -23,6 +24,58 @@
     }
   },
   "provider": {
+    "openai": {
+      "models": {
+        "gpt-5.2-codex": {
+          "name": "GPT 5.2 Codex",
+          "options": {
+            "reasoningEffort": "medium",
+            "textVerbosity": "medium",
+            "reasoningSummary": "auto",
+            "include": [
+              "reasoning.encrypted_content"
+            ],
+            "store": false
+          }
+        },
+        "gpt-5.2-low": {
+          "name": "GPT 5.2 Low",
+          "options": {
+            "reasoningEffort": "low",
+            "textVerbosity": "low",
+            "reasoningSummary": "auto",
+            "include": [
+              "reasoning.encrypted_content"
+            ],
+            "store": false
+          }
+        },
+        "gpt-5.2-high": {
+          "name": "GPT 5.2 High",
+          "options": {
+            "reasoningEffort": "high",
+            "textVerbosity": "medium",
+            "reasoningSummary": "detailed",
+            "include": [
+              "reasoning.encrypted_content"
+            ],
+            "store": false
+          }
+        },
+        "gpt-5.2-xhigh": {
+          "name": "GPT 5.2 Xhigh",
+          "options": {
+            "reasoningEffort": "xhigh",
+            "textVerbosity": "high",
+            "reasoningSummary": "detailed",
+            "include": [
+              "reasoning.encrypted_content"
+            ],
+            "store": false
+          }
+        },
+      }
+    },
     "github-copilot": {
       "models": {
         "gpt-5.1-high": {

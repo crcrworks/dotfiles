@@ -30,7 +30,6 @@ idiomatic_version_file_enable_tools = ["rust"]
 "cargo-binstall" = "latest"
 "task" = "latest"
 "just" = "latest"
-"github:sst/opencode" = "latest"
 "act" = "latest"
 "opencode" = "latest"
 "prek" = "latest"

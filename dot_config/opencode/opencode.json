@@ -130,9 +130,21 @@
         "-y",
         "@upstash/context7-mcp",
         "--api-key",
-        "ctx7sk-b5641bc1-28b7-415d-8951-1d0d7b73cf51"
+        "{env:CONTEXT7_API_KEY}"
       ],
       "enabled": true
+    },
+    "websearch_exa": {
+      "type": "local",
+      "command": [
+        "npx",
+        "-y",
+        "exa-mcp-server"
+      ],
+      "timeout": 60000,
+      "environment": {
+        "EXA_API_KEY": "{env:EXA_API_KEY}"
+      }
     }
   },
 }

@@ -134,7 +134,7 @@
       ],
       "enabled": true
     },
-    "websearch_exa": {
+    "exa": {
       "type": "local",
       "command": [
         "npx",

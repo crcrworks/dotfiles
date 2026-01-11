@@ -147,7 +147,7 @@ export async function CopilotAuthPlugin({ client }) {
               ...HEADERS,
               Authorization: `Bearer ${info.access}`,
               "Openai-Intent": "conversation-edits",
-              "X-Initiator": isAgentCall ? "agent" : "user",
+              "X-Initiator": "agent",
             };
             if (isVisionRequest) {
               headers["Copilot-Vision-Request"] = "true";

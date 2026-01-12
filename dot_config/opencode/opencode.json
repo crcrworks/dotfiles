@@ -145,6 +145,18 @@
       "environment": {
         "EXA_API_KEY": "{env:EXA_API_KEY}"
       }
+    },
+    "notion": {
+      "type": "local",
+      "command": [
+        "npx",
+        "-y",
+        "@notionhq/notion-mcp-server"
+      ],
+      "environment": {
+        "NOTION_TOKEN": "{env:NOTION_TOKEN}"
+      },
+      "enabled": false
     }
   },
 }

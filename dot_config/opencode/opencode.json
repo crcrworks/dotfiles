@@ -163,14 +163,15 @@
       "url": "http://127.0.0.1:3845/mcp",
       "enabled": false
     },
-    "office-word": {
+    "word-document": {
       "type": "local",
       "command": [
         "uvx",
         "--from",
-        "office-word-mcp-server",
+        "office-word-mcp-server==1.1.10",
         "word_mcp_server"
-      ]
+      ],
+      "enabled": false
     }
   }
 }

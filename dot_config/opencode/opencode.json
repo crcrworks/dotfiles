@@ -157,6 +157,11 @@
         "NOTION_TOKEN": "{env:NOTION_TOKEN}"
       },
       "enabled": false
+    },
+    "figma-desktop": {
+      "type": "remote",
+      "url": "http://127.0.0.1:3845/mcp",
+      "enabled": false
     }
-  },
+  }
 }

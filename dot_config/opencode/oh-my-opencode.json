@@ -11,15 +11,21 @@
           "*": "ask",
           "gh pr diff *": "allow",
           "gh pr view *": "allow",
-          "cargo run *": "allow"
+          "cargo run *": "allow",
+          "cargo test *": "allow"
         }
       }
     },
     "Planner-Sisyphus": {
       "model": "github-copilot/claude-opus-4.5",
       "prompt_append": "懸念点、トレードオフなど、文字通り何でも詳細に私にインタビューしてください。ただし、質問は明らかなものではないことを確認してください。非常に詳細に掘り下げて、完了するまで継続的にインタビューを続けてください。",
-      "gh pr diff *": "allow",
-      "gh pr view *": "allow"
+      "permission": {
+        "bash": {
+          "*": "ask",
+          "gh pr diff *": "allow",
+          "gh pr view *": "allow"
+        }
+      }
     },
     "oracle": {
       "model": "github-copilot/claude-opus-4.5"

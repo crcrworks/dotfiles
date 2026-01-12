@@ -3,6 +3,12 @@
   "disabled_mcps": [
     "websearch_exa"
   ],
+  "mcps": {
+    "office-word": {
+      "command": "uvx",
+      "args": ["--from", "office-word-mcp-server", "word_mcp_server"]
+    }
+  },
   "agents": {
     "Sisyphus": {
       "model": "github-copilot/claude-opus-4.5",

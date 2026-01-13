@@ -188,6 +188,14 @@
         "GITHUB_PERSONAL_ACCESS_TOKEN": "{env:GITHUB_PERSONAL_ACCESS_TOKEN}"
       },
       "enabled": true
+    },
+    "markitdown": {
+      "type": "local",
+      "command": [
+        "uvx",
+        "markitdown-mcp"
+      ],
+      "enabled": false
     }
   }
 }

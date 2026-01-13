@@ -16,6 +16,7 @@ alias port="lsof"
 alias vencode-install="open /Users/crcr/Development/installer/VencordInstaller\ 5.app"
 alias nv="nvim"
 alias ca="cargo"
+alias oc="opencode"
 
 # jujutsu
 alias ju="mise exec jj -- jj"

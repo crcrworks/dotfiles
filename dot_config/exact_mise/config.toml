@@ -31,7 +31,7 @@ idiomatic_version_file_enable_tools = ["rust"]
 "task" = "latest"
 "just" = "latest"
 "act" = "latest"
-"opencode" = "latest"
+"github:anomalyco/opencode" = "latest"
 "prek" = "latest"
 
 [hooks]

@@ -3,6 +3,10 @@
   "disabled_mcps": [
     "websearch_exa"
   ],
+  "sisyphus_agent": {
+    "disabled": false,
+    "replace_plan": false
+  },
   "agents": {
     "Sisyphus": {
       "model": "github-copilot/claude-opus-4.5",

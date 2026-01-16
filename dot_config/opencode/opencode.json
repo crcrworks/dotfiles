@@ -4,7 +4,6 @@
   "default_agent": "plan",
   "plugin": [
     "oh-my-opencode",
-    "opencode-copilot-usage-toast",
     "opencode-openai-codex-auth"
   ],
   "agent": {

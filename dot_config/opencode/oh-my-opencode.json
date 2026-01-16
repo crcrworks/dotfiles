@@ -5,11 +5,24 @@
   ],
   "sisyphus_agent": {
     "disabled": false,
-    "replace_plan": false
+    "replace_plan": false,
+    "default_builder_enabled": true
   },
   "agents": {
     "Sisyphus": {
-      "model": "github-copilot/claude-opus-4.5",
+      "model": "zai-coding-plan/glm-4.7",
+      "permission": {
+        "bash": {
+          "*": "ask",
+          "gh pr diff *": "allow",
+          "gh pr view *": "allow",
+          "cargo run *": "allow",
+          "cargo test *": "allow"
+        }
+      }
+    },
+    "plan": {
+      "model": "zai-coding-plan/glm-4.7",
       "permission": {
         "bash": {
           "*": "ask",
@@ -21,43 +34,40 @@
       }
     },
     "oracle": {
-      "model": "github-copilot/claude-opus-4.5"
+      "model": "zai-coding-plan/glm-4.7"
     },
     "explore": {
       "model": "github-copilot/gemini-3-flash-preview"
     },
     "librarian": {
-      "model": "github-copilot/gemini-3-pro-preview"
-    },
-    "build": {
-      "model": "github-copilot/claude-sonnet-4.5"
-    },
-    "plan": {
-      "model": "github-copilot/claude-opus-4.5"
-    },
-    "OpenCode-Builder": {
-      "model": "github-copilot/claude-sonnet-4.5"
-    },
-    "Prometheus (Planner)": {
-      "model": "github-copilot/claude-opus-4.5"
-    },
-    "Metis (Plan Consultant)": {
-      "model": "github-copilot/claude-sonnet-4.5"
-    },
-    "Momus (Plan Reviewer)": {
-      "model": "github-copilot/claude-sonnet-4.5"
-    },
-    "frontend-ui-ux-engineer": {
-      "model": "github-copilot/gemini-3-pro-preview"
-    },
-    "document-writer": {
       "model": "github-copilot/gemini-3-flash-preview"
     },
+    "build": {
+      "model": "zai-coding-plan/glm-4.7"
+    },
+    "OpenCode-Builder": {
+      "model": "zai-coding-plan/glm-4.7"
+    },
+    "Prometheus (Planner)": {
+      "model": "zai-coding-plan/glm-4.7"
+    },
+    "Metis (Plan Consultant)": {
+      "model": "zai-coding-plan/glm-4.7"
+    },
+    "Momus (Plan Reviewer)": {
+      "model": "zai-coding-plan/glm-4.7"
+    },
+    "frontend-ui-ux-engineer": {
+      "model": "zai-coding-plan/glm-4.7"
+    },
+    "document-writer": {
+      "model": "zai-coding-plan/glm-4.7"
+    },
     "multimodal-looker": {
-      "model": "github-copilot/gemini-3-pro-preview"
+      "model": "zai-coding-plan/glm-4.7"
     },
     "orchestrator-sisyphus": {
-      "model": "github-copilot/claude-opus-4.5"
+      "model": "zai-coding-plan/glm-4.7"
     }
   }
 }

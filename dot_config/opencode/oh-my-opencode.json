@@ -37,10 +37,10 @@
       "model": "zai-coding-plan/glm-4.7"
     },
     "explore": {
-      "model": "github-copilot/gemini-3-flash-preview"
+      "model": "zai-coding-plan/glm-4.7"
     },
     "librarian": {
-      "model": "github-copilot/gemini-3-flash-preview"
+      "model": "zai-coding-plan/glm-4.7"
     },
     "build": {
       "model": "zai-coding-plan/glm-4.7"
@@ -64,7 +64,7 @@
       "model": "zai-coding-plan/glm-4.7"
     },
     "multimodal-looker": {
-      "model": "zai-coding-plan/glm-4.6v"
+      "model": "google/gemini-3-flash-preview"
     },
     "orchestrator-sisyphus": {
       "model": "zai-coding-plan/glm-4.7"

@@ -1,3 +1,4 @@
 .DS_Store
 .env
 dot_config/opencode/.env
+.opencode/plans/

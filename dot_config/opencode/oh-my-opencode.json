@@ -1,73 +1,62 @@
 {
   "$schema": "https://raw.githubusercontent.com/code-yeongyu/oh-my-opencode/master/assets/oh-my-opencode.schema.json",
-  "disabled_mcps": [
-    "websearch_exa"
-  ],
-  "sisyphus_agent": {
-    "disabled": false,
-    "replace_plan": false,
-    "default_builder_enabled": true
+  "categories": {
+    "default": {
+      "model": "zai-coding-plan/glm-4.7",
+      "permission": {
+        "bash": {
+          "*": "ask",
+          "gh pr diff *": "allow",
+          "gh pr view *": "allow",
+          "cargo run *": "allow",
+          "cargo test *": "allow",
+          "ls": "allow"
+        }
+      }
+    }
   },
   "agents": {
     "Sisyphus": {
-      "model": "zai-coding-plan/glm-4.7",
-      "permission": {
-        "bash": {
-          "*": "ask",
-          "gh pr diff *": "allow",
-          "gh pr view *": "allow",
-          "cargo run *": "allow",
-          "cargo test *": "allow"
-        }
-      }
+      "category": "default"
     },
     "plan": {
-      "model": "zai-coding-plan/glm-4.7",
-      "permission": {
-        "bash": {
-          "*": "ask",
-          "gh pr diff *": "allow",
-          "gh pr view *": "allow",
-          "cargo run *": "allow",
-          "cargo test *": "allow"
-        }
-      }
+      "category": "default"
     },
     "oracle": {
-      "model": "zai-coding-plan/glm-4.7"
+      "category": "default"
     },
     "explore": {
-      "model": "zai-coding-plan/glm-4.7"
+      "category": "default"
     },
     "librarian": {
-      "model": "zai-coding-plan/glm-4.7"
+      "category": "default"
     },
     "build": {
-      "model": "zai-coding-plan/glm-4.7"
+      "category": "default"
     },
     "OpenCode-Builder": {
-      "model": "zai-coding-plan/glm-4.7"
+      "category": "default"
     },
     "Prometheus (Planner)": {
-      "model": "zai-coding-plan/glm-4.7"
+      "category": "default"
     },
     "Metis (Plan Consultant)": {
-      "model": "zai-coding-plan/glm-4.7"
+      "category": "default"
     },
     "Momus (Plan Reviewer)": {
-      "model": "zai-coding-plan/glm-4.7"
+      "category": "default"
     },
     "frontend-ui-ux-engineer": {
-      "model": "zai-coding-plan/glm-4.7"
+      "category": "default"
     },
     "document-writer": {
-      "model": "zai-coding-plan/glm-4.7"
+      "category": "default"
     },
     "multimodal-looker": {
       "model": "google/gemini-3-flash-preview"
     },
     "orchestrator-sisyphus": {
-      "model": "zai-coding-plan/glm-4.7"
+      "category": "default"
     }
   }
 }

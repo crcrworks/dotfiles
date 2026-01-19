@@ -3,8 +3,8 @@
   "model": "zai-coding-plan/glm-4.7",
   "default_agent": "plan",
   "plugin": [
-    "oh-my-opencode",
-    "opencode-openai-codex-auth"
+    "oh-my-opencode@3.0.0-beta.10",
+    "opencode-openai-codex-auth@4.4.0"
   ],
   "agent": {
     "plan": {
@@ -136,18 +136,6 @@
         "{env:CONTEXT7_API_KEY}"
       ],
       "enabled": true
-    },
-    "exa": {
-      "type": "local",
-      "command": [
-        "npx",
-        "-y",
-        "exa-mcp-server"
-      ],
-      "timeout": 60000,
-      "environment": {
-        "EXA_API_KEY": "{env:EXA_API_KEY}"
-      }
     },
     "notion": {
       "type": "local",

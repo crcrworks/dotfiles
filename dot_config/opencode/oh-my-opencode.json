@@ -1,8 +1,8 @@
 {
   "$schema": "https://raw.githubusercontent.com/code-yeongyu/oh-my-opencode/master/assets/oh-my-opencode.schema.json",
-  "categories": {
-    "default": {
-      "model": "zai-coding-plan/glm-4.7",
+  "agents": {
+    "Sisyphus": {
+      "model": "openai/gpt-5.2-codex",
       "permission": {
         "bash": {
           "*": "ask",
@@ -13,53 +13,37 @@
           "ls": "allow"
         }
       }
-    }
-  },
-  "agents": {
-    "Sisyphus": {
-      "category": "default"
     },
     "Sisyphus-Junior": {
-      "category": "default"
+      "model": "openai/gpt-5.2-codex",
+      "permission": {
+        "bash": {
+          "*": "ask",
+          "gh pr diff *": "allow",
+          "gh pr view *": "allow",
+          "cargo run *": "allow",
+          "cargo test *": "allow",
+          "ls": "allow"
+        }
+      }
     },
     "plan": {
-      "category": "default"
-    },
-    "oracle": {
-      "category": "default"
-    },
-    "explore": {
-      "category": "default"
-    },
-    "librarian": {
-      "category": "default"
-    },
-    "build": {
-      "category": "default"
-    },
-    "OpenCode-Builder": {
-      "category": "default"
+      "model": "zai-coding-plan/glm-4.7"
     },
     "Prometheus (Planner)": {
-      "category": "default"
+      "model": "zai-coding-plan/glm-4.7"
     },
     "Metis (Plan Consultant)": {
-      "category": "default"
+      "model": "zai-coding-plan/glm-4.7"
     },
     "Momus (Plan Reviewer)": {
-      "category": "default"
+      "model": "zai-coding-plan/glm-4.7"
     },
-    "frontend-ui-ux-engineer": {
-      "category": "default"
-    },
-    "document-writer": {
-      "category": "default"
+    "orchestrator-sisyphus": {
+      "model": "zai-coding-plan/glm-4.7"
     },
     "multimodal-looker": {
       "model": "google/gemini-3-flash-preview"
-    },
-    "orchestrator-sisyphus": {
-      "category": "default"
     }
   }
 }

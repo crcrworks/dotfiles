@@ -30,12 +30,6 @@
     "orchestrator-sisyphus": {
       "model": "zai-coding-plan/glm-4.7"
     },
-    "plan": {
-      "model": "zai-coding-plan/glm-4.7"
-    },
-    "build": {
-      "model": "zai-coding-plan/glm-4.7"
-    },
     "OpenCode-Builder": {
       "model": "zai-coding-plan/glm-4.7"
     },

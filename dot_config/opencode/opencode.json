@@ -3,16 +3,10 @@
   "model": "zai-coding-plan/glm-4.7",
   "default_agent": "plan",
   "plugin": [
-    "oh-my-opencode@3.0.0-beta.10",
+    "oh-my-opencode@3.0.0-beta.11",
     "opencode-openai-codex-auth@4.4.0"
   ],
   "agent": {
-    "plan": {
-      "prompt": "懸念点、トレードオフなど、文字通り何でも詳細に私にインタビューしてください。ただし、質問は明らかなものではないことを確認してください非常に詳細に掘り下げて、完了するまで継続的にインタビューを続けてください。"
-    },
-    "general": {
-      "model": "zai-coding-plan/glm-4.7",
-    },
     "ask": {
       "tools": {
         "write": false,
@@ -79,7 +73,7 @@
             ],
             "store": false
           }
-        },
+        }
       }
     },
     "github-copilot": {
@@ -127,7 +121,7 @@
         "npx",
         "-y",
         "@sylphx/pdf-reader-mcp"
-      ],
+      ]
     },
     "context7": {
       "type": "local",

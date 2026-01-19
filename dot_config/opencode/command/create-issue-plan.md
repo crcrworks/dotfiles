@@ -1,7 +1,7 @@
 ---
 description: 作成するissueの計画を立てる
 agent: plan
-model: opencode/grok-code
+model: zai-coding-plan/glm-4.7 
 ---
 
 現在のコードベースやコンテキストから、GitHubに登録すべきissueを提案してください。

@@ -1,39 +1,62 @@
 {
-  "$schema": "https://raw.githubusercontent.com/code-yeongyu/oh-my-opencode/master/assets/oh-my-opencode.schema.json",
+  "$schema": "https://raw.githubusercontent.com/code-yeongyu/oh-my-opencode/dev/assets/oh-my-opencode.schema.json",
+  "categories": {
+    "visual-engineering": {
+      "model": "google/gemini-3-pro-preview"
+    },
+    "artistry": {
+      "model": "google/gemini-3-pro-preview"
+    },
+    "quick": {
+      "model": "openai/gpt-5.2-codex"
+    },
+    "unspecified-high": {
+      "model": "openai/gpt-5.2",
+      "variant": "high"
+    },
+    "ultreabrain": {
+      "model": "openai/gpt-5.2",
+      "variant": "high"
+    },
+    "unspecified-low": {
+      "model": "zai-coding-plan/glm-4.7"
+    },
+    "writing": {
+      "model": "openai/gpt-5.2-codex",
+      "variant": "high"
+    }
+  },
   "agents": {
-    "Sisyphus": {
-      "model": "zai-coding-plan/glm-4.7",
-      "permission": {
-        "bash": {
-          "*": "ask",
-          "gh pr diff *": "allow",
-          "gh pr view *": "allow",
-          "cargo run *": "allow",
-          "cargo test *": "allow",
-          "ls": "allow"
-        }
-      }
-    },
-    "Sisyphus-Junior": {
-      "model": "zai-coding-plan/glm-4.7",
-      "permission": {
-        "bash": {
-          "*": "ask",
-          "gh pr diff *": "allow",
-          "gh pr view *": "allow",
-          "cargo run *": "allow",
-          "cargo test *": "allow",
-          "ls": "allow"
-        }
-      }
-    },
-    "orchestrator-sisyphus": {
+    "plan": {
       "model": "zai-coding-plan/glm-4.7"
     },
     "OpenCode-Builder": {
+      "model": "openai/gpt-5.2-codex",
+      "variant": "high"
+    },
+    "Sisyphus": {
+      "model": "openai/gpt-5.2-codex",
+      "variant": "high"
+    },
+    "Sisyphus-Junior": {
+      "model": "openai/gpt-5.2-codex",
+      "variant": "high"
+    },
+    "Prometheus (Planner)": {
       "model": "zai-coding-plan/glm-4.7"
     },
+    "Metis (Plan Consultant)": {
+      "model": "openai/gpt-5.2",
+      "variant": "high"
+    },
+    "Momus (Plan Reviewer)": {
+      "model": "openai/gpt-5.2",
+      "variant": "high"
+    },
     "oracle": {
+      "model": "zai-coding-plan/glm-4.7"
+    },
+    "atlas": {
       "model": "zai-coding-plan/glm-4.7"
     },
     "librarian": {
@@ -43,19 +66,10 @@
       "model": "zai-coding-plan/glm-4.7"
     },
     "frontend-ui-ux-engineer": {
-      "model": "zai-coding-plan/glm-4.7"
+      "model": "google/gemini-3-pro-preview"
     },
     "document-writer": {
-      "model": "zai-coding-plan/glm-4.7"
-    },
-    "Prometheus (Planner)": {
-      "model": "zai-coding-plan/glm-4.7"
-    },
-    "Metis (Plan Consultant)": {
-      "model": "zai-coding-plan/glm-4.7"
-    },
-    "Momus (Plan Reviewer)": {
-      "model": "zai-coding-plan/glm-4.7"
+      "model": "google/gemini-3-flash-preview"
     },
     "multimodal-looker": {
       "model": "google/gemini-3-flash-preview"

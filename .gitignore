@@ -2,3 +2,4 @@
 .env
 dot_config/opencode/.env
 .opencode/plans/
+.sisypus/

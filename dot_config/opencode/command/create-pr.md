@@ -1,7 +1,7 @@
 ---
 description: bookmarkからPRを作成
 agent: build
-model: zai-coding-plan/glm-4.7 
+model: opencode/grok-code
 ---
 
 指定されたbookmarkからGitHub PRを作成してください。

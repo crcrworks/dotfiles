@@ -1,7 +1,7 @@
 ---
 description: GitHubにissueを作成
 agent: build
-model: zai-coding-plan/glm-4.7 
+model: opencode/grok-code
 ---
 
 GitHubにissueを作成してください。

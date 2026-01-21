@@ -267,6 +267,18 @@
         "markitdown-mcp"
       ],
       "enabled": false
+    },
+    "stitch": {
+      "type": "local",
+      "command": [
+        "npx",
+        "@_davideast/stitch-mcp",
+        "proxy"
+      ],
+      "environment": {
+        "STITCH_PROJECT_ID": "{env:GITHUB_PERSONAL_ACCESS_TOKEN}"
+      },
+      "enabled": false
     }
   }
 }

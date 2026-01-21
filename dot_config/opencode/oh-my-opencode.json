@@ -8,7 +8,7 @@
       "model": "google/gemini-3-pro-preview"
     },
     "quick": {
-      "model": "openai/gpt-5.2-codex"
+      "model": "zai-coding-plan/glm-4.7"
     },
     "unspecified-high": {
       "model": "openai/gpt-5.2",
@@ -30,15 +30,13 @@
       "model": "zai-coding-plan/glm-4.7"
     },
     "OpenCode-Builder": {
-      "model": "openai/gpt-5.2-codex",
-      "variant": "high"
+      "model": "zai-coding-plan/glm-4.7"
     },
     "Sisyphus": {
       "model": "zai-coding-plan/glm-4.7"
     },
     "Sisyphus-Junior": {
-      "model": "openai/gpt-5.2-codex",
-      "variant": "high"
+      "model": "zai-coding-plan/glm-4.7"
     },
     "Prometheus (Planner)": {
       "model": "zai-coding-plan/glm-4.7"

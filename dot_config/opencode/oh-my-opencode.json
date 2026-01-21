@@ -22,8 +22,7 @@
       "model": "zai-coding-plan/glm-4.7"
     },
     "writing": {
-      "model": "openai/gpt-5.2-codex",
-      "variant": "high"
+      "model": "google/gemini-3-flash-preview"
     }
   },
   "agents": {

@@ -1,7 +1,7 @@
 ---
 description: jujutsuでコミットを作成
 agent: build
-model: opencode/grok-code
+model: zai-coding-plan/glm-4.7 
 ---
 
 現在のステージングされた変更をコミットしてください。

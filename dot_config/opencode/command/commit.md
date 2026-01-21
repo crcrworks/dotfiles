@@ -15,7 +15,7 @@ model: opencode/grok-code
 使用方法: `/commit [言語]`
 
 ## 実行
-jujutsu skillを使用してコミットを作成してください。
+jujutsuのagent skillsから実行方法を読んでください。
 
 ## 言語設定
 - `ja` (デフォルト): コミットメッセージを日本語で記述

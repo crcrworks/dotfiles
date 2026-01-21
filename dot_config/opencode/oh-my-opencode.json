@@ -35,8 +35,7 @@
       "variant": "high"
     },
     "Sisyphus": {
-      "model": "openai/gpt-5.2-codex",
-      "variant": "high"
+      "model": "zai-coding-plan/glm-4.7"
     },
     "Sisyphus-Junior": {
       "model": "openai/gpt-5.2-codex",

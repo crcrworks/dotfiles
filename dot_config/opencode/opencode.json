@@ -3,7 +3,7 @@
   "model": "zai-coding-plan/glm-4.7",
   "default_agent": "plan",
   "plugin": [
-    "oh-my-opencode@v3.0.0-beta.11",
+    "file://{env:HOME}/Development/repos/github.com/code-yeongyu/oh-my-opencode/dist/index.js",
     "opencode-openai-codex-auth@4.4.0",
     "opencode-antigravity-auth@1.3.0"
   ],

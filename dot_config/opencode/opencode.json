@@ -223,6 +223,17 @@
       "url": "http://127.0.0.1:3845/mcp",
       "enabled": false
     },
+    "figma-mcp-server": {
+      "type": "local",
+      "command": [
+        "npx",
+        "@antonytm/figma-mcp-server@latest"
+      ],
+      "environment": {
+        "TRANSPORT": "stdio"
+      },
+      "enabled": false
+    },
     "word-document": {
       "type": "local",
       "command": [

@@ -14,22 +14,15 @@ model: opencode/grok-code
 
 使用方法: `/commit [言語]`
 
-## 前提
-jujutsuを使用しています。fishシェルで実行してください。
+## 実行
+jujutsu skillを使用してコミットを作成してください。
 
 ## 言語設定
 - `ja` (デフォルト): コミットメッセージを日本語で記述
 - `en`: コミットメッセージを英語で記述
 
-## 手順
-1. `fish -c 'ju status'` で現在の状態を確認
-2. `fish -c 'ju diff'` で変更内容を確認
-3. 変更内容を分析して適切なコミットメッセージを作成
-4. `fish -c 'ju commit "{コミットメッセージ}"'` でコミットを実行
-
-## Conventional Commits形式
-コミットメッセージは以下の形式で記述してください:
-`<type>: <description>`
+## コミットメッセージ形式
+Conventional Commits形式 `<type>: <description>` を使用してください。
 
 ### Prefix一覧
 - feat: 新機能の追加

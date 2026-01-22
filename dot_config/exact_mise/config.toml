@@ -33,6 +33,7 @@ idiomatic_version_file_enable_tools = ["rust"]
 "act" = "latest"
 "github:anomalyco/opencode" = "latest"
 "prek" = "latest"
+"npm:clawdbot" = "latest"
 
 [hooks]
 postinstall = "npx corepack enable"

@@ -220,6 +220,16 @@
         "STITCH_PROJECT_ID": "{env:GITHUB_PERSONAL_ACCESS_TOKEN}"
       },
       "enabled": false
+    },
+    "pencil": {
+      "type": "local",
+      "command": [
+        "/Applications/Pencil.app/Contents/Resources/app.asar.unpacked/out/mcp-server-darwin-arm64",
+        "--ws-port",
+        "52884"
+      ],
+      "environment": {},
+      "enabled": false
     }
   }
 }

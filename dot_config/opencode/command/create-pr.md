@@ -1,7 +1,7 @@
 ---
 description: bookmarkからPRを作成 (conventional commit形式対応)
 agent: build
-model: zai-coding-plan/glm-4.7 
+model: google/gemini-3-flash-preview 
 ---
 
 指定されたbookmarkからGitHub PRを作成してください。n8nのconventional commit形式とPR bodyテンプレートを採用しています。

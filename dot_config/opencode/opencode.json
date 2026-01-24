@@ -3,7 +3,7 @@
   "model": "zai-coding-plan/glm-4.7",
   "default_agent": "plan",
   "plugin": [
-    "file://{env:HOME}/Development/repos/github.com/code-yeongyu/oh-my-opencode/dist/index.js",
+    "oh-my-opencode@v3.0.0-beta.16",
     "opencode-openai-codex-auth@4.4.0",
   ],
   "agent": {
@@ -238,7 +238,7 @@
         "chrome-devtools-mcp@latest",
         "--headless=true"
       ],
-      "enabled": true
+      "enabled": false
     }
   }
 }

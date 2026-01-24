@@ -1,91 +1,86 @@
 {
-  "$schema": "https://raw.githubusercontent.com/code-yeongyu/oh-my-opencode/dev/assets/oh-my-opencode.schema.json",
+  "$schema": "https://raw.githubusercontent.com/code-yeongyu/oh-my-opencode/master/assets/oh-my-opencode.schema.json",
   "sisyphus_agent": {
     "replace_plan": false
   },
+  "disabled_mcps": [
+    "playwright"
+  ],
   "categories": {
     "visual-engineering": {
-      "model": "zai-coding-plan/glm-4.7"
+      "model": "google/gemini-3-flash-preview",
+      "variant": "high"
     },
     "artistry": {
-      "model": "zai-coding-plan/glm-4.7"
+      "model": "google/gemini-3-flash-preview",
+      "variant": "high"
     },
     "quick": {
-      "model": "zai-coding-plan/glm-4.7",
-      "temperature": 0.7,
-      "top_p": 1.0
+      "model": "google/gemini-3-flash-preview",
+      "variant": "high"
     },
     "unspecified-high": {
-      "model": "zai-coding-plan/glm-4.7"
+      "model": "google/gemini-3-pro-preview",
+      "variant": "high"
     },
     "ultreabrain": {
-      "model": "zai-coding-plan/glm-4.7"
+      "model": "google/gemini-3-pro-preview",
+      "variant": "high"
     },
     "unspecified-low": {
-      "model": "openai/gpt-4o-mini"
-    },
-    "writing": {
       "model": "zai-coding-plan/glm-4.7",
       "temperature": 0.7,
       "top_p": 1.0
+    },
+    "writing": {
+      "model": "google/gemini-3-flash-preview",
+      "variant": "high"
     }
   },
   "agents": {
     "plan": {
-      "model": "zai-coding-plan/glm-4.7",
-      "temperature": 0.7,
-      "top_p": 1.0
+      "model": "google/gemini-3-flash-preview",
+      "variant": "high"
     },
-    "OpenCode-Builder": {
-      "model": "zai-coding-plan/glm-4.7",
-      "temperature": 0.7,
-      "top_p": 1.0
+    "build": {
+      "model": "google/gemini-3-flash-preview",
+      "variant": "high"
     },
-    "Sisyphus": {
-      "model": "zai-coding-plan/glm-4.7",
-      "temperature": 0.7,
-      "top_p": 1.0
+    "sisyphus": {
+      "model": "google/gemini-3-flash-preview",
+      "variant": "high"
     },
-    "Sisyphus-Junior": {
-      "model": "zai-coding-plan/glm-4.7",
-      "temperature": 0.7,
-      "top_p": 1.0
+    "sisyphus-junior": {
+      "model": "google/gemini-3-flash-preview",
+      "variant": "high"
     },
-    "Prometheus (Planner)": {
-      "model": "zai-coding-plan/glm-4.7",
-      "temperature": 0.7,
-      "top_p": 1.0
+    "prometheus": {
+      "model": "google/gemini-3-pro-preview",
+      "variant": "high"
     },
-    "Metis (Plan Consultant)": {
-      "model": "zai-coding-plan/glm-4.7"
+    "metis": {
+      "model": "google/gemini-3-pro-preview",
+      "variant": "high"
     },
-    "Momus (Plan Reviewer)": {
-      "model": "zai-coding-plan/glm-4.7"
+    "momus": {
+      "model": "google/gemini-3-pro-preview",
+      "variant": "high"
     },
     "oracle": {
-      "model": "zai-coding-plan/glm-4.7",
-      "temperature": 0.7,
-      "top_p": 1.0
+      "model": "google/gemini-3-flash-preview"
     },
     "atlas": {
-      "model": "zai-coding-plan/glm-4.7"
+      "model": "google/gemini-3-pro-preview",
+      "variant": "high"
     },
     "librarian": {
-      "model": "zai-coding-plan/glm-4.7"
+      "model": "google/gemini-3-flash-preview"
     },
     "explore": {
-      "model": "zai-coding-plan/glm-4.7"
-    },
-    "frontend-ui-ux-engineer": {
-      "model": "zai-coding-plan/glm-4.7",
-      "temperature": 0.7,
-      "top_p": 1.0
-    },
-    "document-writer": {
-      "model": "zai-coding-plan/glm-4.7"
+      "model": "google/gemini-3-flash-preview"
     },
     "multimodal-looker": {
-      "model": "openai/gpt-4o-mini"
+      "model": "google/gemini-3-flash-preview"
     }
   }
 }

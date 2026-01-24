@@ -1,7 +1,7 @@
 ---
 description: 作成するissueの計画を立てる
 agent: plan
-model: zai-coding-plan/glm-4.7 
+model: google/gemini-3-flash-preview 
 ---
 
 現在のコードベースやコンテキストから、GitHubに登録すべきissueを提案してください。

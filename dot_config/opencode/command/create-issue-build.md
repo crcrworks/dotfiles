@@ -1,7 +1,7 @@
 ---
 description: GitHubにissueを作成
 agent: build
-model: zai-coding-plan/glm-4.7 
+model: google/gemini-3-flash-preview 
 ---
 
 GitHubにissueを作成してください。

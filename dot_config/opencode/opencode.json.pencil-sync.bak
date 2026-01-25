@@ -72,20 +72,6 @@
         },
       }
     },
-    "zai-coding-plan": {
-      "npm": "@ai-sdk/anthropic",
-      "options": {
-        "baseURL": "https://api.z.ai/api/anthropic/v1"
-      },
-      "models": {
-        "glm-4.7": {
-          "name": "GLM-4.7"
-        },
-        "glm-4.5-air": {
-          "name": "GLM-4.5-air"
-        }
-      }
-    },
     "openai": {
       "models": {
         "gpt-5.2-codex": {
@@ -275,7 +261,7 @@
       "command": [
         "/Applications/Pencil.app/Contents/Resources/app.asar.unpacked/out/mcp-server-darwin-arm64",
         "--ws-port",
-        "62459"
+        "52884"
       ],
       "environment": {},
       "enabled": false

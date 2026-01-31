@@ -16,6 +16,7 @@
     },
     "general": {
       "model": "github-copilot/claude-opus-4.5",
+      "variant": "high"
     },
     "explore": {
       "model": "github-copilot/gemini-3-flash-preview",
@@ -39,31 +40,37 @@
     "planner": {
       "mode": "subagent",
       "model": "github-copilot/gpt-5.2",
+      "variant": "high",
       "description": "Feature implementation planning agent"
     },
     "code-reviewer": {
       "mode": "subagent",
       "model": "github-copilot/gpt-5.2",
+      "variant": "high",
       "description": "Code quality and security reviewer"
     },
     "security-reviewer": {
       "mode": "subagent",
       "model": "github-copilot/gpt-5.2",
+      "variant": "high",
       "description": "Security vulnerability analyzer"
     },
     "tdd-guide": {
       "mode": "subagent",
       "model": "github-copilot/gpt-5.2",
+      "variant": "high",
       "description": "TDD workflow guide"
     },
     "build-resolver": {
       "mode": "subagent",
       "model": "github-copilot/claude-opus-4.5",
+      "variant": "high",
       "description": "Build error resolver"
     },
     "refactor-cleaner": {
       "mode": "subagent",
       "model": "github-copilot/claude-opus-4.5",
+      "variant": "high",
       "description": "Refactoring and dead code removal"
     }
   },

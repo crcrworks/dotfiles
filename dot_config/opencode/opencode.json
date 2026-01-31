@@ -8,14 +8,18 @@
     "opencode-pencil-sync@latest",
   ],
   "agent": {
+    "build": {
+      "model": "zai-coding-plan/glm-4.7",
+    },
+    "plan": {
+      "model": "zai-coding-plan/glm-4.7",
+    },
     "general": {
       "model": "github-copilot/claude-opus-4.5",
-      "variant": "high"
     },
-    "build": {},
-    "plan": {},
     "explore": {
-      "model": "github-copilot/gemini-3-flash-preview"
+      "model": "github-copilot/gemini-3-flash-preview",
+      "mode": "subagent"
     },
     "ask": {
       "tools": {
@@ -31,6 +35,36 @@
         "todoread": true,
         "webfetch": true
       }
+    },
+    "planner": {
+      "mode": "subagent",
+      "model": "github-copilot/gpt-5.2",
+      "description": "Feature implementation planning agent"
+    },
+    "code-reviewer": {
+      "mode": "subagent",
+      "model": "github-copilot/gpt-5.2",
+      "description": "Code quality and security reviewer"
+    },
+    "security-reviewer": {
+      "mode": "subagent",
+      "model": "github-copilot/gpt-5.2",
+      "description": "Security vulnerability analyzer"
+    },
+    "tdd-guide": {
+      "mode": "subagent",
+      "model": "github-copilot/gpt-5.2",
+      "description": "TDD workflow guide"
+    },
+    "build-resolver": {
+      "mode": "subagent",
+      "model": "github-copilot/claude-opus-4.5",
+      "description": "Build error resolver"
+    },
+    "refactor-cleaner": {
+      "mode": "subagent",
+      "model": "github-copilot/claude-opus-4.5",
+      "description": "Refactoring and dead code removal"
     }
   },
   "provider": {

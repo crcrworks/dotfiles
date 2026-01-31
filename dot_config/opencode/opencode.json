@@ -3,13 +3,20 @@
   "model": "zai-coding-plan/glm-4.7",
   "default_agent": "plan",
   "plugin": [
-    "oh-my-opencode@v3.0.0",
     "opencode-openai-codex-auth@latest",
-    "@tarquinen/opencode-dcp@latest",
     "opencode-cursor-auth@latest",
-    "opencode-pencil-sync@latest"
+    "opencode-pencil-sync@latest",
   ],
   "agent": {
+    "general": {
+      "model": "github-copilot/claude-opus-4.5",
+      "variant": "high"
+    },
+    "build": {},
+    "plan": {},
+    "explore": {
+      "model": "github-copilot/gemini-3-flash-preview"
+    },
     "ask": {
       "tools": {
         "write": false,
@@ -72,108 +79,6 @@
         },
       }
     },
-    "zai-coding-plan": {
-      "npm": "@ai-sdk/anthropic",
-      "options": {
-        "baseURL": "https://api.z.ai/api/anthropic/v1"
-      },
-      "models": {
-        "glm-4.7": {
-          "name": "GLM-4.7"
-        },
-        "glm-4.5-air": {
-          "name": "GLM-4.5-air"
-        }
-      }
-    },
-    "openai": {
-      "models": {
-        "gpt-5.2-codex": {
-          "name": "GPT 5.2 Codex",
-          "options": {
-            "reasoningEffort": "medium",
-            "textVerbosity": "medium",
-            "reasoningSummary": "auto",
-            "include": [
-              "reasoning.encrypted_content"
-            ],
-            "store": false
-          }
-        },
-        "gpt-5.2-low": {
-          "name": "GPT 5.2 Low",
-          "options": {
-            "reasoningEffort": "low",
-            "textVerbosity": "low",
-            "reasoningSummary": "auto",
-            "include": [
-              "reasoning.encrypted_content"
-            ],
-            "store": false
-          }
-        },
-        "gpt-5.2-high": {
-          "name": "GPT 5.2 High",
-          "options": {
-            "reasoningEffort": "high",
-            "textVerbosity": "medium",
-            "reasoningSummary": "detailed",
-            "include": [
-              "reasoning.encrypted_content"
-            ],
-            "store": false
-          }
-        },
-        "gpt-5.2-xhigh": {
-          "name": "GPT 5.2 Xhigh",
-          "options": {
-            "reasoningEffort": "xhigh",
-            "textVerbosity": "high",
-            "reasoningSummary": "detailed",
-            "include": [
-              "reasoning.encrypted_content"
-            ],
-            "store": false
-          }
-        }
-      }
-    },
-    "github-copilot": {
-      "models": {
-        "gpt-5.1-high": {
-          "id": "gpt-5.1",
-          "options": {
-            "reasoningEffort": "high",
-            "textVerbosity": "medium",
-            "reasoningSummary": "auto"
-          }
-        },
-        "gpt-5.2-low": {
-          "id": "gpt-5.2",
-          "options": {
-            "reasoningEffort": "low",
-            "textVerbosity": "low",
-            "reasoningSummary": "auto"
-          }
-        },
-        "gpt-5.2-high": {
-          "id": "gpt-5.2",
-          "options": {
-            "reasoningEffort": "high",
-            "textVerbosity": "medium",
-            "reasoningSummary": "detailed"
-          }
-        },
-        "gpt-5.2-xhigh": {
-          "id": "gpt-5.2",
-          "options": {
-            "reasoningEffort": "xhigh",
-            "textVerbosity": "high",
-            "reasoningSummary": "detailed"
-          }
-        }
-      }
-    },
   },
   "mcp": {
     "pdf-reader": {
@@ -194,7 +99,7 @@
         "--api-key",
         "{env:CONTEXT7_API_KEY}"
       ],
-      "enabled": false
+      "enabled": true
     },
     "notion": {
       "type": "local",
@@ -289,6 +194,6 @@
         "--headless=true"
       ],
       "enabled": false
-    }
+    },
   }
 }

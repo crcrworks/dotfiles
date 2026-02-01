@@ -38,6 +38,10 @@
       "mode": "subagent",
       "model": "github-copilot/claude-opus-4.5-high"
     },
+    "explore": {
+      "mode": "subagent",
+      "model": "github-copilot/claude-opus-4.5-high",
+    },
     "codesearch": {
       "mode": "subagent",
       "model": "github-copilot/claude-opus-4.5-high",

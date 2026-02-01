@@ -3,23 +3,22 @@
   "model": "zai-coding-plan/glm-4.7",
   "default_agent": "plan",
   "instructions": [
-    "~/.config/opencode/rules/**/*.md",
+    "~/.config/opencode/rules/**/*.md"
   ],
   "plugin": [
     "opencode-openai-codex-auth@latest",
     "opencode-cursor-auth@latest",
-    "opencode-pencil-sync@latest",
+    "opencode-pencil-sync@latest"
   ],
   "agent": {
     "quick": {
       "mode": "primary",
-      "model": "kimi-for-coding/k2p5",
-      "prompt": "IMPORTANT: Use subagents extensively:\n- Launch multiple explore agents in parallel to understand the codebase"
+      "prompt": "IMPORTANT: Use subagents extensively:\n- Launch multiple codesearch agents in parallel to understand the codebase"
     },
     "ask": {
       "mode": "primary",
       "model": "kimi-for-coding/k2p5",
-      "prompt": "IMPORTANT: Use subagents extensively:\n- Launch multiple explore agents in parallel to understand the codebase",
+      "prompt": "IMPORTANT: Use subagents extensively:\n- Launch multiple codesearch agents in parallel to understand the codebase",
       "tools": {
         "write": false,
         "edit": false,
@@ -32,17 +31,24 @@
         "list": true,
         "todoread": true,
         "webfetch": true
-      },
+      }
     },
     "general": {
       "mode": "subagent",
       "model": "github-copilot/claude-opus-4.5",
       "variant": "high"
     },
-    "explore": {
+    "codesearch": {
       "mode": "subagent",
       "model": "github-copilot/claude-opus-4.5",
-      "variant": "high"
+      "variant": "high",
+      "description": "Codebase search and pattern discovery agent"
+    },
+    "websearch": {
+      "mode": "subagent",
+      "model": "github-copilot/gemini-3-flash-preview",
+      "variant": "high",
+      "description": "Web search agent for retrieving latest information"
     },
     "planner": {
       "mode": "subagent",
@@ -130,9 +136,9 @@
       "models": {
         "zai-org/glm-4.7-flash": {
           "name": "GLM 4.7 Flash (local)"
-        },
+        }
       }
-    },
+    }
   },
   "mcp": {
     "pdf-reader": {

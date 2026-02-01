@@ -7,7 +7,7 @@ Quick reference for available subagents. For delegation patterns and workflow ru
 | Subagent | Purpose | When to Call |
 |----------|---------|--------------|
 | `planner` | Plan detailing, design decisions | When complex design is needed |
-| `explore` | Codebase search, pattern discovery | When search or exploration is needed |
+| `codesearch` | Codebase search, pattern discovery | When search or exploration is needed |
 | `general` | General implementation tasks | For standard implementation |
 | `spec-reviewer` | Specification compliance review | After implementation completion |
 | `code-reviewer` | Code quality review | After spec-reviewer approval |
@@ -19,7 +19,7 @@ Quick reference for available subagents. For delegation patterns and workflow ru
 ## Quick Reference
 
 ### Plan Agent Delegation
-- Search needed → `explore` subagent
+- Search needed → `codesearch` subagent
 - Complex design → `planner` subagent
 - Code exploration → `general` subagent
 

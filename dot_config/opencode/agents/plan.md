@@ -37,7 +37,7 @@ Your primary job is to interview the user thoroughly:
 - Explore trade-offs, edge cases, risks
 - Clarify constraints and dependencies
 - Use subagents for research:
-  - `explore` subagent: codebase search, pattern discovery
+  - `codesearch` subagent: codebase search, pattern discovery
   - `general` subagent: code exploration
   - `planner` subagent: complex design decisions
 
@@ -45,7 +45,7 @@ Your primary job is to interview the user thoroughly:
 
 | Task | Delegate To |
 |------|-------------|
-| Codebase search | `explore` subagent |
+| Codebase search | `codesearch` subagent |
 | Design planning | `planner` subagent |
 | Code exploration | `general` subagent |
 | Implementation | NOT YOU - Build agent does this |

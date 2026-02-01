@@ -1,22 +1,22 @@
 # Jujutsu Commit Rules
 
-## コミット戦略
+## Commit Strategy
 
-**1 TODO = 1 コミット**
+**1 TODO = 1 Commit**
 
-各TODO完了時に、必ずjujutsuでコミットを作成する。
+Create a commit using jujutsu whenever each TODO is completed.
 
-## 必須スキル
+## Required Skill
 
-jujutsu操作を行う前に、必ず`skill`ツールで`jujutsu`スキルを読み取ること。
+Always read the `jujutsu` skill using the `skill` tool before performing jujutsu operations.
 
-## コミット手順
+## Commit Procedure
 
-1. `skill`ツールで`jujutsu`スキルを読み取る
-2. スキルの手順に従ってコミットを作成
-3. コミットメッセージは規約に従う
+1. Read the `jujutsu` skill using the `skill` tool
+2. Follow the skill's instructions to create a commit
+3. Follow conventions for commit messages
 
-## コミットメッセージ形式
+## Commit Message Format
 
 ```
 type(scope): description
@@ -24,27 +24,27 @@ type(scope): description
 [optional body]
 ```
 
-### Type一覧
+### Type List
 
-| Type | 用途 |
-|------|------|
-| `feat` | 新機能 |
-| `fix` | バグ修正 |
-| `docs` | ドキュメントのみ |
-| `style` | フォーマット（動作に影響なし） |
-| `refactor` | リファクタリング |
-| `test` | テスト追加・修正 |
-| `chore` | ビルド・補助ツール |
+| Type | Purpose |
+|------|---------|
+| `feat` | New feature |
+| `fix` | Bug fix |
+| `docs` | Documentation only |
+| `style` | Formatting (no behavior change) |
+| `refactor` | Refactoring |
+| `test` | Test addition/modification |
+| `chore` | Build/auxiliary tools |
 
-## タイミング
+## Timing
 
-- **TODO完了直後** → 即座にコミット
-- **レビュー修正後** → 修正ごとにコミット
-- **複数ファイル変更** → 関連する変更を1コミット
+- **Immediately after TODO completion** → Commit right away
+- **After review fixes** → Commit per fix
+- **Multiple file changes** → One commit for related changes
 
-## 禁止
+## Prohibitions
 
-- `git commit` の使用
-- 複数TODOをまとめてコミット
-- コミットメッセージなしのコミット
-- `jujutsu`スキルを読まずにjujutsu操作を行う
+- Using `git commit`
+- Combining multiple TODOs into one commit
+- Committing without a commit message
+- Performing jujutsu operations without reading the `jujutsu` skill

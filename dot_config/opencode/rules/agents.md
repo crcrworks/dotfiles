@@ -1,54 +1,30 @@
-# Subagent Delegation Rules
+# Subagent Reference
 
-## 基本原則
+Quick reference for available subagents. For delegation patterns and workflow rules, see `using-superpowers` skill.
 
-**自分で実装しない。** すべてサブエージェントに委譲する。
+## Subagent List
 
-## サブエージェント一覧と用途
+| Subagent | Purpose | When to Call |
+|----------|---------|--------------|
+| `planner` | Plan detailing, design decisions | When complex design is needed |
+| `explore` | Codebase search, pattern discovery | When search or exploration is needed |
+| `general` | General implementation tasks | For standard implementation |
+| `spec-reviewer` | Specification compliance review | After implementation completion |
+| `code-reviewer` | Code quality review | After spec-reviewer approval |
+| `security-reviewer` | Security review | When handling sensitive operations |
+| `tdd-guide` | TDD workflow guidance | When implementing TDD |
+| `build-resolver` | Build error resolution | When build fails |
+| `refactor-cleaner` | Refactoring | When organizing code |
 
-| サブエージェント | 用途 | 呼び出しタイミング |
-|---------------|------|----------------|
-| `planner` | 計画の詳細化、設計決定 | 複雑な設計が必要な時 |
-| `explore` | コードベース検索、パターン発見 | 検索、探索が必要な時 |
-| `general` | 一般的な実装タスク | 標準的な実装時 |
-| `spec-reviewer` | 仕様適合レビュー | 実装完了後 |
-| `code-reviewer` | コード品質レビュー | spec-reviewer通過後 |
-| `security-reviewer` | セキュリティレビュー | 機密処理がある時 |
-| `tdd-guide` | TDDワークフロー指導 | TDD実施時 |
-| `build-resolver` | ビルドエラー解決 | ビルド失敗時 |
-| `refactor-cleaner` | リファクタリング | コード整理時 |
+## Quick Reference
 
-## 委譲パターン
+### Plan Agent Delegation
+- Search needed → `explore` subagent
+- Complex design → `planner` subagent
+- Code exploration → `general` subagent
 
-### Planエージェントからの委譲
-
-```
-検索が必要 → exploreサブエージェント
-設計が複雑 → plannerサブエージェント
-コード探索 → generalサブエージェント
-```
-
-### Buildエージェントからの委譲
-
-```
-実装タスク → generalサブエージェント
-仕様確認 → spec-reviewerサブエージェント
-品質確認 → code-reviewerサブエージェント
-セキュリティ確認 → security-reviewerサブエージェント
-```
-
-## 禁止事項
-
-- 自分でファイルを直接編集しない（`.opencode/`内を除く）
-- 自分でコードを書かない
-- サブエージェントを使わずに調査しない
-
-## 例外
-
-以下は直接実行可能：
-
-- ファイルの読み取り（`read`ツール）
-- サブエージェントの呼び出し（`task`ツール）
-- スキルの読み取り（`skill`ツール）
-- TODOリスト管理（`todowrite`/`todoread`）
-- 検証コマンドの実行（テスト実行など）
+### Build Agent Delegation
+- Implementation tasks → `general` subagent
+- Specification check → `spec-reviewer` subagent
+- Quality check → `code-reviewer` subagent
+- Security check → `security-reviewer` subagent

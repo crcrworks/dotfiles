@@ -1,24 +1,24 @@
 ---
-description: GitHubにissueを作成
+description: Create an issue on GitHub
 agent: build
-model: google/gemini-3-flash-preview 
+model: google/gemini-3-flash-preview
 ---
 
-GitHubにissueを作成してください。
+Create an issue on GitHub.
 
-ghコマンドを使用して実際にissueを登録します。
+Actually registers an issue using the gh command.
 
-引数が指定されている場合はその内容でissueを作成:
+If arguments are provided, create an issue with that content:
 $ARGUMENTS
 
-引数がない場合は、現在の状況を分析してissueを作成してください。
+If no arguments are provided, analyze the current situation and create an issue.
 
-コマンド例:
+Command examples:
 ```
-gh issue create --title "タイトル" --body "本文"
+gh issue create --title "Title" --body "Body"
 ```
 
-ラベルを付ける場合:
+To add labels:
 ```
-gh issue create --title "タイトル" --body "本文" --label "bug"
+gh issue create --title "Title" --body "Body" --label "bug"
 ```

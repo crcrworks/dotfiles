@@ -1,50 +1,50 @@
 # Verification Rules
 
-## 検証レベル：標準
+## Verification Level: Standard
 
-- テスト通過
-- 自己レビュー
-- 基本的な動作確認
+- Test passing
+- Self-review
+- Basic functionality verification
 
-## 検証フロー
+## Verification Flow
 
-### 実装後の検証（Buildエージェント）
+### Post-Implementation Verification (Build Agent)
 
-1. **テスト実行**
+1. **Test Execution**
    ```bash
-   # 該当するテストコマンドを実行
+   # Execute relevant test commands
    ```
 
-2. **静的解析**
+2. **Static Analysis**
    ```bash
-   # 型チェック、リントなど
+   # Type checking, linting, etc.
    ```
 
-3. **spec-reviewerによるレビュー**
-   - 計画通りの実装か確認
-   - 不足・過剰がないか確認
+3. **Review by spec-reviewer**
+   - Verify implementation matches the plan
+   - Check for missing or excess functionality
 
-4. **code-reviewerによるレビュー**
-   - コード品質確認
-   - ベストプラクティス遵守確認
+4. **Review by code-reviewer**
+   - Code quality verification
+   - Best practices compliance check
 
-### 検証合格基準
+### Verification Pass Criteria
 
-| チェック | 基準 |
-|---------|------|
-| テスト | すべてPASS |
-| 型チェック | エラー0 |
-| spec-reviewer | 承認 |
-| code-reviewer | 承認 |
+| Check | Criteria |
+|-------|----------|
+| Tests | All PASS |
+| Type Check | 0 errors |
+| spec-reviewer | Approved |
+| code-reviewer | Approved |
 
-## 不合格時の対応
+## Handling Failures
 
-1. 実装サブエージェントに修正依頼
-2. 再検証
-3. 合格するまで繰り返す
+1. Request fixes from implementation subagent
+2. Re-verify
+3. Repeat until passed
 
-## 検証ツール
+## Verification Tools
 
-- `lsp`ツール：診断情報取得
-- `bash`ツール：テスト・コマンド実行
-- `read`ツール：コード確認
+- `lsp` tool: Get diagnostic information
+- `bash` tool: Execute tests/commands
+- `read` tool: Code verification

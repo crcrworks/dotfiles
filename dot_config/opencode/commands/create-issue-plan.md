@@ -1,19 +1,19 @@
 ---
-description: 作成するissueの計画を立てる
+description: Plan an issue to create
 agent: plan
-model: google/gemini-3-flash-preview 
+model: google/gemini-3-flash-preview
 ---
 
-現在のコードベースやコンテキストから、GitHubに登録すべきissueを提案してください。
+Propose issues that should be registered on GitHub based on the current codebase or context.
 
-手順:
-1. 現在の状況を分析（git status、最近の変更、TODOコメントなど）
-2. 登録すべきissueの候補をリストアップ
-3. 各issueについて以下を提案:
-   - タイトル
-   - 本文（問題の説明、再現手順、期待する動作など）
-   - ラベル（bug, enhancement, documentation など）
+Procedure:
+1. Analyze current situation (git status, recent changes, TODO comments, etc.)
+2. List candidate issues to register
+3. For each issue, propose:
+   - Title
+   - Body (problem description, reproduction steps, expected behavior, etc.)
+   - Labels (bug, enhancement, documentation, etc.)
 
-実際にissueを作成するには `/create-issue-build` を使用してください。
+Use `/create-issue-build` to actually create the issue.
 
 $ARGUMENTS

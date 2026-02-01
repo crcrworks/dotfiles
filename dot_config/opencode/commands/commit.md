@@ -1,43 +1,43 @@
 ---
-description: jujutsuでコミットを作成
+description: Create a commit using jujutsu
 agent: build
-model: google/gemini-3-flash-preview 
+model: google/gemini-3-flash-preview
 ---
 
-現在のステージングされた変更をコミットしてください。
+Commit the currently staged changes.
 
-## 引数
-- 言語: $1 (`en` または `ja`、省略時は `ja`)
+## Arguments
+- Language: $1 (`en` or `ja`, defaults to `ja`)
 
-## バリデーション
-- **言語が `en` または `ja` 以外の場合は、エラーメッセージを表示して終了してください。**
+## Validation
+- **If the language is not `en` or `ja`, display an error message and exit.**
 
-使用方法: `/commit [言語]`
+Usage: `/commit [language]`
 
-## 実行
-jujutsuのagent skillsから実行方法を読んでください。
+## Execution
+Please read the execution method from the jujutsu agent skills.
 
-## 言語設定
-- `ja` (デフォルト): コミットメッセージを日本語で記述
-- `en`: コミットメッセージを英語で記述
+## Language Settings
+- `ja` (default): Write commit messages in Japanese
+- `en`: Write commit messages in English
 
-## コミットメッセージ形式
-Conventional Commits形式 `<type>: <description>` を使用してください。
+## Commit Message Format
+Use Conventional Commits format `<type>: <description>`.
 
-### Prefix一覧
-- feat: 新機能の追加
-- fix: バグ修正
-- docs: ドキュメントのみの変更
-- style: コードの意味に影響しない変更（フォーマット等）
-- refactor: バグ修正でも機能追加でもないコード変更
-- perf: パフォーマンス改善
-- test: テストの追加・修正
-- build: ビルドシステムや外部依存関係の変更
-- ci: CI設定の変更
-- chore: その他の変更（設定ファイル等）
-- revert: 以前のコミットの取り消し
+### Prefix List
+- feat: Add new feature
+- fix: Bug fix
+- docs: Documentation changes only
+- style: Changes that don't affect code meaning (formatting, etc.)
+- refactor: Code changes that are neither bug fixes nor feature additions
+- perf: Performance improvement
+- test: Add or modify tests
+- build: Changes to build system or external dependencies
+- ci: Changes to CI configuration
+- chore: Other changes (configuration files, etc.)
+- revert: Revert previous commit
 
-例:
+Examples:
 - feat: add user authentication
 - fix: resolve null pointer in login
 - docs: update API documentation

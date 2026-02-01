@@ -1,105 +1,105 @@
 ---
-description: bookmarkからPRを作成 (conventional commit形式対応)
+description: Create a PR from bookmark (supports conventional commit format)
 agent: build
-model: google/gemini-3-flash-preview 
+model: google/gemini-3-flash-preview
 ---
 
-指定されたbookmarkからGitHub PRを作成してください。n8nのconventional commit形式とPR bodyテンプレートを採用しています。
+Create a GitHub PR from the specified bookmark. Uses n8n's conventional commit format and PR body template.
 
-## 引数
-- bookmark名: $1
-- 言語: $2 (`en` または `ja`、省略時は `ja`)
+## Arguments
+- Bookmark name: $1
+- Language: $2 (`en` or `ja`, defaults to `ja`)
 
-## バリデーション
-- **bookmark名が指定されていない場合は、エラーメッセージを表示して終了してください。**
-- **言語が `en` または `ja` 以外の場合は、エラーメッセージを表示して終了してください。**
+## Validation
+- **If bookmark name is not specified, display an error message and exit.**
+- **If language is not `en` or `ja`, display an error message and exit.**
 
-使用方法: `/create-pr <bookmark名> [言語]`
+Usage: `/create-pr <bookmark_name> [language]`
 
-## 前提
-- jujutsuを使用しています。fishシェルで実行してください。
-- PRのベースブランチはmainです。
+## Prerequisites
+- Using jujutsu. Execute in fish shell.
+- PR base branch is main.
 
-## 手順
-1. `fish -c 'ju bookmark list'` でbookmarkの存在を確認
-2. `fish -c 'ju log -r "main::$1"'` でmainからの変更を確認
-3. 変更内容を分析してPRのタイトルと説明を作成
-4. `fish -c 'ju git push --bookmark $1'` でリモートにpush
-5. `gh pr create --head $1 --base main` でPRを作成
+## Procedure
+1. Check bookmark existence with `fish -c 'ju bookmark list'`
+2. Check changes from main with `fish -c 'ju log -r "main::$1"'`
+3. Analyze changes and create PR title and description
+4. Push to remote with `fish -c 'ju git push --bookmark $1'`
+5. Create PR with `gh pr create --head $1 --base main`
 
-## PRタイトル形式 (Conventional Commits)
+## PR Title Format (Conventional Commits)
 
 ```
 <type>(<scope>): <summary>
 ```
 
-### タイプ (必須)
+### Types (Required)
 
-| タイプ   | 説明                    |
-|----------|-------------------------|
-| `feat`   | 新機能                  |
-| `fix`    | バグ修正                |
-| `perf`   | パフォーマンス改善      |
-| `test`   | テストの追加/修正        |
-| `docs`   | ドキュメントのみ        |
-| `refactor` | リファクタリング      |
-| `build`  | ビルドシステム/依存関係 |
-| `ci`     | CI設定                  |
-| `chore`   | その他のタスク          |
+| Type | Description |
+|------|-------------|
+| `feat` | New feature |
+| `fix` | Bug fix |
+| `perf` | Performance improvement |
+| `test` | Test addition/modification |
+| `docs` | Documentation only |
+| `refactor` | Refactoring |
+| `build` | Build system/dependencies |
+| `ci` | CI configuration |
+| `chore` | Other tasks |
 
-### スコープ (推奨、オプション)
+### Scope (Recommended, Optional)
 
-- `API` - パブリックAPI変更
-- `core` - コア/バックエンド
-- `ui` - UI変更
-- 特定のモジュール名 (例: `auth`, `db`)
+- `API` - Public API changes
+- `core` - Core/backend
+- `ui` - UI changes
+- Specific module name (e.g., `auth`, `db`)
 
-### サマリーのルール
+### Summary Rules
 
-- 命令形現在形: "Add" ではなく "追加" (ja), "Add" (en)
-- 最初の文字は大文字
-- 最後にピリオドをつけない
-- チケットIDを含めない
+- Imperative present tense: "Add" not "Added" (en), "追加" (ja)
+- First letter capitalized
+- No period at the end
+- Do not include ticket ID
 
-### 例
+### Examples
 
 ```
-feat(auth): JWT認証を追加
-fix(core): メモリリークを修正
-refactor(db): クエリ最適化 (no-changelog)
-perf(ui): レンダリング速度を改善
+feat(auth): Add JWT authentication
+fix(core): Fix memory leak
+refactor(db): Optimize queries (no-changelog)
+perf(ui): Improve rendering speed
 ```
 
-## PRボディテンプレート
+## PR Body Template
 
 ```bash
-gh pr create --head $1 --base main --title "PRタイトル" --body "$(cat <<'EOF'
+gh pr create --head $1 --base main --title "PR Title" --body "$(cat <<'EOF'
 ## Summary
 
-<変更内容の説明。テスト方法も含める。UI変更の場合はスクリーンショットを推奨。>
+<Description of changes. Include testing method. Screenshots recommended for UI changes.>
 
 ## Related Issues
 
-<!-- 関連するissue: closes #123, fixes #123, resolves #123 -->
+<!-- Related issues: closes #123, fixes #123, resolves #123 -->
 
 ## Review / Merge checklist
 
-- [ ] PRタイトルはconventional commit形式に従っている
-- [ ] ドキュメントが更新されている、または追従チケットがある
-- [ ] テストが含まれている
-- [ ] コードレビューを受けた
+- [ ] PR title follows conventional commit format
+- [ ] Documentation is updated or follow-up ticket exists
+- [ ] Tests are included
+- [ ] Code review received
 
 ## Changes
 
-- 変更点1
-- 変更点2
+- Change 1
+- Change 2
 EOF
 )"
 ```
 
-## 言語設定
-- `ja` (デフォルト): PRタイトルと説明を日本語で記述
-- `en`: PRタイトルと説明を英語で記述
+## Language Settings
+- `ja` (default): Write PR title and description in Japanese
+- `en`: Write PR title and description in English
 
-PRのタイトルと説明は変更の「なぜ」を重視し、簡潔に記述してください。
-作成したPRのURLを表示してください。
+Focus on the "why" of changes and keep the PR title and description concise.
+Display the URL of the created PR.

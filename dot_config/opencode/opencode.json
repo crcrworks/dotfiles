@@ -14,7 +14,7 @@
     "quick": {
       "mode": "primary",
       "model": "kimi-for-coding/k2p5",
-      "prompt": "IMPORTANT: Use subagents extensively:\n- Launch multiple codesearch agents in parallel to understand the codebase"
+      "prompt": "~/.config/opencode/agents/quick.md"
     },
     "ask": {
       "mode": "primary",

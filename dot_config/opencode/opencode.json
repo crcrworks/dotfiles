@@ -82,6 +82,11 @@
       "mode": "subagent",
       "model": "github-copilot/gpt-5.2-high",
       "description": "Spec compliance reviewer - verifies implementation matches plan"
+    },
+    "frontend-designer": {
+      "mode": "subagent",
+      "model": "github-copilot/gemini-3-flash-preview",
+      "description": "Frontend design specialist for UI/UX implementation"
     }
   },
   "provider": {

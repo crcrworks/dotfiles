@@ -13,6 +13,7 @@
   "agent": {
     "quick": {
       "mode": "primary",
+      "model": "kimi-for-coding/k2p5",
       "prompt": "IMPORTANT: Use subagents extensively:\n- Launch multiple codesearch agents in parallel to understand the codebase"
     },
     "ask": {
@@ -35,65 +36,76 @@
     },
     "general": {
       "mode": "subagent",
-      "model": "github-copilot/claude-opus-4.5",
-      "variant": "high"
+      "model": "github-copilot/claude-opus-4.5-high"
     },
     "codesearch": {
       "mode": "subagent",
-      "model": "github-copilot/claude-opus-4.5",
-      "variant": "high",
+      "model": "github-copilot/claude-opus-4.5-high",
       "description": "Codebase search and pattern discovery agent"
     },
     "websearch": {
       "mode": "subagent",
-      "model": "github-copilot/gemini-3-flash-preview",
-      "variant": "high",
+      "model": "github-copilot/gpt-5.2-high",
       "description": "Web search agent for retrieving latest information"
     },
     "planner": {
       "mode": "subagent",
-      "model": "github-copilot/gpt-5.2",
-      "variant": "high",
+      "model": "github-copilot/gpt-5.2-high",
       "description": "Feature implementation planning agent"
     },
     "code-reviewer": {
       "mode": "subagent",
-      "model": "github-copilot/gpt-5.2",
-      "variant": "high",
+      "model": "github-copilot/gpt-5.2-high",
       "description": "Code quality and security reviewer"
     },
     "security-reviewer": {
       "mode": "subagent",
-      "model": "github-copilot/gpt-5.2",
-      "variant": "high",
+      "model": "github-copilot/gpt-5.2-high",
       "description": "Security vulnerability analyzer"
     },
     "tdd-guide": {
       "mode": "subagent",
-      "model": "github-copilot/gpt-5.2",
-      "variant": "high",
+      "model": "github-copilot/gpt-5.2-high",
       "description": "TDD workflow guide"
     },
     "build-resolver": {
       "mode": "subagent",
-      "model": "github-copilot/claude-opus-4.5",
-      "variant": "high",
+      "model": "github-copilot/claude-opus-4.5-high",
       "description": "Build error resolver"
     },
     "refactor-cleaner": {
       "mode": "subagent",
-      "model": "github-copilot/claude-opus-4.5",
-      "variant": "high",
+      "model": "github-copilot/claude-opus-4.5-high",
       "description": "Refactoring and dead code removal"
     },
     "spec-reviewer": {
       "mode": "subagent",
-      "model": "github-copilot/gpt-5.2",
-      "variant": "high",
+      "model": "github-copilot/gpt-5.2-high",
       "description": "Spec compliance reviewer - verifies implementation matches plan"
     }
   },
   "provider": {
+    "github-copilot": {
+      "models": {
+        "claude-opus-4.5-high": {
+          "name": "Claude Opus 4.5 High",
+          "id": "claude-opus-4.5",
+          "options": {
+            "thinking": {
+              "type": "enabled",
+              "budgetTokens": 200000
+            }
+          }
+        },
+        "gpt-5.2-high": {
+          "name": "GPT-5.2 High",
+          "id": "gpt-5.2",
+          "options": {
+            "reasoningEffort": "high"
+          }
+        }
+      }
+    },
     "cursor": {
       "npm": "@ai-sdk/openai-compatible",
       "name": "Cursor Agent (local)",

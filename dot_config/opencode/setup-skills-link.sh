@@ -3,7 +3,7 @@
 set -e
 
 SOURCE_DIR="$HOME/.agents/skills"
-TARGET_DIR="$HOME/.claude/skills"
+TARGET_DIR="$HOME/.config/opencode/skills"
 
 if [ ! -d "$SOURCE_DIR" ]; then
     echo "Error: $SOURCE_DIR does not exist"

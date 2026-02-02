@@ -4,15 +4,16 @@ yabai -m config split_ratio 0.5
 yabai -m config window_placement first_child
 
 yabai -m config layout bsp
-yabai -m config top_padding 35
+yabai -m config top_padding 0
+yabai -m config bottom_padding 5
 yabai -m config right_padding 15
-yabai -m config bottom_padding 10
 yabai -m config left_padding 15
-yabai -m config window_gap 5
+yabai -m config window_gap 10
 
 # Focus window under cursor when a window is destroyed
-yabai -m signal --add event=window_destroyed action="yabai -m query --windows --window &> /dev/null || yabai -m window --focus mouse"
-yabai -m signal --add event=application_terminated action="yabai -m query --windows --window &> /dev/null || yabai -m window --focus mouse"
+# Use a small delay to ensure window is fully destroyed before focusing
+yabai -m signal --add event=window_destroyed action="sleep 0.1 && yabai -m query --windows --window &> /dev/null || yabai -m window --focus mouse &> /dev/null || yabai -m window --focus \$(yabai -m query --windows --space | jq -r '.[0].id') &> /dev/null"
+yabai -m signal --add event=application_terminated action="sleep 0.1 && yabai -m query --windows --window &> /dev/null || yabai -m window --focus mouse &> /dev/null || yabai -m window --focus \$(yabai -m query --windows --space | jq -r '.[0].id') &> /dev/null"
 
 # Focus first window when switching spaces
 yabai -m signal --add event=space_changed action="yabai -m window --focus \$(yabai -m query --windows --space | jq '.[0].id')"
@@ -34,6 +35,7 @@ yabai -m rule --add space=3 label="Obsidian" app="^Obsidian$"
 ## Sticky windows
 yabai -m rule --add manage=off label="System Settings" app="System Settings" sticky="on"
 yabai -m rule --add manage=off label="Finder" app="Finder" sticky="on"
+yabai -m rule --add manage=off label="Reminders" app="Reminders" sticky="on"
 yabai -m rule --add manage=off label="Mail" app="Mail" sticky="on"
 yabai -m rule --add manage=off label="Activity Monitor" app="Activity Monitor" sticky="on"
 yabai -m rule --add manage=off label="Toggl Track" app="Toggl Track" sticky="on"

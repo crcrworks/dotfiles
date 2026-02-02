@@ -1,0 +1,74 @@
+{
+  "$schema": "https://raw.githubusercontent.com/code-yeongyu/oh-my-opencode/master/assets/oh-my-opencode.schema.json",
+  "sisyphus_agent": {
+    "replace_plan": false
+  },
+  "categories": {
+    "visual-engineering": {
+      "model": "github-copilot/gemini-3-pro-preview"
+    },
+    "artistry": {
+      "model": "github-copilot/gemini-3-pro-preview"
+    },
+    "quick": {
+      "model": "github-copilot/claude-opus-4.5"
+    },
+    "unspecified-high": {
+      "model": "github-copilot/claude-opus-4.5"
+    },
+    "ultreabrain": {
+      "model": "github-copilot/gpt-5.2",
+      "variant": "xhigh"
+    },
+    "unspecified-low": {
+      "model": "github-copilot/gemini-3-flash-preview"
+    },
+    "writing": {
+      "model": "github-copilot/gemini-3-pro-preview"
+    }
+  },
+  "agents": {
+    "plan": {
+      "model": "kimi-for-coding/k2p5"
+    },
+    "build": {
+      "model": "kimi-for-coding/k2p5"
+    },
+    "sisyphus": {
+      "model": "kimi-for-coding/k2p5"
+    },
+    "prometheus": {
+      "model": "kimi-for-coding/k2p5"
+    },
+    "hephaestus": {
+      "model": "kimi-for-coding/k2p5"
+    },
+    "atlas": {
+      "model": "kimi-for-coding/k2p5"
+    },
+    "sisyphus-junior": {
+      "model": "github-copilot/claude-opus-4.5"
+    },
+    "metis": {
+      "model": "github-copilot/gpt-5.2",
+      "variant": "high"
+    },
+    "momus": {
+      "model": "github-copilot/gpt-5.2",
+      "variant": "high"
+    },
+    "oracle": {
+      "model": "github-copilot/gpt-5.2",
+      "variant": "high"
+    },
+    "librarian": {
+      "model": "github-copilot/gemini-3-flash-preview"
+    },
+    "explore": {
+      "model": "github-copilot/gemini-3-flash-preview"
+    },
+    "multimodal-looker": {
+      "model": "github-copilot/gemini-3-flash-preview"
+    }
+  }
+}

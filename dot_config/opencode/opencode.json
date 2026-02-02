@@ -8,14 +8,10 @@
   "plugin": [
     "opencode-openai-codex-auth@latest",
     "opencode-cursor-auth@latest",
-    "opencode-pencil-sync@latest"
+    "opencode-pencil-sync@latest",
+    "oh-my-opencode@3.2.1"
   ],
   "agent": {
-    "quick": {
-      "mode": "primary",
-      "model": "kimi-for-coding/k2p5",
-      "prompt": "~/.config/opencode/agents/quick.md"
-    },
     "ask": {
       "mode": "primary",
       "model": "kimi-for-coding/k2p5",
@@ -36,55 +32,55 @@
     },
     "general": {
       "mode": "subagent",
-      "model": "github-copilot/claude-opus-4.5-high"
+      "model": "github-copilot/claude-opus-4.5"
     },
     "explore": {
       "mode": "subagent",
-      "model": "github-copilot/claude-opus-4.5-high",
+      "model": "github-copilot/claude-opus-4.5",
     },
     "codesearch": {
       "mode": "subagent",
-      "model": "github-copilot/claude-opus-4.5-high",
+      "model": "github-copilot/claude-opus-4.5",
       "description": "Codebase search and pattern discovery agent"
     },
     "websearch": {
       "mode": "subagent",
-      "model": "github-copilot/gpt-5.2-high",
+      "model": "github-copilot/gpt-5.2",
       "description": "Web search agent for retrieving latest information"
     },
     "planner": {
       "mode": "subagent",
-      "model": "github-copilot/gpt-5.2-high",
+      "model": "github-copilot/gpt-5.2",
       "description": "Feature implementation planning agent"
     },
     "code-reviewer": {
       "mode": "subagent",
-      "model": "github-copilot/gpt-5.2-high",
+      "model": "github-copilot/gpt-5.2",
       "description": "Code quality and security reviewer"
     },
     "security-reviewer": {
       "mode": "subagent",
-      "model": "github-copilot/gpt-5.2-high",
+      "model": "github-copilot/gpt-5.2",
       "description": "Security vulnerability analyzer"
     },
     "tdd-guide": {
       "mode": "subagent",
-      "model": "github-copilot/gpt-5.2-high",
+      "model": "github-copilot/gpt-5.2",
       "description": "TDD workflow guide"
     },
     "build-resolver": {
       "mode": "subagent",
-      "model": "github-copilot/claude-opus-4.5-high",
+      "model": "github-copilot/claude-opus-4.5",
       "description": "Build error resolver"
     },
     "refactor-cleaner": {
       "mode": "subagent",
-      "model": "github-copilot/claude-opus-4.5-high",
+      "model": "github-copilot/claude-opus-4.5",
       "description": "Refactoring and dead code removal"
     },
     "spec-reviewer": {
       "mode": "subagent",
-      "model": "github-copilot/gpt-5.2-high",
+      "model": "github-copilot/gpt-5.2",
       "description": "Spec compliance reviewer - verifies implementation matches plan"
     },
     "frontend-designer": {
@@ -94,27 +90,6 @@
     }
   },
   "provider": {
-    "github-copilot": {
-      "models": {
-        "claude-opus-4.5-high": {
-          "name": "Claude Opus 4.5 High",
-          "id": "claude-opus-4.5",
-          "options": {
-            "thinking": {
-              "type": "enabled",
-              "budgetTokens": 200000
-            }
-          }
-        },
-        "gpt-5.2-high": {
-          "name": "GPT-5.2 High",
-          "id": "gpt-5.2",
-          "options": {
-            "reasoningEffort": "high"
-          }
-        }
-      }
-    },
     "cursor": {
       "npm": "@ai-sdk/openai-compatible",
       "name": "Cursor Agent (local)",
@@ -157,6 +132,26 @@
       "models": {
         "zai-org/glm-4.7-flash": {
           "name": "GLM 4.7 Flash (local)"
+        }
+      }
+    },
+    "openrouter": {
+      "npm": "@ai-sdk/openai-compatible",
+      "name": "OpenRouter",
+      "options": {
+        "baseURL": "https://openrouter.ai/api/v1",
+        "apiKey": "{env:OPENROUTER_API_KEY}"
+      },
+      "models": {
+        "stepfun/step-3.5-flash:free": {
+          "name": "Step 3.5 Flash (free)",
+          "options": {
+            "supportsImages": false
+          },
+          "limit": {
+            "context": 256000,
+            "output": 65536
+          },
         }
       }
     }
@@ -272,6 +267,17 @@
         "npx",
         "@playwright/mcp@latest",
         "--headless"
+      ],
+      "enabled": false
+    },
+    "supabase": {
+      "type": "local",
+      "command": [
+        "npx",
+        "-y",
+        "@supabase/mcp-server-supabase@latest",
+        "--access-token",
+        "{env:SUPABASE_ACCESS_TOKEN}"
       ],
       "enabled": false
     }

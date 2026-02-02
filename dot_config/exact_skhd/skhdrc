@@ -50,10 +50,19 @@ shift + ctrl - s : yabai -m window --toggle sticky
 shift + ctrl - p : yabai -m window --toggle sticky --toggle pip
 shift + ctrl - e : yabai -m window --toggle expose
 
-# shift + ctrl - h    : yabai -m window  west --stack $(yabai -m query --windows --window | jq -r '.id')
-# shift + ctrl - k    : yabai -m window south --stack $(yabai -m query --windows --window | jq -r '.id')
-# shift + ctrl - j    : yabai -m window north --stack $(yabai -m query --windows --window | jq -r '.id')
-# shift + ctrl - l : yabai -m window  east --stack $(yabai -m query --windows --window | jq -r '.id')
+# ウィンドウをstack（重ねる）
+shift + ctrl - h : yabai -m window west --stack $(yabai -m query --windows --window | jq -r '.id')
+shift + ctrl - j : yabai -m window south --stack $(yabai -m query --windows --window | jq -r '.id')
+shift + ctrl - k : yabai -m window north --stack $(yabai -m query --windows --window | jq -r '.id')
+shift + ctrl - l : yabai -m window east --stack $(yabai -m query --windows --window | jq -r '.id')
+
+# stack内のウィンドウを切り替え
+alt - n : yabai -m window --focus stack.next || yabai -m window --focus stack.first
+alt - p : yabai -m window --focus stack.prev || yabai -m window --focus stack.last
+
+# stackを解除（unstack）
+# 方法1: 別ウィンドウがある場合はwarpで解除
+shift + ctrl - u : yabai -m window --toggle float && yabai -m window --toggle float
 
 # ウィンドウサイズ調整
 ctrl + lalt - h    : yabai -m window --resize right:-100:0 || yabai -m window --resize left:-100:0

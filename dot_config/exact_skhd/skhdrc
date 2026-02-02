@@ -40,8 +40,9 @@ shift + alt - s : yabai -m window --space 6
 shift + alt - f : yabai -m window --space 7
 shift + alt - w : yabai -m window --space 8
 
-# 最近使ったスペースへ移動（最初のウィンドウを選択）
-alt - tab : yabai -m space --focus recent; yabai -m window --focus first
+# スペースを左右に移動
+alt - tab : yabai -m space --focus next
+shift + alt - tab : yabai -m space --focus prev
 
 # ウィンドウ操作
 alt - return : yabai -m window --toggle zoom-fullscreen

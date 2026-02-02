@@ -1,38 +1,68 @@
 #!/bin/bash
 
-yabai -m config mouse_follows_focus        off            \
-                focus_follows_mouse        off            \
-                window_zoom_persist        off            \
-                window_placement           first_child    \
-                window_shadow              float          \
-                window_opacity             off            \
-                insert_feedback_color      0x00000000     \
-                split_ratio                0.50           \
-                auto_balance               off            \
-                mouse_modifier             fn             \
-                mouse_action1              move           \
-                mouse_action2              resize         \
-                mouse_drop_action          swap           \
-                top_padding                10             \
-                bottom_padding             10             \
-                left_padding               15             \
-                right_padding              15             \
-                window_gap                 10
+yabai -m config split_ratio 0.5
+yabai -m config window_placement first_child
 
 yabai -m config layout bsp
+yabai -m config top_padding 35
+yabai -m config right_padding 15
+yabai -m config bottom_padding 10
+yabai -m config left_padding 15
+yabai -m config window_gap 5
 
-yabai -m rule --add app="^(LINE|Mail|Finder|Calendar|LuLu|Calculator|Software Update|Dictionary|VLC|System Preferences|System Settings|zoom.us|Photo Booth|Archive Utility|Python|LibreOffice|App Store|Steam|Alfred|Activity Monitor)$" manage=off
-yabai -m rule --add label="Finder" app="^Finder$" title="(Co(py|nnect)|Move|Info|Pref)" manage=off
-yabai -m rule --add label="Safari" app="^Safari$" title="^(General|(Tab|Password|Website|Extension)s|AutoFill|Se(arch|curity)|Privacy|Advance)$" manage=off
-yabai -m rule --add label="About This Mac" app="System Information" title="About This Mac" manage=off
-yabai -m rule --add label="Select file to save to" app="^Inkscape$" title="Select file to save to" manage=off
-yabai -m rule --add app="^towerd$" manage=off
-yabai -m signal --add app='^Ghostty$' event=window_created action='yabai -m space --layout bsp'
+# Focus window under cursor when a window is destroyed
+yabai -m signal --add event=window_destroyed action="yabai -m query --windows --window &> /dev/null || yabai -m window --focus mouse"
+yabai -m signal --add event=application_terminated action="yabai -m query --windows --window &> /dev/null || yabai -m window --focus mouse"
+
+# Focus first window when switching spaces
+yabai -m signal --add event=space_changed action="yabai -m window --focus \$(yabai -m query --windows --space | jq '.[0].id')"
+
+## Space 1
+yabai -m rule --add space=1 label="Helium" app="^Helium$"
+yabai -m rule --add space=1 label="Safari" app="^Safari$"
+yabai -m rule --add space=1 label="Kitty" app="^Kitty$"
+
+## Space 2
+yabai -m rule --add space=2 label="Discord" app="^Discord$"
+yabai -m rule --add space=2 label="Music" app="^Music$"
+yabai -m rule --add space=2 label="Spotify" app="^Spotify$"
+
+## Space 3
+yabai -m rule --add space=3 label="Figma" app="^Figma$"
+yabai -m rule --add space=3 label="Obsidian" app="^Obsidian$"
+
+## Sticky windows
+yabai -m rule --add manage=off label="System Settings" app="System Settings" sticky="on"
+yabai -m rule --add manage=off label="Finder" app="Finder" sticky="on"
+yabai -m rule --add manage=off label="Mail" app="Mail" sticky="on"
+yabai -m rule --add manage=off label="Activity Monitor" app="Activity Monitor" sticky="on"
+yabai -m rule --add manage=off label="Toggl Track" app="Toggl Track" sticky="on"
+yabai -m rule --add manage=off label="AdGuard" app="AdGuard" sticky="on"
+yabai -m rule --add manage=off label="App Store" app="App Store" sticky="on"
+yabai -m rule --add manage=off app="Raycast" sticky="on"
+yabai -m rule --add manage=off label="Tunnelblick" app="Tunnelblick" sticky="on"
+yabai -m rule --add manage=off label="Calculator" app="Calculator" sticky="on"
+yabai -m rule --add manage=off label="Calendar" app="Calendar" sticky="on"
+yabai -m rule --add manage=off label="Console" app="Console" sticky="on"
+yabai -m rule --add manage=off label="Contexts" app="Contexts" sticky="on"
+yabai -m rule --add manage=off label="Dictionary" app="Dictionary" sticky="on"
+yabai -m rule --add manage=off label="Preview" app="Preview" sticky="on"
+yabai -m rule --add manage=off label="Stats" app="Stats" sticky="on"
+yabai -m rule --add manage=off label="System Information" app="System Information" sticky="on"
+yabai -m rule --add manage=off label="VoiceOver Utility" app="VoiceOver Utility" sticky="on"
+yabai -m rule --add manage=off label="Shottr" app="Shottr" sticky="on"
+yabai -m rule --add manage=off label="iPhone Mirroring" app="iPhone Mirroring" sticky="on"
+yabai -m rule --add manage=off label="Bartender 5" app="Bartender 5" sticky="on"
+yabai -m rule --add manage=off label="ChatGPT" app="ChatGPT" sticky="on"
+
+## Unmanaged windows
+yabai -m rule --add manage=off title="(Copy|Bin|About This Mac|Info)"
+yabai -m rule --add manage=off title="(Settings|Preferences)"
+yabai -m rule --add manage=off title="^(General|(Tab|Password|Website|Extension)s|AutoFill|Se(arch|curity)|Privacy|Advanced)$"
+yabai -m rule --add manage=off title="^Exports"
+yabai -m rule --add manage=off title="^Opening"
+yabai -m rule --add manage=off title="^towerd$" 
 
 yabai -m signal --add event=dock_did_restart action="sudo yabai --load-sa"
-yabai -m signal --add event=window_destroyed action="yabai -m query --windows --window &> /dev/null || yabai -m window --focus mouse"
-
 sudo yabai --load-sa
-
-echo "yabai configuration loaded.."
 

@@ -34,6 +34,7 @@ idiomatic_version_file_enable_tools = ["rust"]
 "github:anomalyco/opencode" = "latest"
 "prek" = "latest"
 "npm:openclaw" = "latest"
+"go:github.com/pranshuparmar/witr/cmd/witr" = "latest"
 
 [hooks]
 postinstall = "npx corepack enable"

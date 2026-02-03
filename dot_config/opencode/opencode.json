@@ -261,15 +261,6 @@
       "environment": {},
       "enabled": false
     },
-    "playwright": {
-      "type": "local",
-      "command": [
-        "npx",
-        "@playwright/mcp@latest",
-        "--headless"
-      ],
-      "enabled": false
-    },
     "supabase": {
       "type": "local",
       "command": [

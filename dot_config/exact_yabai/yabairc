@@ -20,7 +20,6 @@ yabai -m signal --add event=space_changed action="yabai -m window --focus \$(yab
 
 ## Space 1
 yabai -m rule --add space=1 label="Helium" app="^Helium$"
-yabai -m rule --add space=1 label="Safari" app="^Safari$"
 yabai -m rule --add space=1 label="Kitty" app="^Kitty$"
 
 ## Space 2

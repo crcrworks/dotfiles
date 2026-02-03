@@ -11,10 +11,12 @@
       "model": "github-copilot/gemini-3-pro-preview"
     },
     "quick": {
-      "model": "github-copilot/claude-opus-4.5"
+      "model": "github-copilot/gpt-5.2-codex",
+      "variant": "high"
     },
     "unspecified-high": {
-      "model": "github-copilot/claude-opus-4.5"
+      "model": "github-copilot/gpt-5.2-codex",
+      "variant": "high"
     },
     "ultreabrain": {
       "model": "github-copilot/gpt-5.2",
@@ -29,25 +31,32 @@
   },
   "agents": {
     "plan": {
-      "model": "kimi-for-coding/k2p5"
+      "model": "kimi-for-coding/k2p5",
+      "variant": "high"
     },
     "build": {
-      "model": "kimi-for-coding/k2p5"
+      "model": "kimi-for-coding/k2p5",
+      "variant": "high"
     },
     "sisyphus": {
-      "model": "kimi-for-coding/k2p5"
+      "model": "kimi-for-coding/k2p5",
+      "variant": "high"
     },
     "prometheus": {
-      "model": "kimi-for-coding/k2p5"
+      "model": "kimi-for-coding/k2p5",
+      "variant": "high"
     },
     "hephaestus": {
-      "model": "kimi-for-coding/k2p5"
+      "model": "kimi-for-coding/k2p5",
+      "variant": "high"
     },
     "atlas": {
-      "model": "kimi-for-coding/k2p5"
+      "model": "kimi-for-coding/k2p5",
+      "variant": "high"
     },
     "sisyphus-junior": {
-      "model": "github-copilot/claude-opus-4.5"
+      "model": "github-copilot/gpt-5.2-codex",
+      "variant": "high"
     },
     "metis": {
       "model": "github-copilot/gpt-5.2",

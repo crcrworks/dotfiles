@@ -135,6 +135,9 @@
         },
         "qwen/qwen3-coder-next": {
           "name": "Qwen3 Coder Next (local)"
+        },
+        "openai/gpt-oss-20b": {
+          "name": "GPT OSS 20b (local)"
         }
       }
     },

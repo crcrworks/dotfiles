@@ -1,7 +1,7 @@
 ---
 description: Create a PR from bookmark (supports conventional commit format)
-agent: build
-model: google/gemini-3-flash-preview
+agent: quick
+model: kimi-for-coding/k2p5 
 ---
 
 Create a GitHub PR from the specified bookmark. Uses n8n's conventional commit format and PR body template.

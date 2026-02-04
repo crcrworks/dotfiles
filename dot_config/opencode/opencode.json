@@ -132,6 +132,9 @@
       "models": {
         "zai-org/glm-4.7-flash": {
           "name": "GLM 4.7 Flash (local)"
+        },
+        "qwen/qwen3-coder-next": {
+          "name": "Qwen3 Coder Next (local)"
         }
       }
     },

@@ -1,7 +1,7 @@
 ---
 description: Create a commit using jujutsu
-agent: build
-model: google/gemini-3-flash-preview
+agent: quick
+model: kimi-for-coding/k2p5 
 ---
 
 Commit the currently staged changes.

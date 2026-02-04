@@ -1,7 +1,7 @@
 ---
 description: Create an issue on GitHub
-agent: build
-model: google/gemini-3-flash-preview
+agent: quick
+model: kimi-for-coding/k2p5 
 ---
 
 Create an issue on GitHub.

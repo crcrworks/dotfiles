@@ -1,7 +1,8 @@
 ---
 description: Plan an issue to create
 agent: plan
-model: google/gemini-3-flash-preview
+agent: quick
+model: kimi-for-coding/k2p5 
 ---
 
 Propose issues that should be registered on GitHub based on the current codebase or context.

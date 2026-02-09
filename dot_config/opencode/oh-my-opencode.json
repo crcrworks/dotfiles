@@ -5,28 +5,30 @@
   },
   "categories": {
     "visual-engineering": {
-      "model": "github-copilot/gemini-3-pro-preview"
+      "model": "github-copilot/claude-sonnet-4.5"
     },
     "artistry": {
-      "model": "github-copilot/gemini-3-pro-preview"
+      "model": "github-copilot/claude-opus-4.6"
+    },
+    "deep": {
+      "model": "github-copilot/gpt-5.2",
+      "variant": "high"
     },
     "quick": {
       "model": "github-copilot/gpt-5.2-codex",
       "variant": "high"
     },
     "unspecified-high": {
-      "model": "github-copilot/gpt-5.2-codex",
-      "variant": "high"
+      "model": "github-copilot/claude-opus-4.6"
     },
-    "ultreabrain": {
-      "model": "github-copilot/gpt-5.2",
-      "variant": "xhigh"
+    "ultrabrain": {
+      "model": "github-copilot/claude-opus-4.6"
     },
     "unspecified-low": {
       "model": "github-copilot/gemini-3-flash-preview"
     },
     "writing": {
-      "model": "github-copilot/gemini-3-pro-preview"
+      "model": "github-copilot/claude-sonnet-4.5"
     }
   },
   "agents": {
@@ -63,12 +65,10 @@
       "variant": "high"
     },
     "momus": {
-      "model": "github-copilot/gpt-5.2",
-      "variant": "high"
+      "model": "github-copilot/claude-opus-4.6"
     },
     "oracle": {
-      "model": "github-copilot/gpt-5.2",
-      "variant": "high"
+      "model": "github-copilot/claude-opus-4.6"
     },
     "librarian": {
       "model": "github-copilot/gemini-3-flash-preview"

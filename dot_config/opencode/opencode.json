@@ -9,7 +9,7 @@
     "opencode-openai-codex-auth@latest",
     "opencode-cursor-auth@latest",
     "opencode-pencil-sync@latest",
-    "oh-my-opencode@3.2.1"
+    "oh-my-opencode@3.4.0"
   ],
   "agent": {
     "ask": {

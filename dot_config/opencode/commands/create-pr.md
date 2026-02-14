@@ -1,7 +1,6 @@
 ---
 description: Create a PR from bookmark (supports conventional commit format)
 agent: quick
-model: kimi-for-coding/k2p5 
 ---
 
 Create a GitHub PR from the specified bookmark. Uses n8n's conventional commit format and PR body template.

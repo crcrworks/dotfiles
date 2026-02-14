@@ -1,7 +1,6 @@
 ---
 description: Create a commit using jujutsu
 agent: quick
-model: kimi-for-coding/k2p5 
 ---
 
 Commit the currently staged changes.

@@ -1,7 +1,6 @@
 ---
 description: Create an issue on GitHub
 agent: quick
-model: kimi-for-coding/k2p5 
 ---
 
 Create an issue on GitHub.

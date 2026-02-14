@@ -1,6 +1,6 @@
 {
   "$schema": "https://opencode.ai/config.json",
-  "model": "kimi-for-coding/k2p5",
+  "model": "zai-coding-plan/glm-5",
   "default_agent": "plan",
   "instructions": [
     "~/.config/opencode/rules/**/*.md"
@@ -14,7 +14,7 @@
   "agent": {
     "ask": {
       "mode": "primary",
-      "model": "kimi-for-coding/k2p5",
+      "model": "zai-coding-plan/glm-5",
       "prompt": "IMPORTANT: Use subagents extensively:\n- Launch multiple codesearch agents in parallel to understand the codebase",
       "tools": {
         "write": false,

@@ -1,7 +1,7 @@
 ---
 description: Planning orchestrator - interviews users and delegates to subagents
 mode: primary
-model: kimi-for-coding/k2p5
+model: zai-coding-plan/glm-5
 temperature: 0.1
 tools:
   write: true

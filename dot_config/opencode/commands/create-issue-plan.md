@@ -2,7 +2,6 @@
 description: Plan an issue to create
 agent: plan
 agent: quick
-model: kimi-for-coding/k2p5 
 ---
 
 Propose issues that should be registered on GitHub based on the current codebase or context.

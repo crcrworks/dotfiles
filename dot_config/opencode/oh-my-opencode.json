@@ -36,28 +36,22 @@
   },
   "agents": {
     "plan": {
-      "model": "kimi-for-coding/k2p5",
-      "variant": "high"
+      "model": "zai-coding-plan/glm-5"
     },
     "build": {
-      "model": "kimi-for-coding/k2p5",
-      "variant": "high"
+      "model": "zai-coding-plan/glm-5"
     },
     "sisyphus": {
-      "model": "kimi-for-coding/k2p5",
-      "variant": "high"
+      "model": "zai-coding-plan/glm-5"
     },
     "prometheus": {
-      "model": "kimi-for-coding/k2p5",
-      "variant": "high"
+      "model": "zai-coding-plan/glm-5"
     },
     "hephaestus": {
-      "model": "kimi-for-coding/k2p5",
-      "variant": "high"
+      "model": "zai-coding-plan/glm-5"
     },
     "atlas": {
-      "model": "kimi-for-coding/k2p5",
-      "variant": "high"
+      "model": "zai-coding-plan/glm-5"
     },
     "sisyphus-junior": {
       "model": "github-copilot/gpt-5.2-codex",

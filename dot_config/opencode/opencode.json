@@ -9,7 +9,7 @@
     "opencode-openai-codex-auth@latest",
     "opencode-cursor-auth@latest",
     "opencode-pencil-sync@latest",
-    "oh-my-opencode@3.4.0"
+    "oh-my-opencode@3.5.3"
   ],
   "agent": {
     "ask": {
@@ -37,6 +37,11 @@
     "explore": {
       "mode": "subagent",
       "model": "github-copilot/gemini-3-flash-preview"
+    },
+    "librarian": {
+      "mode": "subagent",
+      "model": "github-copilot/gemini-3-flash-preview",
+      "description": "Library and documentation search agent"
     },
     "codesearch": {
       "mode": "subagent",
@@ -112,6 +117,9 @@
         "gpt-5.1-codex": {
           "name": "Cursor Agent GPT-5.1 Codex"
         },
+        "gpt-5.3-codex-high-fast": {
+          "name": "Cursor Agent GPT-5.3 Codex High Fast"
+        },
         "sonnet-4.5": {
           "name": "Cursor Agent Sonnet 4.5"
         },
@@ -136,9 +144,15 @@
         "qwen/qwen3-coder-next": {
           "name": "Qwen3 Coder Next (local)"
         },
+        "qwen/qwen3.5-35b-a3b-text-qx64-hi-mlx": {
+          "name": "Qwen3.5 (local)"
+        },
+        "lmstudio-community/qwen2.5-coder-7b-instruct-mlx": {
+          "name": "Qwen2.5 Coder (local)"
+        },
         "openai/gpt-oss-20b": {
           "name": "GPT OSS 20b (local)"
-        }
+        },
       }
     },
     "openrouter": {
@@ -157,7 +171,7 @@
           "limit": {
             "context": 256000,
             "output": 65536
-          },
+          }
         }
       }
     }

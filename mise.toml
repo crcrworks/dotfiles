@@ -3,4 +3,5 @@ patterns = ["**/*"]
 run = "chezmoi apply --force"
 
 [tools]
+"cargo:llmfit" = "latest"
 chezmoi = "latest"

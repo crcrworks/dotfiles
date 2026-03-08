@@ -9,7 +9,6 @@ idiomatic_version_file_enable_tools = ["rust"]
 "node" = "22"
 "bun" = "latest"
 "uv" = "latest"
-"gemini-cli" = "latest"
 "claude-code" = "latest"
 "pnpm" = "latest"
 "typst" = "latest"
@@ -33,6 +32,7 @@ idiomatic_version_file_enable_tools = ["rust"]
 "act" = "latest"
 "github:anomalyco/opencode" = "latest"
 "prek" = "latest"
+"yt-dlp" = "latest"
 "npm:openclaw" = "latest"
 "go:github.com/pranshuparmar/witr/cmd/witr" = "latest"
 

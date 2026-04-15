@@ -1,7 +1,7 @@
 ---
 description: Build orchestrator - manages TODOs and delegates implementation to subagents
 mode: primary
-model: zai-coding-plan/glm-5
+model: zai-coding-plan/glm-5-turbo
 temperature: 0.1
 tools:
   write: true

@@ -1,22 +1,19 @@
 {
   "$schema": "https://raw.githubusercontent.com/code-yeongyu/oh-my-opencode/master/assets/oh-my-opencode.schema.json",
-  "disabled_hooks": [
-    "todo-continuation-enforcer"
-  ],
   "sisyphus_agent": {
     "replace_plan": false
   },
   "categories": {
     "visual-engineering": {
-      "model": "github-copilot/gpt-5.4",
+      "model": "github-copilot/gpt-5.3-codex",
       "variant": "high"
     },
     "artistry": {
-      "model": "github-copilot/gpt-5.4",
+      "model": "github-copilot/gpt-5.3-codex",
       "variant": "high"
     },
     "deep": {
-      "model": "github-copilot/gpt-5.4",
+      "model": "github-copilot/gpt-5.3-codex",
       "variant": "high"
     },
     "quick": {
@@ -24,56 +21,56 @@
       "variant": "high"
     },
     "unspecified-high": {
-      "model": "github-copilot/gpt-5.4",
+      "model": "github-copilot/gpt-5.3-codex",
       "variant": "high"
     },
     "ultrabrain": {
-      "model": "github-copilot/gpt-5.4"
+      "model": "github-copilot/gpt-5.3-codex"
     },
     "unspecified-low": {
       "model": "github-copilot/gemini-3-flash-preview"
     },
     "writing": {
-      "model": "github-copilot/claude-sonnet-4.6"
+      "model": "github-copilot/gpt-5.3-codex"
     }
   },
   "agents": {
     "plan": {
-      "model": "zai-coding-plan/glm-5"
+      "model": "zai-coding-plan/glm-5-turbo"
     },
     "build": {
-      "model": "zai-coding-plan/glm-5"
+      "model": "zai-coding-plan/glm-5-turbo"
     },
     "sisyphus": {
-      "model": "zai-coding-plan/glm-5"
+      "model": "zai-coding-plan/glm-5-turbo"
     },
     "prometheus": {
-      "model": "zai-coding-plan/glm-5"
+      "model": "zai-coding-plan/glm-5-turbo"
     },
     "hephaestus": {
-      "model": "zai-coding-plan/glm-5"
+      "model": "zai-coding-plan/glm-5-turbo"
     },
     "atlas": {
-      "model": "zai-coding-plan/glm-5"
+      "model": "zai-coding-plan/glm-5-turbo"
     },
     "sisyphus-junior": {
       "model": "github-copilot/gpt-5.3-codex",
       "variant": "high"
     },
     "metis": {
-      "model": "github-copilot/gpt-5.4",
+      "model": "github-copilot/gpt-5.3-codex",
       "variant": "high"
     },
     "momus": {
-      "model": "github-copilot/gpt-5.4",
+      "model": "github-copilot/gpt-5.3-codex",
       "variant": "high"
     },
     "oracle": {
-      "model": "github-copilot/gpt-5.4",
+      "model": "github-copilot/gpt-5.3-codex",
       "variant": "high"
     },
     "librarian": {
-      "model": "zai-coding-plan/glm-5"
+      "model": "zai-coding-plan/glm-5-turbo"
     },
     "explore": {
       "model": "github-copilot/gemini-3-flash-preview"

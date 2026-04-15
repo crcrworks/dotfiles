@@ -1,6 +1,7 @@
 ---
 description: Quick task orchestrator - handles simple tasks with minimal planning, delegates to subagents extensively
 temperature: 0.1
+model: zai-coding-plan/glm-5-turbo
 tools:
   write: true
   edit: true

@@ -1,7 +1,6 @@
 # シェルをzshに設定
 .shell "/bin/bash"
 
-
 # ウィンドウのフォーカス移動
 alt - h : yabai -m window --focus west
 alt - j : yabai -m window --focus south
@@ -39,10 +38,14 @@ shift + alt - 1 : yabai -m window --space 1
 shift + alt - 2 : yabai -m window --space 2
 shift + alt - 3 : yabai -m window --space 3
 shift + alt - 4 : yabai -m window --space 4
-shift + alt - a : yabai -m window --space 5
-shift + alt - s : yabai -m window --space 6
-shift + alt - f : yabai -m window --space 7
-shift + alt - w : yabai -m window --space 8
+
+shift + alt - a : yabai -m window --space 1
+shift + alt - s : yabai -m window --space 2
+shift + alt - d : yabai -m window --space 3
+
+shift + alt - z : yabai -m window --space 4
+shift + alt - x : yabai -m window --space 5
+shift + alt - c : yabai -m window --space 6
 
 # スペースを左右に移動
 alt - tab : yabai -m space --focus next

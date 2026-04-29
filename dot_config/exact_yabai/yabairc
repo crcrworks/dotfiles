@@ -18,18 +18,17 @@ yabai -m signal --add event=application_terminated action="sleep 0.1 && yabai -m
 # Focus first window when switching spaces
 yabai -m signal --add event=space_changed action="yabai -m window --focus \$(yabai -m query --windows --space | jq '.[0].id')"
 
-## Space 1
-yabai -m rule --add space=1 label="Helium" app="^Helium$"
-yabai -m rule --add space=1 label="Kitty" app="^Kitty$"
-
 ## Space 2
-yabai -m rule --add space=2 label="Discord" app="^Discord$"
-yabai -m rule --add space=2 label="Music" app="^Music$"
-yabai -m rule --add space=2 label="Spotify" app="^Spotify$"
+yabai -m rule --add space=7 label="Music" app="^Music$"
+yabai -m rule --add space=7 label="Spotify" app="^Spotify$"
+yabai -m rule --add space=8 label="Discord" app="^Discord$"
 
 ## Space 3
 yabai -m rule --add space=3 label="Figma" app="^Figma$"
+yabai -m rule --add space=3 label="Cavalry" app="^Cavalry$"
 yabai -m rule --add space=3 label="Obsidian" app="^Obsidian$"
+
+yabai -m rule --add space=4 label="Cursor" app="^Cursor$"
 
 ## Sticky windows
 yabai -m rule --add manage=off label="System Settings" app="System Settings" sticky="on"

@@ -78,20 +78,20 @@ return {
           lens = {
             enable = true,
             implementations = {
-              enable = false,
+              enable = true,
             },
             references = {
               adt = {
-                enable = false,
+                enable = true,
               },
               enumVariant = {
-                enable = false,
+                enable = true,
               },
               method = {
                 enable = true,
               },
               trait = {
-                enable = false,
+                enable = true,
               },
             },
             run = {

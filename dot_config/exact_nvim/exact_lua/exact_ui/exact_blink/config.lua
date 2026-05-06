@@ -5,7 +5,13 @@ local opts = {
   cmdline = { enabled = true },
   appearance = { nerd_font_variant = "normal" },
   fuzzy = { implementation = "prefer_rust" },
-  sources = { default = { "lsp", "snippets", "buffer", "path" } },
+  sources = {
+    default = { "lazydev", "lsp", "snippets", "buffer", "path" },
+    providers = {
+      lazydev = { name = "LazyDev", module = "lazydev.integrations.blink", score_offset = 100 },
+      lsp = { fallback_for = { "lazydev" } },
+    },
+  },
 
   keymap = {
     preset = "enter",

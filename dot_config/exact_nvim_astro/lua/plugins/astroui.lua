@@ -27,6 +27,7 @@ return {
           SnacksPickerList = { bg = bg },
           SnacksPickerListTitle = { fg = bg, bg = bg },
           LspCodeLens = { fg = gray },
+          SnacksDashboardDir = { fg = gray },
         }
       end,
     },

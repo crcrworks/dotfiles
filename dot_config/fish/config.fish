@@ -26,6 +26,19 @@ end
 
 set -q GHCUP_INSTALL_BASE_PREFIX[1]; or set GHCUP_INSTALL_BASE_PREFIX $HOME
 
-starship init fish | source
+
+mise activate fish --shims | source
 zoxide init fish | source
-mise activate fish | source
+
+set -x STARSHIP_CONFIG ~/.config/starship/starship.toml
+starship init fish | source
+
+if status is-interactive
+    function __remove_slow_prompt_hooks --on-event fish_prompt
+        for fn in __mise_env_eval __mise_env_eval_2 __mise_cd_hook
+            functions -q -- $fn && functions --erase -- $fn
+        end
+
+        functions --erase __remove_slow_prompt_hooks
+    end
+end

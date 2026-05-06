@@ -5,3 +5,5 @@ run = "chezmoi apply --force"
 [tools]
 "cargo:llmfit" = "latest"
 chezmoi = "latest"
+starship = "latest"
+yq = "latest"

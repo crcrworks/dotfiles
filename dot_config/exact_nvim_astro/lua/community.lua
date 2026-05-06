@@ -18,4 +18,5 @@ return {
 
   { import = "astrocommunity.recipes.picker-nvchad-theme" },
   { import = "astrocommunity.recipes.disable-borders" },
+  { import = "astrocommunity.recipes.vscode-icons" },
 }

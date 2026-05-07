@@ -4,7 +4,6 @@ return {
   { import = "astrocommunity.pack.html-css" },
   { import = "astrocommunity.pack.biome" },
   { import = "astrocommunity.pack.typescript" },
-  { import = "astrocommunity.pack.python" },
 
   { import = "astrocommunity.scrolling.nvim-scrollbar" },
 

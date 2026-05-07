@@ -22,6 +22,9 @@ return {
           cmd = { "lua-language-server" },
           settings = {
             Lua = {
+              codeLens = {
+                enable = false,
+              },
               hint = {
                 enable = true,
                 arrayIndex = "Disable",

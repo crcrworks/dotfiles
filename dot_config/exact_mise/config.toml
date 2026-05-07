@@ -3,6 +3,7 @@ experimental = true
 idiomatic_version_file_enable_tools = ["rust"]
 
 [tools]
+# skhdとyabaiはややこしいのでmiseでは管理しない
 "rust" = { version = "stable", components = "rust-src,llvm-tools,rust-analyzer" }
 "go" = "latest"
 "python" = "latest"

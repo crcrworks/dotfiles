@@ -12,4 +12,7 @@ return {
     "max397574/better-escape.nvim",
     enabled = false,
   },
+  { "mason-org/mason.nvim", enabled = false },
+  { "mason-org/mason-lspconfig.nvim", enabled = false },
+  { "mason-org/mason-null-ls.nvim", enabled = false },
 }

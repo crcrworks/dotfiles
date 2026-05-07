@@ -43,6 +43,13 @@ idiomatic_version_file_enable_tools = ["rust"]
 "ripgrep" = "latest"
 "bat" = "latest"
 
+# Language Servers
+"github:vadimcn/codelldb" = "latest"
+"lua-language-server" = "latest"
+"stylua" = "latest"
+"github:Kampfkarren/selene" = "latest"
+"tombi" = "latest"
+
 [hooks]
 postinstall = "npx corepack enable"
 

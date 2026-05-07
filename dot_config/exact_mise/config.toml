@@ -39,6 +39,8 @@ idiomatic_version_file_enable_tools = ["rust"]
 "wrangler" = "latest"
 "lazydocker" = "latest"
 "jjui" = "latest"
+"ripgrep" = "latest"
+"bat" = "latest"
 
 [hooks]
 postinstall = "npx corepack enable"

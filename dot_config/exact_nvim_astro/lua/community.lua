@@ -9,7 +9,6 @@ return {
   { import = "astrocommunity.pack.biome" },
   { import = "astrocommunity.pack.typescript" },
   { import = "astrocommunity.pack.python" },
-  { import = "astrocommunity.pack.jj" },
 
   { import = "astrocommunity.scrolling.nvim-scrollbar" },
 

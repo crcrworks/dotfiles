@@ -38,6 +38,7 @@ idiomatic_version_file_enable_tools = ["rust"]
 "go:github.com/pranshuparmar/witr/cmd/witr" = "latest"
 "wrangler" = "latest"
 "lazydocker" = "latest"
+"jjui" = "latest"
 
 [hooks]
 postinstall = "npx corepack enable"

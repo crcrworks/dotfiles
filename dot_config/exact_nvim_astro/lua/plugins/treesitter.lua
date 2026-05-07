@@ -1,8 +1,3 @@
--- Customize Treesitter
--- --------------------
--- Treesitter customizations are handled with AstroCore
--- as nvim-treesitter simply provides a download utility for parsers
-
 ---@type LazySpec
 return {
   "AstroNvim/astrocore",
@@ -13,9 +8,7 @@ return {
       indent = true, -- enable/disable treesitter based indentation
       auto_install = true, -- enable/disable automatic installation of detected languages
       ensure_installed = {
-        "lua",
         "vim",
-        "rust",
         "go",
         "svelte",
         "html",

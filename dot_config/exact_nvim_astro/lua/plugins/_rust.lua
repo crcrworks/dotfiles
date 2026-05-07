@@ -1,3 +1,57 @@
+--- Fallback so `dap.continue()` works without mason-nvim-dap (rustaceanvim adds configs asynchronously).
+local function setup_rust_dap_fallback()
+  local dap = require "dap"
+  local function exepath_or_binary(binary)
+    local exe_path = vim.fn.exepath(binary)
+    return #exe_path > 0 and exe_path or binary
+  end
+
+  if vim.fn.executable "codelldb" == 1 then
+    dap.adapters.codelldb = dap.adapters.codelldb
+      or {
+        type = "server",
+        host = "127.0.0.1",
+        port = "${port}",
+        executable = {
+          command = exepath_or_binary "codelldb",
+          args = { "--port", "${port}" },
+        },
+      }
+  elseif vim.fn.executable "lldb-dap" == 1 or vim.fn.executable "lldb-vscode" == 1 then
+    local cmd = vim.fn.executable "lldb-dap" == 1 and "lldb-dap" or "lldb-vscode"
+    dap.adapters.lldb = dap.adapters.lldb
+      or {
+        type = "executable",
+        command = exepath_or_binary(cmd),
+        name = "lldb",
+      }
+  else
+    return
+  end
+
+  local typ = dap.adapters.codelldb and "codelldb" or "lldb"
+  dap.configurations.rust = dap.configurations.rust or {}
+  for _, c in ipairs(dap.configurations.rust) do
+    if c.__rust_dap_fallback then return end
+  end
+
+  local cfg = {
+    __rust_dap_fallback = true,
+    name = "Rust: pick debug binary",
+    type = typ,
+    request = "launch",
+    stopOnEntry = false,
+    program = function() return vim.fn.input("Path to executable: ", vim.fn.getcwd() .. "/target/debug/", "file") end,
+    cwd = "${workspaceFolder}",
+  }
+  if typ == "codelldb" then
+    cfg.sourceLanguages = { "rust" }
+  else
+    cfg.console = "integratedTerminal"
+  end
+  table.insert(dap.configurations.rust, cfg)
+end
+
 return {
   {
     "AstroNvim/astrocore",
@@ -159,5 +213,11 @@ return {
       }
     end,
     config = function(_, opts) vim.g.rustaceanvim = opts end,
+  },
+  {
+    "mfussenegger/nvim-dap",
+    optional = true,
+    ft = "rust",
+    config = setup_rust_dap_fallback,
   },
 }

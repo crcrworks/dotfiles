@@ -19,6 +19,7 @@ return {
       ---@diagnostic disable-next-line: missing-fields
       config = {
         gopls = {
+          filetypes = { "go" },
           settings = {
             gopls = {
               analyses = {

@@ -19,6 +19,7 @@ return {
       },
       config = {
         lua_ls = {
+          filetypes = { "lua" },
           cmd = { "lua-language-server" },
           settings = {
             Lua = {

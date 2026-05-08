@@ -1,9 +1,6 @@
 ---@type LazySpec
 return {
   "AstroNvim/astrocommunity",
-  { import = "astrocommunity.pack.html-css" },
-  { import = "astrocommunity.pack.typescript" },
-
   { import = "astrocommunity.scrolling.nvim-scrollbar" },
 
   { import = "astrocommunity.recipes.picker-nvchad-theme" },

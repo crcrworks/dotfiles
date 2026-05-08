@@ -70,6 +70,7 @@ return {
       ---@diagnostic disable: missing-fields
       config = {
         rust_analyzer = {
+          filetypes = { "rust" },
           settings = {
             ["rust-analyzer"] = {
               files = {

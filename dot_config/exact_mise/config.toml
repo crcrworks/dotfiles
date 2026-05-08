@@ -53,6 +53,9 @@ idiomatic_version_file_enable_tools = ["rust"]
 "go:golang.org/x/tools/cmd/goimports" = "latest"
 "ruff" = "latest"
 "biome" = "latest"
+"npm:vscode-langservers-extracted" = "latest"
+"npm:emmet-ls" = "latest"
+"npm:@typescript/native-preview" = "latest"
 
 [hooks]
 postinstall = "npx corepack enable"

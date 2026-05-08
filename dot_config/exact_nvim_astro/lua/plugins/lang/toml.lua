@@ -17,6 +17,11 @@ return {
       servers = {
         "tombi",
       },
+      config = {
+        tombi = {
+          filetypes = { "toml" },
+        },
+      },
     },
   },
 }

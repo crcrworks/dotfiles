@@ -2,6 +2,13 @@ return {
   {
     "folke/noice.nvim",
     event = { "VeryLazy" },
+    keys = {
+      {
+        "<leader>fn",
+        function() require("noice.integrations.snacks").open() end,
+        desc = "Find notifications",
+      },
+    },
     opts = {
       lsp = {
         hover = { enabled = false },

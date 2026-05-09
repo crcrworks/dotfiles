@@ -41,4 +41,13 @@ return {
       },
     },
   },
+  keys = {
+    {
+      "<leader>fn",
+      function()
+        require("noice").cmd "all"
+      end,
+      desc = "Show noice notification",
+    },
+  },
 }

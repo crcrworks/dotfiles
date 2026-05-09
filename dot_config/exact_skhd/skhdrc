@@ -1,91 +1,91 @@
-# skhd が Login Item / BTM 経由で起動すると PATH に /usr/local/bin が入らない。
+# skhd が Login Item / BTM 経由で起動すると PATH に mise の shims が入らない。
 # このままだと `yabai` が見つからずホットキーが無反応になるためフルパスで指定する。
 .shell "/bin/bash"
 
 # ウィンドウのフォーカス移動
-alt - h : /usr/local/bin/yabai -m window --focus west
-alt - j : /usr/local/bin/yabai -m window --focus south
-alt - k : /usr/local/bin/yabai -m window --focus north
-alt - l : /usr/local/bin/yabai -m window --focus east
+alt - h : /Users/crcr/.local/share/mise/shims/yabai -m window --focus west
+alt - j : /Users/crcr/.local/share/mise/shims/yabai -m window --focus south
+alt - k : /Users/crcr/.local/share/mise/shims/yabai -m window --focus north
+alt - l : /Users/crcr/.local/share/mise/shims/yabai -m window --focus east
 
 # ウィンドウの入れ替え
-shift + alt - h : /usr/local/bin/yabai -m window --swap west
-shift + alt - j : /usr/local/bin/yabai -m window --swap south
-shift + alt - k : /usr/local/bin/yabai -m window --swap north
-shift + alt - l : /usr/local/bin/yabai -m window --swap east
+shift + alt - h : /Users/crcr/.local/share/mise/shims/yabai -m window --swap west
+shift + alt - j : /Users/crcr/.local/share/mise/shims/yabai -m window --swap south
+shift + alt - k : /Users/crcr/.local/share/mise/shims/yabai -m window --swap north
+shift + alt - l : /Users/crcr/.local/share/mise/shims/yabai -m window --swap east
 
 # ウィンドウの移動（warp）
-ctrl + shift + alt - h : /usr/local/bin/yabai -m window west --insert south; /usr/local/bin/yabai -m window --warp west
-ctrl + shift + alt - j : /usr/local/bin/yabai -m window south --insert east; /usr/local/bin/yabai -m window --warp south
-ctrl + shift + alt - k : /usr/local/bin/yabai -m window north --insert west; /usr/local/bin/yabai -m window --warp north
-ctrl + shift + alt - l : /usr/local/bin/yabai -m window east --insert north; /usr/local/bin/yabai -m window --warp east
+ctrl + shift + alt - h : /Users/crcr/.local/share/mise/shims/yabai -m window west --insert south; /Users/crcr/.local/share/mise/shims/yabai -m window --warp west
+ctrl + shift + alt - j : /Users/crcr/.local/share/mise/shims/yabai -m window south --insert east; /Users/crcr/.local/share/mise/shims/yabai -m window --warp south
+ctrl + shift + alt - k : /Users/crcr/.local/share/mise/shims/yabai -m window north --insert west; /Users/crcr/.local/share/mise/shims/yabai -m window --warp north
+ctrl + shift + alt - l : /Users/crcr/.local/share/mise/shims/yabai -m window east --insert north; /Users/crcr/.local/share/mise/shims/yabai -m window --warp east
 
 # スペースへフォーカス移動（最初のウィンドウを選択）
-alt - 1 : /usr/local/bin/yabai -m space --focus 1
-alt - 2 : /usr/local/bin/yabai -m space --focus 2
-alt - 3 : /usr/local/bin/yabai -m space --focus 3
-alt - 4 : /usr/local/bin/yabai -m space --focus 4
+alt - 1 : /Users/crcr/.local/share/mise/shims/yabai -m space --focus 1
+alt - 2 : /Users/crcr/.local/share/mise/shims/yabai -m space --focus 2
+alt - 3 : /Users/crcr/.local/share/mise/shims/yabai -m space --focus 3
+alt - 4 : /Users/crcr/.local/share/mise/shims/yabai -m space --focus 4
 
 
-alt - a : /usr/local/bin/yabai -m space --focus 1
-alt - s : /usr/local/bin/yabai -m space --focus 2
-alt - d : /usr/local/bin/yabai -m space --focus 3
+alt - a : /Users/crcr/.local/share/mise/shims/yabai -m space --focus 1
+alt - s : /Users/crcr/.local/share/mise/shims/yabai -m space --focus 2
+alt - d : /Users/crcr/.local/share/mise/shims/yabai -m space --focus 3
 
-alt - q : /usr/local/bin/yabai -m space --focus 4
-alt - w : /usr/local/bin/yabai -m space --focus 5
-alt - e : /usr/local/bin/yabai -m space --focus 6
+alt - q : /Users/crcr/.local/share/mise/shims/yabai -m space --focus 4
+alt - w : /Users/crcr/.local/share/mise/shims/yabai -m space --focus 5
+alt - e : /Users/crcr/.local/share/mise/shims/yabai -m space --focus 6
 
-alt - z : /usr/local/bin/yabai -m space --focus 7
-alt - x : /usr/local/bin/yabai -m space --focus 8
-alt - c : /usr/local/bin/yabai -m space --focus 9
+alt - z : /Users/crcr/.local/share/mise/shims/yabai -m space --focus 7
+alt - x : /Users/crcr/.local/share/mise/shims/yabai -m space --focus 8
+alt - c : /Users/crcr/.local/share/mise/shims/yabai -m space --focus 9
 
 # ウィンドウを別スペースに移動
-shift + alt - 1 : /usr/local/bin/yabai -m window --space 1
-shift + alt - 2 : /usr/local/bin/yabai -m window --space 2
-shift + alt - 3 : /usr/local/bin/yabai -m window --space 3
-shift + alt - 4 : /usr/local/bin/yabai -m window --space 4
+shift + alt - 1 : /Users/crcr/.local/share/mise/shims/yabai -m window --space 1
+shift + alt - 2 : /Users/crcr/.local/share/mise/shims/yabai -m window --space 2
+shift + alt - 3 : /Users/crcr/.local/share/mise/shims/yabai -m window --space 3
+shift + alt - 4 : /Users/crcr/.local/share/mise/shims/yabai -m window --space 4
 
-shift + alt - q : /usr/local/bin/yabai -m window --space 4
-shift + alt - w : /usr/local/bin/yabai -m window --space 5
-shift + alt - e : /usr/local/bin/yabai -m window --space 6
+shift + alt - q : /Users/crcr/.local/share/mise/shims/yabai -m window --space 4
+shift + alt - w : /Users/crcr/.local/share/mise/shims/yabai -m window --space 5
+shift + alt - e : /Users/crcr/.local/share/mise/shims/yabai -m window --space 6
 
-shift + alt - a : /usr/local/bin/yabai -m window --space 1
-shift + alt - s : /usr/local/bin/yabai -m window --space 2
-shift + alt - d : /usr/local/bin/yabai -m window --space 3
+shift + alt - a : /Users/crcr/.local/share/mise/shims/yabai -m window --space 1
+shift + alt - s : /Users/crcr/.local/share/mise/shims/yabai -m window --space 2
+shift + alt - d : /Users/crcr/.local/share/mise/shims/yabai -m window --space 3
 
-shift + alt - z : /usr/local/bin/yabai -m window --space 7
-shift + alt - x : /usr/local/bin/yabai -m window --space 8
-shift + alt - c : /usr/local/bin/yabai -m window --space 9
+shift + alt - z : /Users/crcr/.local/share/mise/shims/yabai -m window --space 7
+shift + alt - x : /Users/crcr/.local/share/mise/shims/yabai -m window --space 8
+shift + alt - c : /Users/crcr/.local/share/mise/shims/yabai -m window --space 9
 
 # スペースを左右に移動
-alt - tab : /usr/local/bin/yabai -m space --focus next
-shift + alt - tab : /usr/local/bin/yabai -m space --focus prev
+alt - tab : /Users/crcr/.local/share/mise/shims/yabai -m space --focus next
+shift + alt - tab : /Users/crcr/.local/share/mise/shims/yabai -m space --focus prev
 
 # ウィンドウ操作
-alt - return : /usr/local/bin/yabai -m window --toggle zoom-fullscreen
-shift + ctrl - f : /usr/local/bin/yabai -m window --toggle float
-shift + ctrl - s : /usr/local/bin/yabai -m window --toggle sticky
-shift + ctrl - p : /usr/local/bin/yabai -m window --toggle sticky --toggle pip
-shift + ctrl - e : /usr/local/bin/yabai -m window --toggle expose
+alt - return : /Users/crcr/.local/share/mise/shims/yabai -m window --toggle zoom-fullscreen
+shift + ctrl - f : /Users/crcr/.local/share/mise/shims/yabai -m window --toggle float
+shift + ctrl - s : /Users/crcr/.local/share/mise/shims/yabai -m window --toggle sticky
+shift + ctrl - p : /Users/crcr/.local/share/mise/shims/yabai -m window --toggle sticky --toggle pip
+shift + ctrl - e : /Users/crcr/.local/share/mise/shims/yabai -m window --toggle expose
 
 # ウィンドウをstack（重ねる）
-shift + ctrl - h : /usr/local/bin/yabai -m window west --stack $(/usr/local/bin/yabai -m query --windows --window | jq -r '.id')
-shift + ctrl - j : /usr/local/bin/yabai -m window south --stack $(/usr/local/bin/yabai -m query --windows --window | jq -r '.id')
-shift + ctrl - k : /usr/local/bin/yabai -m window north --stack $(/usr/local/bin/yabai -m query --windows --window | jq -r '.id')
-shift + ctrl - l : /usr/local/bin/yabai -m window east --stack $(/usr/local/bin/yabai -m query --windows --window | jq -r '.id')
+shift + ctrl - h : /Users/crcr/.local/share/mise/shims/yabai -m window west --stack $(/Users/crcr/.local/share/mise/shims/yabai -m query --windows --window | jq -r '.id')
+shift + ctrl - j : /Users/crcr/.local/share/mise/shims/yabai -m window south --stack $(/Users/crcr/.local/share/mise/shims/yabai -m query --windows --window | jq -r '.id')
+shift + ctrl - k : /Users/crcr/.local/share/mise/shims/yabai -m window north --stack $(/Users/crcr/.local/share/mise/shims/yabai -m query --windows --window | jq -r '.id')
+shift + ctrl - l : /Users/crcr/.local/share/mise/shims/yabai -m window east --stack $(/Users/crcr/.local/share/mise/shims/yabai -m query --windows --window | jq -r '.id')
 
 # stack内のウィンドウを切り替え
-alt - n : /usr/local/bin/yabai -m window --focus stack.next || /usr/local/bin/yabai -m window --focus stack.first
-alt - p : /usr/local/bin/yabai -m window --focus stack.prev || /usr/local/bin/yabai -m window --focus stack.last
+alt - n : /Users/crcr/.local/share/mise/shims/yabai -m window --focus stack.next || /Users/crcr/.local/share/mise/shims/yabai -m window --focus stack.first
+alt - p : /Users/crcr/.local/share/mise/shims/yabai -m window --focus stack.prev || /Users/crcr/.local/share/mise/shims/yabai -m window --focus stack.last
 
 # stackを解除（unstack）
 # 方法1: 別ウィンドウがある場合はwarpで解除
-shift + ctrl - u : /usr/local/bin/yabai -m window --toggle float && /usr/local/bin/yabai -m window --toggle float
+shift + ctrl - u : /Users/crcr/.local/share/mise/shims/yabai -m window --toggle float && /Users/crcr/.local/share/mise/shims/yabai -m window --toggle float
 
 # ウィンドウサイズ調整
-ctrl + lalt - h    : /usr/local/bin/yabai -m window --resize right:-100:0 || /usr/local/bin/yabai -m window --resize left:-100:0
-ctrl + lalt - j    : /usr/local/bin/yabai -m window --resize bottom:0:100 || /usr/local/bin/yabai -m window --resize top:0:100
-ctrl + lalt - k    : /usr/local/bin/yabai -m window --resize bottom:0:-100 || /usr/local/bin/yabai -m window --resize top:0:-100
-ctrl + lalt - l : /usr/local/bin/yabai -m window --resize right:100:0 || /usr/local/bin/yabai -m window --resize left:100:0
+ctrl + lalt - h    : /Users/crcr/.local/share/mise/shims/yabai -m window --resize right:-100:0 || /Users/crcr/.local/share/mise/shims/yabai -m window --resize left:-100:0
+ctrl + lalt - j    : /Users/crcr/.local/share/mise/shims/yabai -m window --resize bottom:0:100 || /Users/crcr/.local/share/mise/shims/yabai -m window --resize top:0:100
+ctrl + lalt - k    : /Users/crcr/.local/share/mise/shims/yabai -m window --resize bottom:0:-100 || /Users/crcr/.local/share/mise/shims/yabai -m window --resize top:0:-100
+ctrl + lalt - l : /Users/crcr/.local/share/mise/shims/yabai -m window --resize right:100:0 || /Users/crcr/.local/share/mise/shims/yabai -m window --resize left:100:0
 
-lalt + shift - return : /usr/local/bin/yabai -m window --toggle zoom-parent
+lalt + shift - return : /Users/crcr/.local/share/mise/shims/yabai -m window --toggle zoom-parent

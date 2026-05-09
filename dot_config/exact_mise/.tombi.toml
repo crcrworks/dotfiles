@@ -4,7 +4,7 @@ strict = true
 
 [[schemas]]
 path = "https://mise.jdx.dev/schema/mise.json"
-include = ["config.toml", "conf.d/env.toml", "conf.d/alias.toml"]
+include = ["config.toml", "conf.d/**/*.toml"]
 
 [schemas.lint.rules]
 deprecated = "warn"

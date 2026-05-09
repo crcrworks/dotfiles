@@ -28,6 +28,8 @@ set -q GHCUP_INSTALL_BASE_PREFIX[1]; or set GHCUP_INSTALL_BASE_PREFIX $HOME
 
 
 mise activate fish --shims | source
+mise hook-env -s fish | source
+
 zoxide init fish | source
 
 set -x STARSHIP_CONFIG ~/.config/starship/starship.toml

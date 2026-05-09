@@ -43,6 +43,7 @@ idiomatic_version_file_enable_tools = ["rust"]
 "ripgrep" = "latest"
 "bat" = "latest"
 "github:asmvik/yabai" = "latest"
+"github:tumf/jj-desc" = "latest"
 
 # Language Servers
 "github:vadimcn/codelldb" = "latest"

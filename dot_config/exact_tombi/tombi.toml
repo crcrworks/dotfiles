@@ -1,0 +1,10 @@
+[schema]
+enabled = true
+strict = true
+
+[[schemas]]
+path = "https://www.schemastore.org/tombi.json"
+include = ["tombi.toml", ".tombi.toml"]
+
+[schemas.lint.rules]
+deprecated = "warn"

@@ -1,0 +1,10 @@
+[schema]
+enabled = true
+strict = true
+
+[[schemas]]
+path = "https://mise.jdx.dev/schema/mise.json"
+include = ["config.toml", "conf.d/env.toml", "conf.d/alias.toml"]
+
+[schemas.lint.rules]
+deprecated = "warn"

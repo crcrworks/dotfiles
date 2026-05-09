@@ -27,8 +27,18 @@ end
 set -q GHCUP_INSTALL_BASE_PREFIX[1]; or set GHCUP_INSTALL_BASE_PREFIX $HOME
 
 
-mise activate fish --shims | source
-mise hook-env -s fish | source
+mise activate fish  | source
+
+# Node 24 currently overflows the call stack when this large mise session blob is
+# inherited by JS CLIs (npm, Cursor Agent). Keep mise activation, but do not
+# export the internal session snapshot to child processes.
+function __mise_scrub_node_env --on-event fish_prompt
+    set -e __MISE_SESSION
+end
+__mise_scrub_node_env
+for fn in __mise_env_eval __mise_env_eval_2 __mise_cd_hook
+    functions -q -- $fn && functions --erase -- $fn
+end
 
 zoxide init fish | source
 

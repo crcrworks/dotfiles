@@ -1,14 +1,14 @@
 #theme
-set -l foreground remove_hash "#d3c6aa"
-set -l selection remove_hash "#493b40"
-set -l comment remove_hash "#7a8479"
-set -l red remove_hash "#e67e80"
-set -l orange remove_hash "#e69875"
-set -l yellow remove_hash "#dbbc7f"
-set -l green remove_hash "#a7c080"
-set -l purple remove_hash "#d699b6"
-set -l cyan remove_hash "#83c092"
-set -l blue remove_hash "#7fbbb3"
+set -l foreground d3c6aa
+set -l selection 493b40
+set -l comment 7a8479
+set -l red e67e80
+set -l orange e69875
+set -l yellow dbbc7f
+set -l green a7c080
+set -l purple d699b6
+set -l cyan 83c092
+set -l blue 7fbbb3
 
 set -g fish_color_normal $foreground
 set -g fish_color_command $blue

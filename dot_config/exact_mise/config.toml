@@ -7,10 +7,10 @@ idiomatic_version_file_enable_tools = ["rust"]
 "rust" = { version = "stable", components = "rust-src,llvm-tools,rust-analyzer" }
 "go" = "latest"
 "python" = "latest"
-"node" = "22"
+"node" = "24"
+"pnpm" = "latest"
 "bun" = "latest"
 "uv" = "latest"
-"pnpm" = "latest"
 "typst" = "latest"
 "jq" = "latest"
 "yq" = "latest"
@@ -58,9 +58,3 @@ idiomatic_version_file_enable_tools = ["rust"]
 "npm:vscode-langservers-extracted" = "latest"
 "npm:emmet-ls" = "latest"
 "npm:@typescript/native-preview" = "latest"
-
-[hooks]
-postinstall = "npx corepack enable"
-
-[tasks."brew-install"]
-run = "Brew bundle"

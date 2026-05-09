@@ -2,16 +2,24 @@ return {
   {
     "folke/noice.nvim",
     event = { "VeryLazy" },
-    dependencies = {
-      -- if you lazy-load any plugin below, make sure to add proper `module="..."` entries
-      "MunifTanjim/nui.nvim",
+    keys = {
+      {
+        "<leader>fn",
+        function() require("noice.integrations.snacks").open() end,
+        desc = "Find notifications",
+      },
     },
     opts = {
       lsp = {
+        hover = { enabled = false },
+        signature = { enabled = false },
+        progress = { enabled = false },
+        message = { enabled = false },
+        -- Markdown 関連の monkey patch も無効のまま（既定はすべて false）
         override = {
-          ["vim.lsp.util.convert_input_to_markdown_lines"] = true,
-          ["vim.lsp.util.stylize_markdown"] = true,
-          ["cmp.entry.get_documentation"] = true,
+          ["vim.lsp.util.convert_input_to_markdown_lines"] = false,
+          ["vim.lsp.util.stylize_markdown"] = false,
+          ["cmp.entry.get_documentation"] = false,
         },
       },
 
@@ -39,15 +47,6 @@ return {
         bottom_search = true,
         long_message_to_split = true,
       },
-    },
-  },
-  keys = {
-    {
-      "<leader>fn",
-      function()
-        require("noice").cmd "all"
-      end,
-      desc = "Show noice notification",
     },
   },
 }

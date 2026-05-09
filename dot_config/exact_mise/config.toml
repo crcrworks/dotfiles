@@ -44,6 +44,7 @@ idiomatic_version_file_enable_tools = ["rust"]
 "bat" = "latest"
 "github:asmvik/yabai" = "latest"
 "github:tumf/jj-desc" = "latest"
+"github:Rtarun3606k/TakaTime" = "latest"
 
 # Language Servers
 "github:vadimcn/codelldb" = "latest"

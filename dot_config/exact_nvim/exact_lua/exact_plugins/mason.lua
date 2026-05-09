@@ -1,19 +1,15 @@
+---@type LazySpec
 return {
-  "mason-org/mason.nvim",
-  cmd = { "Mason", "MasonInstall", "MasonUpdate" },
-  opts = {
-    {
-      PATH = "skip",
-
-      ui = {
-        icons = {
-          package_pending = " ",
-          package_installed = " ",
-          package_uninstalled = " ",
-        },
+  {
+    "WhoIsSethDaniel/mason-tool-installer.nvim",
+    enabled = false,
+    opts = {
+      ensure_installed = {
+        "lua-language-server-",
+        "stylua",
+        "debugpy",
+        "tree-sitter-cli",
       },
-
-      max_concurrent_installers = 10,
     },
   },
 }

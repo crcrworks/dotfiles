@@ -3,7 +3,6 @@ return {
   event = "BufRead",
   cmd = { "TSContext" },
   opts = {
-
     mode = "topline",
     max_lines = 3,
   },

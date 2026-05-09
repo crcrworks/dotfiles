@@ -18,18 +18,14 @@ return {
             icon = "",
             desc = "Open Issues",
             key = "i",
-            action = function()
-              vim.fn.jobstart("gh issue list --web", { detach = true })
-            end,
+            action = function() vim.fn.jobstart("gh issue list --web", { detach = true }) end,
           },
 
           {
             icon = " ",
             desc = "Open PRs",
             key = "p",
-            action = function()
-              vim.fn.jobstart("gh pr list --web", { detach = true })
-            end,
+            action = function() vim.fn.jobstart("gh pr list --web", { detach = true }) end,
           },
           {
             icon = "󰈆",

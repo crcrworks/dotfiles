@@ -1,20 +1,25 @@
-local ensure_installed = require "configs.treesitter"
-
+---@type LazySpec
 return {
-  "nvim-treesitter/nvim-treesitter",
-  event = { "BufReadPost", "BufNewFile" },
-  cmd = { "TSInstall", "TSBufEnable", "TSBufDisable", "TSModuleInfo" },
-  build = ":TSUpdate",
-  config = function(_, opts)
-    require("nvim-treesitter.configs").setup(opts)
-  end,
+  "AstroNvim/astrocore",
+  ---@type AstroCoreOpts
   opts = {
-    highlight = {
-      enable = true,
-      use_languagetree = true,
+    treesitter = {
+      highlight = true, -- enable/disable treesitter based highlighting
+      indent = true, -- enable/disable treesitter based indentation
+      auto_install = true, -- enable/disable automatic installation of detected languages
+      ensure_installed = {
+        "vim",
+        "go",
+        "svelte",
+        "html",
+        "css",
+        "scss",
+        "typescript",
+        "tsx",
+        "javascript",
+        "jsx",
+        -- add more arguments for adding more treesitter parsers
+      },
     },
-
-    indent = { enable = true },
-    ensure_installed = ensure_installed,
   },
 }

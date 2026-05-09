@@ -1,4 +1,0 @@
-return {
-  "gopls",
-  filetypes = { "go" },
-}

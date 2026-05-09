@@ -1,3 +1,0 @@
-return {
-  "tsp_server",
-}

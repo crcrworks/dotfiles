@@ -20,7 +20,7 @@
 "oc" = "opencode"
 
 "ju" = "mise exec jj -- jj"
-"jua" = "ju -r.."
+"jua" = "clear && ju -r.."
 "jus" = "ju status"
 "jub" = "ju bookmark"
 "jubl" = "ju bookmark list"

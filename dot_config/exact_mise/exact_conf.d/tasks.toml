@@ -1,0 +1,4 @@
+[tasks.ai-setup]
+run = '''
+lms load qwen3.5-0.8b-mlx --context-length 25000
+'''

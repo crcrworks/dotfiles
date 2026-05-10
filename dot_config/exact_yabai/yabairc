@@ -45,6 +45,7 @@ yabai -m rule --add manage=off label="Dictionary" app="Dictionary" sticky="on"
 yabai -m rule --add manage=off label="Preview" app="Preview" sticky="on"
 yabai -m rule --add manage=off label="Stats" app="Stats" sticky="on"
 yabai -m rule --add manage=off label="PLaMo" app="PLaMo翻訳" sticky="on"
+yabai -m rule --add manage=off label="towerd" app="towerd" sticky="on"
 
 yabai -m rule --add manage=off label="VoiceOver Utility" app="VoiceOver Utility" sticky="on"
 yabai -m rule --add manage=off label="Shottr" app="Shottr" sticky="on"

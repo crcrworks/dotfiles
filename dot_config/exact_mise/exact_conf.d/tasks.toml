@@ -1,4 +1,4 @@
 [tasks.ai-setup]
 run = '''
-lms load qwen3.5-0.8b-mlx --context-length 25000
+lms load qwen3.5-0.8b-mlx --context-length 100000
 '''

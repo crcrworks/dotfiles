@@ -41,6 +41,7 @@
 "github:tumf/jj-desc" = "latest"
 "github:Rtarun3606k/TakaTime" = "latest"
 "github:AlDanial/cloc" = "latest"
+"llmfit" = "latest"
 
 # Language Servers
 "github:vadimcn/codelldb" = "latest"

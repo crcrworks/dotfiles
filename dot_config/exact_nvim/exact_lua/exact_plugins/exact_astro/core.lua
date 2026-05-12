@@ -28,6 +28,7 @@ return {
     },
     options = {
       opt = {
+        guicursor = "c-i:hor20",
         relativenumber = false,
         number = true,
         spell = false,

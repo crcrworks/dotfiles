@@ -14,7 +14,7 @@
 "gl" = "git log --oneline --graph --all"
 "yt" = "yt-dlp"
 "port" = "lsof"
-"vencode-install" = "open /Users/crcr/Development/installer/VencordInstaller 5.app"
+"vencode-install" = "open /Users/crcr/Development/installer/VencordInstaller\\ 5.app"
 "nv" = "nvim"
 "ca" = "cargo"
 "oc" = "opencode"

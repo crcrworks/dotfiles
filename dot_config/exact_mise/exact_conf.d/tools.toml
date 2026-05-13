@@ -42,6 +42,7 @@
 "github:Rtarun3606k/TakaTime" = "latest"
 "github:AlDanial/cloc" = "latest"
 "llmfit" = "latest"
+"npm:@earendil-works/pi-coding-agent" = "latest"
 
 # Language Servers
 "github:vadimcn/codelldb" = "latest"

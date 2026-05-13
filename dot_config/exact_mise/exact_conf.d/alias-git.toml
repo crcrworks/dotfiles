@@ -1,0 +1,12 @@
+[shell_alias]
+"gs" = "git status"
+"gfa" = "git fetch --all"
+"gpa" = "git pull --all"
+"gco" = "git checkout"
+"gcob" = "git checkout -b"
+"gsu" = "git stash save -u"
+"gsl" = "git stash list"
+"gsc" = "git stash clear"
+"gb" = "git branch --all"
+"gbl" = "git branch"
+"gbr" = "git branch --remote"

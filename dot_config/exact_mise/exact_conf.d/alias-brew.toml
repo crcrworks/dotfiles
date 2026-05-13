@@ -1,0 +1,7 @@
+[shell_alias]
+"bl" = "brew list --formula"
+"bg" = "brew upgrade"
+"blc" = "brew list --cask"
+"al" = "echo \"************brew***************\"; brew list --formula; echo \"************cask***************\"; brew list --cask; echo \"************mas***************\"; mas list"
+"ao" = "echo \"************brew***************\"; brew upgrade --dry-run; echo \"************cask***************\"; brew upgrade --cask --greedy --dry-run; echo \"************mas***************\"; mas outdated"
+"ag" = "echo \"************brew***************\"; brew upgrade; echo \"************cask***************\"; brew upgrade --cask --greedy; echo \"************mas***************\"; mas upgrade"

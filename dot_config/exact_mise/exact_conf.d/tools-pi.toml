@@ -1,0 +1,7 @@
+[tools]
+"npm:pi-ask-user" = "latest"
+"npm:pi-docparser" = "latest"
+"npm:pi-exa" = "latest"
+"npm:pi-skillful" = "latest"
+"npm:pi-subagents" = "latest"
+"npm:pi-websearch-router" = "latest"

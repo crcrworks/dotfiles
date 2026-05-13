@@ -1,0 +1,7 @@
+[shell_alias]
+"nrb" = "npm run build"
+"nrw" = "npm run watch"
+"nrt" = "npm run test"
+"nig" = "npm install -g"
+"nid" = "npm install -D"
+"pnd" = "pnpm dev"

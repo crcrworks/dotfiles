@@ -1,0 +1,13 @@
+[tools]
+"github:vadimcn/codelldb" = "latest"
+"lua-language-server" = "latest"
+"stylua" = "latest"
+"github:Kampfkarren/selene" = "latest"
+"tombi" = "latest"
+"go:golang.org/x/tools/gopls" = "latest"
+"go:golang.org/x/tools/cmd/goimports" = "latest"
+"ruff" = "latest"
+"biome" = "latest"
+"npm:vscode-langservers-extracted" = "latest"
+"npm:emmet-ls" = "latest"
+"npm:@typescript/native-preview" = "latest"

@@ -1,0 +1,4 @@
+[shell_alias]
+"ch" = "chezmoi"
+"cha" = "chezmoi apply"
+"chc" = "chezmoi cd"

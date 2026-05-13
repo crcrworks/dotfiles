@@ -1,0 +1,18 @@
+[shell_alias]
+"ld" = "lazydocker"
+"dkl" = "docker logs -f"
+"dke" = "docker exec"
+"dkc" = "docker compose"
+"dkcl" = "docker compose logs"
+"dkcu" = "docker compose up -d"
+"dkcd" = "docker compose down"
+"dkcub" = "docker compose up -d --build"
+"dkcb" = "docker compose build"
+
+"dllobby" = "docker logs -f lobby"
+"delobby" = "docker exec -i lobby rcon-cli"
+"dlnijisaba" = "docker logs -f nijisaba"
+"denijisaba" = "docker exec -i nijisaba rcon-cli"
+"dlsubworld" = "docker logs -f subworld"
+"desubworld" = "docker exec -i subworld rcon-cli"
+"dlvelocity" = "docker logs -f velocity"

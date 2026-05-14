@@ -18,11 +18,16 @@ return {
           -- "python",
         },
       },
-      disabled = { -- disable formatting capabilities for the listed language servers
+      enabled = {},
+      disabled = { -- LSP names from `client.name`; jsonls must be here so JSON uses oxfmt only
         "svelte",
         "lua_ls",
         "tsgo",
         "vtsls",
+        "jsonls",
+        "tombi",
+        "cssls",
+        "html",
       },
       timeout_ms = 1000, -- default format timeout
       -- filter = function(client) -- fully override the default formatting function

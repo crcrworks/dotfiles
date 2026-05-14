@@ -12,3 +12,4 @@
 "npm:emmet-ls" = "latest"
 "npm:@typescript/native-preview" = "latest"
 "oxfmt" = "latest"
+"oxlint" = "latest"

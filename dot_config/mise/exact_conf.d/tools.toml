@@ -26,7 +26,6 @@
 "cargo-binstall" = "latest"
 "starship" = "latest"
 "task" = "latest"
-"just" = "latest"
 "act" = "latest"
 "github:anomalyco/opencode" = "latest"
 "prek" = "latest"

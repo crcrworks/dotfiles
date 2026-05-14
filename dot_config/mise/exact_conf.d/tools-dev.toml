@@ -11,3 +11,4 @@
 "npm:vscode-langservers-extracted" = "latest"
 "npm:emmet-ls" = "latest"
 "npm:@typescript/native-preview" = "latest"
+"oxfmt" = "latest"

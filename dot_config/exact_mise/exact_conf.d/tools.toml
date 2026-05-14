@@ -43,3 +43,4 @@
 "github:AlDanial/cloc" = "latest"
 "llmfit" = "latest"
 "npm:@earendil-works/pi-coding-agent" = "latest"
+"npm:svelte-language-server" = "latest"

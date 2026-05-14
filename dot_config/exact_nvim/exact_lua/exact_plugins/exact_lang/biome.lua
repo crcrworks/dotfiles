@@ -1,10 +1,18 @@
 return {
   {
-    "stevearc/conform.nvim",
+    "AstroNvim/astrolsp",
     optional = true,
+    ---@type AstroLSPOpts
+    opts = {
+      servers = { "biome" },
+    },
+  },
+  {
+    "stevearc/conform.nvim",
+    event = "User AstroFile",
+    cmd = "ConformInfo",
     opts = function(_, opts)
       if not opts.formatters_by_ft then opts.formatters_by_ft = {} end
-      -- https://biomejs.dev/internals/language-support/
       local supported_ft = {
         "astro",
         "css",

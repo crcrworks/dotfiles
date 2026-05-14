@@ -31,6 +31,7 @@ return {
           filetypes = { "javascript", "javascriptreact", "typescript", "typescriptreact" },
           settings = {
             typescript = {
+              format = { enable = false },
               updateImportsOnFileMove = { enabled = "always" },
               inlayHints = {
                 enumMemberValues = { enabled = true },
@@ -42,6 +43,7 @@ return {
               },
             },
             javascript = {
+              format = { enable = false },
               updateImportsOnFileMove = { enabled = "always" },
               inlayHints = {
                 enumMemberValues = { enabled = true },

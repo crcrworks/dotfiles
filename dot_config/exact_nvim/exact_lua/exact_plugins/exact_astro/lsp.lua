@@ -21,6 +21,8 @@ return {
       disabled = { -- disable formatting capabilities for the listed language servers
         "svelte",
         "lua_ls",
+        "tsgo",
+        "vtsls",
       },
       timeout_ms = 1000, -- default format timeout
       -- filter = function(client) -- fully override the default formatting function
@@ -85,6 +87,10 @@ return {
     on_attach = function(client, bufnr)
       -- this would disable semanticTokensProvider for all clients
       -- client.server_capabilities.semanticTokensProvider = nil
+      if client.name == "tsgo" or client.name == "vtsls" then
+        client.server_capabilities.documentFormattingProvider = false
+        client.server_capabilities.documentRangeFormattingProvider = false
+      end
     end,
   },
 }

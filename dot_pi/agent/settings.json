@@ -9,6 +9,7 @@
     "npm:pi-exa",
     "npm:pi-skillful",
     "npm:pi-subagents",
-    "npm:pi-websearch-router"
+    "npm:pi-websearch-router",
+    "npm:pi-modes"
   ]
 }

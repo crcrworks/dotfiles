@@ -1,7 +1,7 @@
 {
   "providers": {
     "lm-studio": {
-      "baseUrl": "http://100.124.114.84:1234/v1",
+      "baseUrl": "http://localhost:2468/v1",
       "api": "openai-completions",
       "apiKey": "lm-studio",
       "authHeader": true,

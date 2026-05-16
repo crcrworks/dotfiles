@@ -1,0 +1,139 @@
+{
+  "version": 3,
+  "skills": {
+    "find-skills": {
+      "source": "vercel-labs/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/vercel-labs/skills.git",
+      "skillPath": "skills/find-skills/SKILL.md",
+      "skillFolderHash": "c2f31172b6f256272305a5e6e7228b258446899f",
+      "installedAt": "2026-02-01T05:09:33.318Z",
+      "updatedAt": "2026-02-01T05:09:33.318Z"
+    },
+    "ai-sdk": {
+      "source": "vercel/ai",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/vercel/ai.git",
+      "skillPath": "skills/use-ai-sdk/SKILL.md",
+      "skillFolderHash": "d8e09e2796e2a04a9c7f7cc8c5bbab8da76a77d9",
+      "installedAt": "2026-03-16T09:31:26.838Z",
+      "updatedAt": "2026-03-16T09:31:26.838Z"
+    },
+    "gpui-actions": {
+      "source": "cnwzhu/gpui-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/cnwzhu/gpui-skills.git",
+      "skillPath": "gpui-actions/SKILL.md",
+      "skillFolderHash": "05b6de2f36f8936433b47c832a40044cfa242bf4",
+      "installedAt": "2026-04-12T06:18:45.126Z",
+      "updatedAt": "2026-04-12T06:18:45.126Z"
+    },
+    "gpui-async": {
+      "source": "cnwzhu/gpui-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/cnwzhu/gpui-skills.git",
+      "skillPath": "gpui-async/SKILL.md",
+      "skillFolderHash": "751178b66bb6b9b0e3f6366848ef18e5448f9b99",
+      "installedAt": "2026-04-12T06:18:45.569Z",
+      "updatedAt": "2026-04-12T06:18:45.569Z"
+    },
+    "gpui-code-quality": {
+      "source": "cnwzhu/gpui-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/cnwzhu/gpui-skills.git",
+      "skillPath": "gpui-code-quality/SKILL.md",
+      "skillFolderHash": "99f286d453d0602a4479259be3780e021533b5d1",
+      "installedAt": "2026-04-12T06:18:46.079Z",
+      "updatedAt": "2026-04-12T06:18:46.079Z"
+    },
+    "gpui-elements": {
+      "source": "cnwzhu/gpui-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/cnwzhu/gpui-skills.git",
+      "skillPath": "gpui-elements/SKILL.md",
+      "skillFolderHash": "5cf94606e5d674d170d4f6909a8dac61da8bb0d5",
+      "installedAt": "2026-04-12T06:18:46.575Z",
+      "updatedAt": "2026-04-12T06:18:46.575Z"
+    },
+    "gpui-entities": {
+      "source": "cnwzhu/gpui-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/cnwzhu/gpui-skills.git",
+      "skillPath": "gpui-entities/SKILL.md",
+      "skillFolderHash": "2e5232ee3918cafa6ca93d7da79bdf655f1405f5",
+      "installedAt": "2026-04-12T06:18:47.017Z",
+      "updatedAt": "2026-04-12T06:18:47.017Z"
+    },
+    "gpui-fundamentals": {
+      "source": "cnwzhu/gpui-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/cnwzhu/gpui-skills.git",
+      "skillPath": "gpui-fundamentals/SKILL.md",
+      "skillFolderHash": "134a0c81c314c3d2018df36a8830bcdc285438df",
+      "installedAt": "2026-04-12T06:18:47.513Z",
+      "updatedAt": "2026-04-12T06:18:47.513Z"
+    },
+    "gpui-init": {
+      "source": "cnwzhu/gpui-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/cnwzhu/gpui-skills.git",
+      "skillPath": "gpui-init/SKILL.md",
+      "skillFolderHash": "3016fd84b3a82456d3edecf58e051ee77abf2fd0",
+      "installedAt": "2026-04-12T06:18:48.011Z",
+      "updatedAt": "2026-04-12T06:18:48.011Z"
+    },
+    "gpui-patterns": {
+      "source": "cnwzhu/gpui-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/cnwzhu/gpui-skills.git",
+      "skillPath": "gpui-patterns/SKILL.md",
+      "skillFolderHash": "975738545aaaa7c846c90855926cc38cfee6596e",
+      "installedAt": "2026-04-12T06:18:48.482Z",
+      "updatedAt": "2026-04-12T06:18:48.482Z"
+    },
+    "gpui-styling": {
+      "source": "cnwzhu/gpui-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/cnwzhu/gpui-skills.git",
+      "skillPath": "gpui-styling/SKILL.md",
+      "skillFolderHash": "41810eb2bced6ac3c77401830853a3555e72251c",
+      "installedAt": "2026-04-12T06:18:48.968Z",
+      "updatedAt": "2026-04-12T06:18:48.968Z"
+    },
+    "gpui-testing": {
+      "source": "cnwzhu/gpui-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/cnwzhu/gpui-skills.git",
+      "skillPath": "gpui-testing/SKILL.md",
+      "skillFolderHash": "1b7b39f90b7f5a1632f9748272bd9d19e721b6cf",
+      "installedAt": "2026-04-12T06:18:49.449Z",
+      "updatedAt": "2026-04-12T06:18:49.449Z"
+    },
+    "gpui-troubleshooting": {
+      "source": "cnwzhu/gpui-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/cnwzhu/gpui-skills.git",
+      "skillPath": "gpui-troubleshooting/SKILL.md",
+      "skillFolderHash": "55c7e61d051b9cf69acd0e3bd858ebb7f0de2791",
+      "installedAt": "2026-04-12T06:18:49.918Z",
+      "updatedAt": "2026-04-12T06:18:49.918Z"
+    }
+  },
+  "dismissed": {
+    "findSkillsPrompt": true
+  },
+  "lastSelectedAgents": [
+    "amp",
+    "antigravity",
+    "cline",
+    "codex",
+    "cursor",
+    "deepagents",
+    "firebender",
+    "gemini-cli",
+    "github-copilot",
+    "kimi-cli",
+    "opencode",
+    "warp"
+  ]
+}

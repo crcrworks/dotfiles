@@ -12,10 +12,8 @@ return {
     optional = true,
     ---@type AstroLSPOpts
     opts = {
-      servers = {
-        "gopls",
-        "goimports",
-      },
+      -- goimports は conform のフォーマッタ。nvim の LSP サーバー名ではない。
+      servers = { "gopls" },
       ---@diagnostic disable-next-line: missing-fields
       config = {
         gopls = {

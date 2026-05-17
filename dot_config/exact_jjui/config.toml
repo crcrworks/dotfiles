@@ -1,2 +1,7 @@
 [ui]
 theme = "base16-everforest-dark-hard"
+
+[aliases]
+ai-desc = ["util", "exec", "--", "jj-ai-describe"]
+ai-commit = ["util", "exec", "--", "jj-ai-commit"]
+ai-revise = ["util", "exec", "--", "jj-ai-revise"]

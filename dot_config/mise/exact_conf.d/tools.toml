@@ -1,5 +1,6 @@
 [tools]
 # skhdとyabaiはややこしいのでmiseでは管理しない
+
 "rust" = { version = "stable", components = "rust-src,llvm-tools,rust-analyzer" }
 "go" = "latest"
 "python" = "latest"
@@ -42,3 +43,4 @@
 "llmfit" = "latest"
 "npm:@earendil-works/pi-coding-agent" = "latest"
 "npm:svelte-language-server" = "latest"
+"github:tumf/jj-desc" = "latest"

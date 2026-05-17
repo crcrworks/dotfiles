@@ -1,2 +1,5 @@
 mise.toml
 dot_config/opencode/.env
+bin
+
+ignore_*

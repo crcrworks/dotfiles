@@ -16,6 +16,28 @@
           "contextWindow": 131072
         }
       ]
+    },
+    "cerebras": {
+      "baseUrl": "https://api.cerebras.ai/v1",
+      "api": "openai-completions",
+      "apiKey": "YOUR_CEREBRAS_API_KEY",
+      "authHeader": true,
+      "compat": {
+        "supportsDeveloperRole": true,
+        "supportsReasoningEffort": true
+      },
+      "models": [
+        {
+          "id": "gpt-oss-120b",
+          "name": "GPT OSS 120B (Cerebras)",
+          "contextWindow": 131072
+        },
+        {
+          "id": "zai-glm-4.7",
+          "name": "Z.ai GLM 4.7 (Cerebras, preview)",
+          "contextWindow": 131072
+        }
+      ]
     }
   }
 }

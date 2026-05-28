@@ -54,6 +54,8 @@ yabai -m rule --add manage=off label="Bartender 5" app="Bartender 5" sticky="on"
 yabai -m rule --add manage=off label="ChatGPT" app="ChatGPT" sticky="on"
 
 ## Unmanaged windows
+yabai -m rule --add manage=off label="Codex overlay" app="^Codex$" subrole!="^AXStandardWindow$"
+yabai -m rule --add manage=off label="Codex untitled" app="^Codex$" title="^$"
 yabai -m rule --add manage=off title="(Copy|Bin|About This Mac|Info)"
 yabai -m rule --add manage=off title="(Settings|Preferences)"
 yabai -m rule --add manage=off title="^(General|(Tab|Password|Website|Extension)s|AutoFill|Se(arch|curity)|Privacy|Advanced)$"

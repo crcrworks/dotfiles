@@ -1,209 +1,26 @@
 {
   "$schema": "https://opencode.ai/config.json",
-  "model": "zai-coding-plan/glm-5-turbo",
-  "default_agent": "plan",
-  "instructions": [
-    "~/.config/opencode/rules/**/*.md"
-  ],
+  "model": "",
+  "default_agent": "",
   "plugin": [
     "opencode-openai-codex-auth@latest",
     "opencode-cursor-auth@latest",
-    "opencode-pencil-sync@latest",
-    "oh-my-openagent@3.12.3"
+    "opencode-pencil-sync@latest"
   ],
-  "agent": {
-    "ask": {
-      "mode": "primary",
-      "model": "zai-coding-plan/glm-5-turbo",
-      "prompt": "IMPORTANT: Use subagents extensively:\n- Launch multiple codesearch agents in parallel to understand the codebase",
-      "tools": {
-        "write": false,
-        "edit": false,
-        "bash": false,
-        "patch": false,
-        "todowrite": false,
-        "read": true,
-        "grep": true,
-        "glob": true,
-        "list": true,
-        "todoread": true,
-        "webfetch": true
-      }
-    },
-    "general": {
-      "mode": "subagent",
-      "model": "github-copilot/gpt-5.3-codex",
-    },
-    "explore": {
-      "mode": "subagent",
-      "model": "github-copilot/gemini-3-flash-preview"
-    },
-    "librarian": {
-      "mode": "subagent",
-      "model": "github-copilot/gemini-3-flash-preview",
-      "description": "Library and documentation search agent"
-    },
-    "codesearch": {
-      "mode": "subagent",
-      "model": "github-copilot/gemini-3-flash-preview",
-      "description": "Codebase search and pattern discovery agent"
-    },
-    "websearch": {
-      "mode": "subagent",
-      "model": "github-copilot/gpt-5.3-codex",
-      "description": "Web search agent for retrieving latest information"
-    },
-    "planner": {
-      "mode": "subagent",
-      "model": "github-copilot/gpt-5.3-codex",
-      "description": "Feature implementation planning agent"
-    },
-    "code-reviewer": {
-      "mode": "subagent",
-      "model": "github-copilot/gpt-5.3-codex",
-      "description": "Code quality and security reviewer"
-    },
-    "security-reviewer": {
-      "mode": "subagent",
-      "model": "github-copilot/gpt-5.3-codex",
-      "description": "Security vulnerability analyzer"
-    },
-    "tdd-guide": {
-      "mode": "subagent",
-      "model": "github-copilot/gpt-5.3-codex",
-      "description": "TDD workflow guide"
-    },
-    "build-resolver": {
-      "mode": "subagent",
-      "model": "github-copilot/gpt-5.3-codex",
-      "description": "Build error resolver"
-    },
-    "refactor-cleaner": {
-      "mode": "subagent",
-      "model": "github-copilot/gpt-5.3-codex",
-      "description": "Refactoring and dead code removal"
-    },
-    "spec-reviewer": {
-      "mode": "subagent",
-      "model": "github-copilot/gpt-5.3-codex",
-      "description": "Spec compliance reviewer - verifies implementation matches plan"
-    },
-    "frontend-designer": {
-      "mode": "subagent",
-      "model": "github-copilot/gpt-5.3-codex",
-      "description": "Frontend design specialist for UI/UX implementation"
-    }
-  },
-  "provider": {
-    "cursor": {
-      "npm": "@ai-sdk/openai-compatible",
-      "name": "Cursor Agent (local)",
-      "options": {
-        "baseURL": "http://127.0.0.1:32123/v1"
-      },
-      "models": {
-        "auto": {
-          "name": "Cursor Agent Auto"
-        },
-        "gpt-5": {
-          "name": "Cursor Agent GPT-5 (alias → gpt-5.2)"
-        },
-        "gpt-5.2": {
-          "name": "Cursor Agent GPT-5.2"
-        },
-        "gpt-5.1": {
-          "name": "Cursor Agent GPT-5.1"
-        },
-        "gpt-5.1-codex": {
-          "name": "Cursor Agent GPT-5.1 Codex"
-        },
-        "gpt-5.3-codex-high-fast": {
-          "name": "Cursor Agent GPT-5.3 Codex High Fast"
-        },
-        "sonnet-4.5": {
-          "name": "Cursor Agent Sonnet 4.5"
-        },
-        "gemini-3-flash": {
-          "name": "Cursor Agent Gemini 3 Flash"
-        },
-        "sonnet-4.5-thinking": {
-          "name": "Cursor Agent Sonnet 4.5 Thinking"
-        }
-      }
-    },
-    "lmstudio": {
-      "npm": "@ai-sdk/openai-compatible",
-      "name": "LM Studio (local)",
-      "options": {
-        "baseURL": "http://localhost:1234/v1"
-      },
-      "models": {
-        "zai-org/glm-4.7-flash": {
-          "name": "GLM 4.7 Flash (local)"
-        },
-        "qwen/qwen3-coder-next": {
-          "name": "Qwen3 Coder Next (local)"
-        },
-        "qwen/qwen3.5-35b-a3b-text-qx64-hi-mlx": {
-          "name": "Qwen3.5 (local)"
-        },
-        "lmstudio-community/qwen2.5-coder-7b-instruct-mlx": {
-          "name": "Qwen2.5 Coder (local)"
-        },
-        "openai/gpt-oss-20b": {
-          "name": "GPT OSS 20b (local)"
-        },
-      }
-    },
-    "openrouter": {
-      "npm": "@ai-sdk/openai-compatible",
-      "name": "OpenRouter",
-      "options": {
-        "baseURL": "https://openrouter.ai/api/v1",
-        "apiKey": "{env:OPENROUTER_API_KEY}"
-      },
-      "models": {
-        "stepfun/step-3.5-flash:free": {
-          "name": "Step 3.5 Flash (free)",
-          "options": {
-            "supportsImages": false
-          },
-          "limit": {
-            "context": 256000,
-            "output": 65536
-          }
-        }
-      }
-    }
-  },
   "mcp": {
     "pdf-reader": {
       "type": "local",
       "enabled": false,
-      "command": [
-        "npx",
-        "-y",
-        "@sylphx/pdf-reader-mcp"
-      ]
+      "command": ["npx", "-y", "@sylphx/pdf-reader-mcp"]
     },
     "context7": {
       "type": "local",
-      "command": [
-        "npx",
-        "-y",
-        "@upstash/context7-mcp",
-        "--api-key",
-        "{env:CONTEXT7_API_KEY}"
-      ],
+      "command": ["npx", "-y", "@upstash/context7-mcp", "--api-key", "{env:CONTEXT7_API_KEY}"],
       "enabled": true
     },
     "notion": {
       "type": "local",
-      "command": [
-        "npx",
-        "-y",
-        "@notionhq/notion-mcp-server"
-      ],
+      "command": ["npx", "-y", "@notionhq/notion-mcp-server"],
       "environment": {
         "NOTION_TOKEN": "{env:NOTION_TOKEN}"
       },
@@ -216,10 +33,7 @@
     },
     "figma-mcp-server": {
       "type": "local",
-      "command": [
-        "npx",
-        "@antonytm/figma-mcp-server@latest"
-      ],
+      "command": ["npx", "@antonytm/figma-mcp-server@latest"],
       "environment": {
         "TRANSPORT": "stdio"
       },
@@ -227,12 +41,7 @@
     },
     "word-document": {
       "type": "local",
-      "command": [
-        "uvx",
-        "--from",
-        "office-word-mcp-server==1.1.10",
-        "word_mcp_server"
-      ],
+      "command": ["uvx", "--from", "office-word-mcp-server==1.1.10", "word_mcp_server"],
       "enabled": false
     },
     "github": {
@@ -253,19 +62,12 @@
     },
     "markitdown": {
       "type": "local",
-      "command": [
-        "uvx",
-        "markitdown-mcp"
-      ],
+      "command": ["uvx", "markitdown-mcp"],
       "enabled": false
     },
     "stitch": {
       "type": "local",
-      "command": [
-        "npx",
-        "@_davideast/stitch-mcp",
-        "proxy"
-      ],
+      "command": ["npx", "@_davideast/stitch-mcp", "proxy"],
       "environment": {
         "STITCH_PROJECT_ID": "{env:GITHUB_PERSONAL_ACCESS_TOKEN}"
       },

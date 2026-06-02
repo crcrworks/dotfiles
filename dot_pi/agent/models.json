@@ -11,8 +11,28 @@
       },
       "models": [
         {
+          "id": "liquid/lfm2-24b-a2b",
+          "name": "LFM2 25b a2b (LM Studio)",
+          "contextWindow": 131072
+        },
+        {
           "id": "qwen/qwen3.6-35b-a3b",
           "name": "Qwen 3.6 35B-A3B (LM Studio)",
+          "contextWindow": 131072
+        },
+        {
+          "id": "qwen/qwen3.6-27b",
+          "name": "Qwen 3.6 27B (LM Studio)",
+          "contextWindow": 131072
+        },
+        {
+          "id": "unsloth/Qwen3.6-35B-A3B-MTP-GGUF",
+          "name": "Qwen 3.6 35B MTP (LM Studio)",
+          "contextWindow": 131072
+        },
+        {
+          "id": "google/gemma-4-26b-a4b",
+          "name": "Gemma4",
           "contextWindow": 131072
         }
       ]

@@ -11,6 +11,11 @@
       },
       "models": [
         {
+          "id": "huihui-ai/huihui-qwen3.6-35b-a3b-claude-4.7-opus-abliterated-mtp",
+          "name": "Qwen3.6 Abliterated",
+          "contextWindow": 131072
+        },
+        {
           "id": "liquid/lfm2-24b-a2b",
           "name": "LFM2 25b a2b (LM Studio)",
           "contextWindow": 131072

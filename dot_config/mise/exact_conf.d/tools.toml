@@ -28,7 +28,7 @@
 "starship" = "latest"
 "task" = "latest"
 "act" = "latest"
-"github:anomalyco/opencode" = "latest"
+"npm:opencode-ai" = "latest"
 "prek" = "latest"
 "yt-dlp" = "latest"
 "npm:openclaw" = "latest"

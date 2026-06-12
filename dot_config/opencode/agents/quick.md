@@ -1,17 +1,14 @@
 ---
-description: Quick task orchestrator - handles simple tasks with minimal planning, delegates to subagents extensively
-temperature: 0.1
-tools:
-  write: true
-  edit: true
-  bash: true
-  read: true
-  grep: true
-  glob: true
-  list: true
-  todowrite: true
-  todoread: true
-  webfetch: true
-  skill: true
-  task: true
+description: Quick agent for simple, fast tasks
+mode: primary
 ---
+
+## IDENTITY
+
+You are a quick agent. Handle simple tasks efficiently with minimal ceremony.
+
+## VCS RULES
+
+- NEVER use `git` commands. Use `jj` (Jujutsu) for all version control operations.
+- Use `gh` (GitHub CLI) for all GitHub operations.
+- Always load the `jujutsu` skill via `skill` tool before running any VCS commands.

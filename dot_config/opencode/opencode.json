@@ -1,12 +1,61 @@
 {
   "$schema": "https://opencode.ai/config.json",
-  "model": "",
-  "default_agent": "",
+  "model": "cursorapi/composer-2.5",
+  "default_agent": "build",
   "plugin": [
     "opencode-openai-codex-auth@latest",
     "opencode-cursor-auth@latest",
     "opencode-pencil-sync@latest"
   ],
+  "provider": {
+    "cursorapi": {
+      "npm": "@ai-sdk/openai-compatible",
+      "name": "API for Cursor",
+      "options": {
+        "baseURL": "http://127.0.0.1:8787/v1",
+        "apiKey": "cursor-local"
+      },
+      "models": {
+        "composer-2.5": {
+          "name": "Composer 2.5",
+          "tool_call": true,
+          "limit": {
+            "context": 200000,
+            "output": 64000
+          }
+        },
+        "composer-2.5-fast": {
+          "name": "Composer 2.5 Fast",
+          "tool_call": true,
+          "limit": {
+            "context": 200000,
+            "output": 64000
+          }
+        }
+      }
+    },
+    "cursor": {
+      "npm": "@ai-sdk/openai-compatible",
+      "name": "Cursor Agent (cursor-agent)",
+      "options": {
+        "baseURL": "http://127.0.0.1:32123/v1"
+      },
+      "models": {
+        "auto": {
+          "name": "Cursor Agent Auto",
+          "tool_call": true
+        },
+        "gpt-5.2": {
+          "name": "Cursor Agent GPT-5.2",
+          "tool_call": true
+        },
+        "sonnet-4.5": {
+          "name": "Cursor Agent Sonnet 4.5",
+          "tool_call": true
+        }
+      }
+    }
+  },
   "mcp": {
     "pdf-reader": {
       "type": "local",

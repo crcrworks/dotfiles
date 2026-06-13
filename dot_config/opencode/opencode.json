@@ -2,16 +2,12 @@
   "$schema": "https://opencode.ai/config.json",
   "model": "opencode-go/deepseek-v4-flash",
   "default_agent": "",
-  "yolo": true,
+  "permission": "allow",
   "plugin": [],
   "mcp": {
     "playwright": {
       "type": "local",
-      "command": [
-        "npx",
-        "@playwright/mcp@latest",
-        "--cdp-endpoint=http://localhost:9222"
-      ],
+      "command": ["npx", "@playwright/mcp@latest", "--cdp-endpoint=http://localhost:9222"],
       "enabled": true
     }
   }

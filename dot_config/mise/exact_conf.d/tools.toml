@@ -45,3 +45,4 @@
 "github:tumf/jj-desc" = "latest"
 "tokei" = "latest"
 "codex" = "latest"
+"npm:@codeproxy/cli" = "latest"

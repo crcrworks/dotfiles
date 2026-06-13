@@ -4,5 +4,15 @@
   "default_agent": "",
   "permission": "allow",
   "plugin": ["@sveltejs/opencode"],
-  "mcp": {}
+  "mcp": {},
+  "command": {
+    "no-browser": {
+      "description": "Skip browser verification for frontend changes in this session. Use when you are sure the frontend changes don't need visual checking.",
+      "template": "/no-browser was used. The user explicitly skipped browser verification. Do NOT run agent-browser or take screenshots. Skip the FRONTEND DESIGN VERIFICATION step entirely for this session."
+    },
+    "commit": {
+      "description": "Create a jujutsu commit with an auto-generated message based on the current changes.",
+      "template": "The user wants to commit their current changes using jujutsu (jj).\n\n1. Load the `jujutsu` skill via the `skill` tool.\n2. Run `jj status` to see the current state and list of changed files.\n3. Run `jj diff --git` to see the full diff of all changes.\n4. Based on the changes, generate an appropriate commit message in conventional commit format (e.g., feat:, fix:, docs:, chore:, refactor:, style:, test:, etc.) with an optional scope. Write the message in the user's language but keep type prefixes in English.\n5. Present the suggested commit message to the user and ask if they want to use it or provide their own.\n6. Once confirmed, run `jj commit -m \"<message>\"` to create the commit.\n7. Show the resulting commit via `jj log -l 1`."
+    }
+  }
 }

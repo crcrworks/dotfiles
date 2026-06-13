@@ -46,3 +46,4 @@
 "tokei" = "latest"
 "codex" = "latest"
 "npm:@codeproxy/cli" = "latest"
+"npm:agent-browser" = "latest"

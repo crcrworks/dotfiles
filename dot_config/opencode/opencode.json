@@ -3,12 +3,6 @@
   "model": "opencode-go/deepseek-v4-flash",
   "default_agent": "",
   "permission": "allow",
-  "plugin": [],
-  "mcp": {
-    "playwright": {
-      "type": "local",
-      "command": ["npx", "@playwright/mcp@latest", "--headless"],
-      "enabled": true
-    }
-  }
+  "plugin": ["@sveltejs/opencode"],
+  "mcp": {}
 }

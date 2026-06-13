@@ -6,9 +6,9 @@
   "plugin": ["@sveltejs/opencode"],
   "mcp": {},
   "command": {
-    "no-browser": {
-      "description": "Skip browser verification for frontend changes in this session. Use when you are sure the frontend changes don't need visual checking.",
-      "template": "/no-browser was used. The user explicitly skipped browser verification. Do NOT run agent-browser or take screenshots. Skip the FRONTEND DESIGN VERIFICATION step entirely for this session."
+    "browser": {
+      "description": "Open browser and visually verify frontend changes using agent-browser. Use when you want to check the appearance of UI changes.",
+      "template": "/browser was used. The user wants you to perform browser verification of the frontend changes.\n\nFollow these steps:\n1. Start the project's dev server in the background (e.g. `npm run dev &` or similar). Wait for it to be ready.\n2. Set AGENT_BROWSER_SCREENSHOT_DIR to a temp directory outside git tracking:\n   export AGENT_BROWSER_SCREENSHOT_DIR=\"/var/folders/nw/1rhqbntd1118df625z9l82300000gn/T/opencode/screenshots\"\n   mkdir -p \"$AGENT_BROWSER_SCREENSHOT_DIR\"\n3. Use agent-browser to open the relevant page(s): agent-browser open http://localhost:5173 (or appropriate URL)\n4. Take screenshots of the changed pages: agent-browser screenshot --full <name>.png\n5. Send screenshots to the vision subagent for visual inspection of layout issues\n6. If issues are found, fix them and re-verify\n7. Stop the dev server (kill %1) and close browser (agent-browser close)\n8. Report the results to the user"
     },
     "commit": {
       "description": "Create a jujutsu commit with an auto-generated message based on the current changes.",

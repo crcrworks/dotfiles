@@ -62,7 +62,7 @@ alt - tab : /opt/homebrew/bin/yabai -m space --focus next
 shift + alt - tab : /opt/homebrew/bin/yabai -m space --focus prev
 
 # ウィンドウ操作
-alt - return : /opt/homebrew/bin/yabai -m window --toggle zoom-fullscreen
+alt + ctrl - return : /opt/homebrew/bin/yabai -m window --toggle zoom-fullscreen
 shift + ctrl - f : /opt/homebrew/bin/yabai -m window --toggle float
 shift + ctrl - s : /opt/homebrew/bin/yabai -m window --toggle sticky
 shift + ctrl - p : /opt/homebrew/bin/yabai -m window --toggle sticky --toggle pip

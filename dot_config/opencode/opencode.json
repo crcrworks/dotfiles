@@ -3,16 +3,6 @@
   "model": "opencode-go/deepseek-v4-flash",
   "default_agent": "",
   "plugin": ["@sveltejs/opencode", "@tarquinen/opencode-dcp@latest"],
-  "mcp": {
-    "design-mode": {
-      "type": "remote",
-      "url": "https://mcp.designmode.app/mcp",
-      "enabled": false,
-      "headers": {
-        "Authorization": "Bearer {env:DESIGN_MODE_TOKEN}"
-      }
-    }
-  },
   "command": {
     "browser": {
       "description": "Open browser and visually verify frontend changes using agent-browser. Use when you want to check the appearance of UI changes.",
@@ -22,18 +12,6 @@
       "description": "Create a jujutsu commit with an auto-generated message based on the current changes.",
       "variant": "low",
       "template": "The user wants to commit their current changes using jujutsu (jj).\n\n1. Load the `jujutsu` skill via the `skill` tool.\n2. Run `jj status` to see the current state and list of changed files.\n3. Run `jj diff --git` to see the full diff of all changes.\n4. Based on the changes, generate an appropriate commit message in conventional commit format (e.g., feat:, fix:, docs:, chore:, refactor:, style:, test:, etc.) with an optional scope. Write the message in the user's language but keep type prefixes in English.\n\n5. Once confirmed, run `jj commit -m \"<message>\"` to create the commit.\n6. Show the resulting commit via `jj log -l 1`."
-    },
-    "design-mode": {
-      "description": "Set up Design Mode (visual editor for live websites, ships changes to opencode via MCP).",
-      "template": "The user wants to set up Design Mode. Follow these steps:\n\n1. Install the Chrome extension from Chrome Web Store:\n   https://chromewebstore.google.com/detail/design-mode/ighgobegfcmjagombgnfhgioflinojih\n\n2. Pin the extension to the toolbar, open any website, and click the Design Mode icon to open the side panel.\n\n3. In the side panel, open Settings. Copy your bearer token (starts with `dm_`).\n\n4. Set the environment variable in your shell profile (~/.zshrc, ~/.bashrc, etc.):\n   ```bash\n   export DESIGN_MODE_TOKEN=dm_\u003cactual-token\u003e\n   ```\n   Then restart your shell or run `source ~/.zshrc`.\n\n5. Restart opencode to pick up the new MCP server and environment variable.\n\n6. To use: open a website, make visual edits with Design Mode, then ask opencode to read the changes using the MCP tools (`get_changes`, `apply_changes`, `get_screenshot`, etc.)."
-    },
-    "dm": {
-      "description": "Fetch changes from Design Mode (Chrome extension) and optionally apply/screenshot/export them.",
-      "template": "/dm was used. The user wants to retrieve their Design Mode edits.\n\n1. Call `get_changes` on the `design-mode` MCP server to get all current edits.\n2. Display the changes in a clear, readable format (element selector, property, old value \u2192 new value).\n3. If there are no changes, tell the user and suggest they:\n   - Open a page in Chrome\n   - Click the Design Mode extension icon\n   - Make visual edits in the side panel\n   - Click \"Send to Agent\" button at the bottom\n   - Then run `/dm` again\n4. If there are changes, present these options to the user and ask which they want:\n   - **Apply to code**: Map the CSS/style changes to the project's source files and apply them\n   - **Take screenshot**: Take a screenshot of the page in its current state via `get_screenshot`\n   - **Export as CSS**: Export the changes as CSS via `export_changes`\n   - **Export as Tailwind**: Export as Tailwind utility classes via `export_changes`\n   - **Preview in browser**: Apply the changes back to the live page for preview via `apply_changes`\n   - **Clear changes**: Clear the change buffer via `clear_changes`"
-    },
-    "dm-apply": {
-      "description": "Fetch Design Mode changes and immediately apply them to the project's source code.",
-      "template": "/dm-apply was used. The user wants to get Design Mode edits and apply them to the project code.\n\n1. Call `get_changes` on the `design-mode` MCP server to get all current edits.\n2. Read the changes carefully: note which CSS selectors, properties, and values were modified.\n3. Map each change to the corresponding source file in the project:\n   - Match CSS selectors to component files (e.g., `.button` \u2192 `Button.svelte`)\n   - If the project uses CSS/Tailwind/modules, apply the changes in the right style\n   - Use the existing styling conventions of the project\n4. Show the user a diff of what you're about to apply.\n5. Once confirmed, write the changes to the source files.\n6. If you can't map a selector to any source file, show the raw CSS diff and ask the user where it should go.\n7. If there are no changes from Design Mode, tell the user and remind them to:\n   - Edit a page in Design Mode\n   - Click \"Send to Agent\" in the extension\n   - Run `/dm-apply` again"
     }
   }
 }

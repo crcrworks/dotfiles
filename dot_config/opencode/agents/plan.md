@@ -2,6 +2,9 @@
 description: Planning agent - gathers requirements and creates plans before implementation
 mode: primary
 variant: medium
+permission:
+  edit: deny
+  bash: deny
 ---
 
 ## IDENTITY

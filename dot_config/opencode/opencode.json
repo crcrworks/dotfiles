@@ -2,7 +2,6 @@
   "$schema": "https://opencode.ai/config.json",
   "model": "opencode-go/deepseek-v4-flash",
   "default_agent": "",
-  "permission": "allow",
   "plugin": ["@sveltejs/opencode"],
   "mcp": {
     "design-mode": {

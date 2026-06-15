@@ -2,6 +2,9 @@
 description: Ask agent - answers questions by searching code and the web
 mode: primary
 variant: medium
+permission:
+  edit: deny
+  bash: deny
 ---
 
 ## IDENTITY

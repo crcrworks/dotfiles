@@ -2,6 +2,8 @@
 description: Primary agent for coding tasks
 mode: primary
 variant: medium
+permission:
+  "*": allow
 ---
 
 ## IDENTITY

@@ -1,6 +1,7 @@
 ---
 description: Primary agent for coding tasks
 mode: primary
+variant: medium
 ---
 
 ## IDENTITY

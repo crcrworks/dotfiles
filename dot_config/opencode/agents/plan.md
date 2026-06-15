@@ -1,6 +1,7 @@
 ---
 description: Planning agent - gathers requirements and creates plans before implementation
 mode: primary
+variant: medium
 ---
 
 ## IDENTITY

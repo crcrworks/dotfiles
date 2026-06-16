@@ -1,6 +1,6 @@
 {
   "$schema": "https://opencode.ai/config.json",
-  "model": "qwen/qwen3.6-35b-a3b",
+  "model": "opencode-go/deepseek-v4-flash",
   "default_agent": "",
   "plugin": ["@sveltejs/opencode", "@tarquinen/opencode-dcp@latest"],
   "provider": {
@@ -29,6 +29,23 @@
         },
         "qwen/qwen3.6-27b": {
           "name": "Qwen 3.6 27B (local)",
+          "tool_call": true,
+          "limit": {
+            "context": 262144,
+            "output": 8192
+          }
+        }
+      }
+    },
+    "ponyexl3": {
+      "npm": "@ai-sdk/openai-compatible",
+      "name": "PonyExl3 (local)",
+      "options": {
+        "baseURL": "http://127.0.0.1:2469/v1"
+      },
+      "models": {
+        "qwen/qwen3.6-35b-a3b": {
+          "name": "Qwen 3.6 35B-A3B (local/mlx)",
           "tool_call": true,
           "limit": {
             "context": 262144,

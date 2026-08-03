@@ -8,3 +8,8 @@ alias ibrew='eval "$(/usr/local/bin/brew shellenv)"'
 
 export VOLTA_HOME="$HOME/.volta"
 export PATH="$VOLTA_HOME/bin:$PATH"
+
+# Added by LM Studio CLI (lms)
+export PATH="$PATH:/Users/crcr/.lmstudio/bin"
+# End of LM Studio CLI section
+

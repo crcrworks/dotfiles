@@ -13,3 +13,5 @@
 "npm:@typescript/native-preview" = "latest"
 "oxfmt" = "latest"
 "oxlint" = "latest"
+"tinymist" = "latest"
+"typstyle" = "latest"

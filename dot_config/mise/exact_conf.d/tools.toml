@@ -48,3 +48,6 @@
 "npm:@codeproxy/cli" = "latest"
 "npm:agent-browser" = "latest"
 "github:jnsahaj/lumen" = "latest"
+"github:XiaomiMimo/MiMo-Code" = "latest"
+"npm:command-code" = "latest"
+"github:herdrdev/herdr" = "latest"

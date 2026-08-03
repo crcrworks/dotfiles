@@ -12,5 +12,6 @@ return {
   { import = "plugins.lang.toml" },
   { import = "plugins.lang.typescript" },
   { import = "plugins.lang.oxc" },
+  { import = "plugins.lang.typst" },
   { import = "plugins.lang.verilog" },
 }

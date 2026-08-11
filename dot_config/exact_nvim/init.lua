@@ -1,5 +1,24 @@
 -- This file simply bootstraps the installation of Lazy.nvim and then calls other files for execution
 -- This file doesn't necessarily need to be touched, BE CAUTIOUS editing this file and proceed at your own risk.
+
+-- Ensure mise / Homebrew tools are on PATH (GUI launches like Neovide skip shell init)
+do
+  local home = vim.fn.expand "~"
+  local prepend = {
+    home .. "/.local/share/mise/shims",
+    "/opt/homebrew/bin",
+    home .. "/.local/bin",
+  }
+  local path = vim.env.PATH or ""
+  for i = #prepend, 1, -1 do
+    local dir = prepend[i]
+    if vim.fn.isdirectory(dir) == 1 and not path:find(dir, 1, true) then
+      path = dir .. ":" .. path
+    end
+  end
+  vim.env.PATH = path
+end
+
 local lazypath = vim.env.LAZY or vim.fn.stdpath "data" .. "/lazy/lazy.nvim"
 
 if not (vim.env.LAZY or (vim.uv or vim.loop).fs_stat(lazypath)) then

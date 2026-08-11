@@ -9,24 +9,28 @@ return {
           {
             "nvim-neo-tree/neo-tree.nvim",
             opts = function(_, opts)
+              -- Guard: plenary Job errors if `jj` is missing from PATH
+              if vim.fn.executable "jj" ~= 1 then return end
+
               table.insert(opts.sources, "jj")
 
               -- Replace git tab in neo-tree when in jj repo
-              if require("neo-tree.sources.jj.utils").get_repository_root() then
-                -- Remove git tab
-                for i, source in ipairs(opts.source_selector.sources) do
-                  if source.source == "git_status" then
-                    table.remove(opts.source_selector.sources, i)
-                    break
-                  end
-                end
+              local ok, root = pcall(require("neo-tree.sources.jj.utils").get_repository_root)
+              if not (ok and root) then return end
 
-                -- Add jj tab
-                table.insert(opts.source_selector.sources, {
-                  display_name = "󰊢 JJ",
-                  source = "jj",
-                })
+              -- Remove git tab
+              for i, source in ipairs(opts.source_selector.sources) do
+                if source.source == "git_status" then
+                  table.remove(opts.source_selector.sources, i)
+                  break
+                end
               end
+
+              -- Add jj tab
+              table.insert(opts.source_selector.sources, {
+                display_name = "󰊢 JJ",
+                source = "jj",
+              })
             end,
           },
         },

@@ -4,7 +4,8 @@ return {
     optional = true,
     ---@type AstroCoreOpts
     opts = {
-      treesitter = { ensure_installed = { "verilog" } },
+      -- tree-sitter parser is `systemverilog` (legacy `verilog` was removed)
+      treesitter = { ensure_installed = { "systemverilog" } },
     },
   },
   {

@@ -1,12 +1,10 @@
 return {
   {
-    {
-      "AstroNvim/astrocore",
-      optional = true,
-      ---@type AstroCoreOpts
-      opts = {
-        treesitter = { ensure_installed = { "toml" } },
-      },
+    "AstroNvim/astrocore",
+    optional = true,
+    ---@type AstroCoreOpts
+    opts = {
+      treesitter = { ensure_installed = { "toml" } },
     },
   },
   {

@@ -1,5 +1,6 @@
 .DS_Store
 .env
 dot_config/opencode/.env
+dot_config/opencode/logs/
 .opencode/plans/
 .sisypus/

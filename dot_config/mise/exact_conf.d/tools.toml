@@ -28,7 +28,6 @@
 "starship" = "latest"
 "task" = "latest"
 "act" = "latest"
-"github:anomalyco/opencode" = "latest"
 "prek" = "latest"
 "yt-dlp" = "latest"
 "npm:openclaw" = "latest"
@@ -50,4 +49,5 @@
 "github:jnsahaj/lumen" = "latest"
 "github:XiaomiMimo/MiMo-Code" = "latest"
 "npm:command-code" = "latest"
+"npm:opencode-ai" = "latest"
 "github:herdrdev/herdr" = "latest"

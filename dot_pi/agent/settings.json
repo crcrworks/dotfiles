@@ -1,15 +1,10 @@
 {
   "theme": "everforest",
   "defaultProvider": "lm-studio",
-  "defaultModel": "huihui-ai/huihui-qwen3.6-35b-a3b-claude-4.7-opus-abliterated-mtp",
-  "lastChangelogVersion": "0.74.0",
+  "defaultModel": "mtplx-qwen38-27b-optimized-speed-fp16",
+  "lastChangelogVersion": "0.84.2",
   "packages": [
-    "npm:pi-ask-user",
-    "npm:pi-docparser",
     "npm:pi-exa",
-    "npm:pi-skillful",
-    "npm:pi-subagents",
-    "npm:pi-websearch-router",
     "npm:pi-modes"
   ]
 }
